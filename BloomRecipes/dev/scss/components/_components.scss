@@ -1,0 +1,6 @@
+@use '../abstracts/vars';
+@use '../abstracts/media-queries';
+
+body{
+    background: vars.$clr-white-blue;
+}

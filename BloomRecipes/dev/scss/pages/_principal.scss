@@ -1,0 +1,266 @@
+@use '../abstracts/vars';
+@use '../abstracts/mixins';
+@use '../abstracts/media-queries';
+
+.bg-w{
+    width: 100%;
+    height: 59.375rem;
+    background: vars.$clr-white-blue;
+    @include media-queries.respond-to(media-queries.$phone){
+        width: 0;
+        height: 0;
+    }
+}
+
+.orange-bg{
+    position: absolute;
+    width: 100%;
+    height: 28.75rem;
+    background: vars.$clr-orange;
+    margin-top: 27.438rem;
+    @include media-queries.respond-to(media-queries.$phone){
+        margin-top: 16.75rem;
+        height: 21.125rem;
+    }
+}
+
+.border-image{
+    position: absolute;
+    width: 56.72%;
+    height: 48.125rem;
+    background: vars.$clr-white-blue;
+    border-top-width: 0.25rem;
+    border-right-width: 0;
+    border-bottom-width: 0.25rem;
+    border-left-width: 0.25rem;
+    border-style: solid;
+    border-color: vars.$clr-orange;
+    border-top-left-radius: 26.25rem;
+    border-bottom-left-radius: 26.25rem;
+    margin-left: 43.28%;
+    margin-top: 2.75rem;
+    @include media-queries.respond-to(media-queries.$phone){
+        margin-left: 0;
+        margin-top: 0;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        width: 100%;
+        height: 16.75rem;
+        border-right-width: 0.25rem;
+    }
+}
+
+.nw-image{
+    width: 64.675rem;
+    height: 42.5rem;
+    border-top-left-radius: 26.25rem;
+    border-bottom-left-radius: 26.25rem;
+    margin-left: 2.563rem;
+    margin-top: 2.563rem;
+    @include media-queries.respond-to(media-queries.$phone){
+        width: 90%;
+        height: 14.125rem;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        margin-left: 1.125rem;
+        margin-top: 1.125rem;
+    }
+}
+
+.icon-click{
+    width: 2.313rem;
+    height: 2.313rem;
+    @include media-queries.respond-to(media-queries.$phone){
+        width: 0;
+        height: 0;
+    } 
+}
+
+.cards-pp{
+    gap: 2.438rem;
+    flex-wrap: wrap;
+    margin-top: 3.875rem !important;
+}
+
+.card-top{
+    width: 19.438rem;
+    height: 25rem;
+    background: vars.$clr-orange;
+    @include media-queries.respond-to(media-queries.$phone){
+        width: 0;
+        height: 0;
+    }
+}
+
+.m-photos{
+    margin-top: 7.625rem;
+    margin-bottom: 5.25rem;
+    @include media-queries.respond-to(media-queries.$phone){
+        display: block !important;
+        margin-top: 4.063rem;
+        margin-bottom: 0;
+    }
+}
+
+.img-left{
+    width: 54rem;
+    height: 29rem;
+    border-radius: 2.188rem 0 0 2.188rem;
+    @include media-queries.respond-to(media-queries.$phone){
+        width: 100%;
+        height: 11.75rem;
+        border-radius: 2.188rem 2.188rem 0 0;
+        margin-bottom: 1.438rem;
+    }
+}
+
+.img-right{
+    width: 54rem;
+    height: 29rem;
+    border-radius: 0 2.188rem 2.188rem 0;
+    @include media-queries.respond-to(media-queries.$phone){
+        width: 100%;
+        height: 11.75rem;
+        border-radius: 0 0 2.188rem 2.188rem;
+    }
+}
+
+.circle-icon{
+    position: absolute;
+    width: 20.188rem;
+    height: 20.188rem;
+    background: vars.$clr-red;
+    margin-left: 43.438rem;
+    margin-top: 4.5rem;
+    border-radius: 10.625rem;
+    @include media-queries.respond-to(media-queries.$phone){
+        width: 90%;
+        height: 5.625rem;
+        border-radius: 0;
+        margin-left: 0;
+        margin-top: -15.313rem;
+    }
+}
+
+.d-fb{
+    display: flex;
+    @include media-queries.respond-to(media-queries.$phone){
+        display: block;
+    }
+}
+
+.icon-more{
+    font-size: 2.125rem;
+    font-weight: vars.$fw-xbold;
+    margin-top: 0.188rem;
+    margin-left: 0.75rem;
+    @include media-queries.respond-to(media-queries.$phone){
+        font-size: 1.688rem;
+        margin-left: 0.188rem;
+    }
+}
+
+.icon-more:hover{
+    color: vars.$clr-orange;
+}
+
+.link-more{
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-reg, vars.$fs-26, vars.$clr-cian);
+    padding-top: 3.5rem;
+    justify-content: center;
+    text-decoration: none;
+    margin-left: 70%;
+    @include media-queries.respond-to(media-queries.$phone){
+        @include mixins.set-font(vars.$ff-primary, vars.$fw-reg, vars.$fs-20, vars.$clr-cian);
+        padding-top: 0;
+        margin-left: 0;
+    }
+}
+
+.card-pp{
+    width: 19.438rem;
+    height: 30rem;
+    background: vars.$clr-orange;
+    @include media-queries.respond-to(media-queries.$phone){
+        width: 0;
+        height: 0;
+    }
+}
+
+.img-cf{
+    width: 58.654rem;
+    height: 42.817rem;
+    margin-top: 2.875rem;
+    position: absolute;
+    margin-left: 49.313rem;
+    @include media-queries.respond-to(media-queries.$phone){
+        position: relative;
+        width: 110%;
+        height: 17.794rem;
+        margin-left: -5%;
+    }
+}
+
+.mt-r{
+    margin-top: 0.125rem;
+    @include media-queries.respond-to(media-queries.$phone){
+        margin-top: 0.438rem;
+    }
+}
+
+.f-principal{
+    width: 100%;
+    height: 10.063rem;
+    background: vars.$clr-red;
+    @include media-queries.respond-to(media-queries.$phone){
+        height: 14.688rem;
+    }
+}
+
+.conf-f{
+    gap: 3.875rem;
+    margin-top: 3.875rem;
+    align-items: center;
+    @include media-queries.respond-to(media-queries.$phone){
+        margin-left: 5%;
+        margin-top: 1.75rem;
+        padding-top: 1.688rem;
+    }
+}
+
+.icons-footer{
+    width: 2.438rem;
+    height: 2.438rem;
+    color: vars.$clr-white-blue;
+}
+
+.icons-footer:hover{
+    color: vars.$clr-orange;
+    animation: moveBtn 3s;
+    @include media-queries.respond-to(media-queries.$phone){
+        animation: moveBtn 0s;
+    }
+}
+
+.icons-rs{
+    gap:3.875rem;
+    align-items: center;
+    display: flex;
+    @include media-queries.respond-to(media-queries.$phone){
+        width: 100%;
+        gap: 32.5%;
+        margin-bottom: 2.375rem;
+    }
+}
+
+//icons footer animations
+
+@keyframes moveBtn{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-10px);
+    }
+}
+

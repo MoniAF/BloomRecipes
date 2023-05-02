@@ -1,0 +1,138 @@
+@use 'vars';
+@use 'media-queries';
+
+//fonts
+
+@mixin set-font($ffamily, $fweight, $fsize, $fcolor:vars.$clr-black){
+    font-family: $ffamily;
+    font-weight: $fweight;
+    font-size: $fsize;
+    color: $fcolor;
+}
+
+//buttons
+
+@mixin button-nav($bg, $color){
+    font-family: vars.$ff-primary;
+    font-weight: vars.$fw-reg;
+    font-size: vars.$fs-20;
+    color: $color;
+    margin-top: 0.5rem;
+    border: none;
+    background: $bg;
+
+    @include media-queries.respond-to(media-queries.$phone){
+        font-size: vars.$fs-30;
+        width: 100%;
+        margin-top: 1.438rem;
+    }
+}
+
+@mixin button-user($bg, $color){
+    font-family: vars.$ff-primary;
+    font-weight: vars.$fw-reg;
+    font-size: vars.$fs-20;
+    color: $color;
+    width: 8.125rem;
+    margin-top: 1.5rem;
+    border: none;
+    background: $bg;
+    text-align: center;
+
+    @include media-queries.respond-to(media-queries.$phone){
+        font-size: 16px;
+        width: 80px;
+        margin-top: 40px;
+    }
+}
+
+@mixin button-search($bg, $color, $borderc){
+    font-family: vars.$ff-primary;
+    font-weight: vars.$fw-reg;
+    font-size: vars.$fs-20;
+    color: $color;
+    width: 6.563rem;
+    height: 2.125rem;
+    background: $bg !important;
+    border: solid 0.125rem $borderc !important;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+
+    @include media-queries.respond-to(media-queries.$phone){
+        width: 25.43%;
+        height: 34px;
+        font-size: 16px;
+    }
+}
+
+@mixin button-show($bg, $borderc, $color:vars.$clr-black){
+    font-family: vars.$ff-primary;
+    font-weight: vars.$fw-med;
+    font-size: vars.$fs-26;
+    color: $color;
+    width: 200px;
+    height: 55px;
+    border: solid 4px $borderc;
+    border-radius: 22px;
+    background: $bg;
+    margin-top: 17px;
+
+    @include media-queries.respond-to(media-queries.$phone){
+        width: 100%;
+        height: 35px;
+        font-size: 18px;
+        margin-top: 10px;
+    }
+}
+
+@mixin button-newest($bg, $color){
+    font-family: vars.$ff-primary;
+    font-weight: vars.$fw-sbold;
+    font-size: vars.$fs-30;
+    color: $color;
+    border: none;
+    background: $bg;
+
+    @include media-queries.respond-to(media-queries.$phone){
+        font-size: vars.$fs-20;
+    }
+}
+
+@mixin button-more($bg, $color){
+    font-family: vars.$ff-primary;
+    font-weight: vars.$fw-reg;
+    font-size: vars.$fs-26;
+    color: $color;
+    border: none;
+    background: $bg;
+    padding-top: 56px;
+    justify-content: center;
+    margin-left: 57%;
+
+    @include media-queries.respond-to(media-queries.$phone){
+        font-size: vars.$fs-20;
+        padding-top: 0;
+        margin: auto;
+    }
+}
+
+@mixin button-register($bg, $borderc, $color:vars.$clr-black){
+    font-family: vars.$ff-primary;
+    font-weight: vars.$fw-med;
+    font-size: vars.$fs-28;
+    color: $color;
+    width: 136px;
+    height: 46px;
+    border: solid 3px $borderc;
+    border-radius: 25px;
+    margin-left: 15px;
+    background: $bg;
+
+    @include media-queries.respond-to(media-queries.$phone){
+        font-size: 22px;
+        margin-left: 38px;
+    }
+}
+
