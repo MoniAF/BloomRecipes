@@ -22,7 +22,6 @@
     background: $bg;
 
     @include media-queries.respond-to(media-queries.$phone){
-        font-size: vars.$fs-30;
         width: 100%;
         margin-top: 1.438rem;
     }
@@ -40,7 +39,6 @@
     text-align: center;
 
     @include media-queries.respond-to(media-queries.$phone){
-        font-size: 16px;
         width: 80px;
         margin-top: 40px;
     }
@@ -80,6 +78,10 @@
     margin-top: 0.875rem;
     @include media-queries.respond-to(media-queries.$phone){
         font-size: vars.$fs-20;
+        width: 100%;
+        height: 3.438rem;
+        margin-top: 0;
+        margin-bottom: 40px;
     }
 }
 
@@ -94,9 +96,10 @@
     align-items: center;
 
     @include media-queries.respond-to(media-queries.$phone){
-        width: 100%;
-        height: 35px;
-        font-size: 18px;
+        font-size: vars.$fs-20;
+        padding-top: 0;
+        margin-left: auto;
+        margin-right: auto;
         margin-top: 10px;
     }
 }

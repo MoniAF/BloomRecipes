@@ -242,6 +242,21 @@ h2 {
   margin-top: 12px;
 }
 
+.txt-search {
+  font-family: "Spectral", serif;
+  font-weight: 500;
+  font-size: 1.875rem;
+  color: hsl(0deg, 0%, 15%);
+  margin-top: 28px;
+}
+
+.txt-result {
+  font-family: "Spectral", serif;
+  font-weight: 700;
+  font-size: 1.875rem;
+  color: hsl(0deg, 0%, 15%);
+}
+
 .txt-footer {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
@@ -260,7 +275,6 @@ h2 {
 }
 @media only screen and (max-width: 480px) {
   .btn-nav {
-    font-size: 1.875rem;
     width: 100%;
     margin-top: 1.438rem;
   }
@@ -277,7 +291,6 @@ h2 {
 }
 @media only screen and (max-width: 480px) {
   .btn-nav:hover {
-    font-size: 1.875rem;
     width: 100%;
     margin-top: 1.438rem;
   }
@@ -296,7 +309,6 @@ h2 {
 }
 @media only screen and (max-width: 480px) and (max-width: 480px) {
   .btn-nav:active {
-    font-size: 1.875rem;
     width: 100%;
     margin-top: 1.438rem;
   }
@@ -315,7 +327,6 @@ h2 {
 }
 @media only screen and (max-width: 480px) {
   .btn-user {
-    font-size: 16px;
     width: 80px;
     margin-top: 40px;
   }
@@ -334,7 +345,6 @@ h2 {
 }
 @media only screen and (max-width: 480px) {
   .btn-user:hover {
-    font-size: 16px;
     width: 80px;
     margin-top: 40px;
   }
@@ -420,9 +430,10 @@ h2 {
 }
 @media only screen and (max-width: 480px) {
   .btn-show {
-    width: 100%;
-    height: 35px;
-    font-size: 18px;
+    font-size: 1.25rem;
+    padding-top: 0;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 10px;
   }
 }
@@ -441,9 +452,10 @@ h2 {
 }
 @media only screen and (max-width: 480px) {
   .btn-show:hover {
-    width: 100%;
-    height: 35px;
-    font-size: 18px;
+    font-size: 1.25rem;
+    padding-top: 0;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 10px;
   }
 }
@@ -463,6 +475,10 @@ h2 {
 @media only screen and (max-width: 480px) {
   .btn-newest {
     font-size: 1.25rem;
+    width: 100%;
+    height: 3.438rem;
+    margin-top: 0;
+    margin-bottom: 40px;
   }
 }
 
@@ -481,6 +497,10 @@ h2 {
 @media only screen and (max-width: 480px) {
   .btn-newest:hover {
     font-size: 1.25rem;
+    width: 100%;
+    height: 3.438rem;
+    margin-top: 0;
+    margin-bottom: 40px;
   }
 }
 
@@ -619,14 +639,6 @@ body {
   color: hsl(0deg, 0%, 100%);
   text-decoration: none;
 }
-@media only screen and (max-width: 480px) {
-  .b-icon {
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
-    font-size: 4.813rem;
-    color: hsl(0deg, 0%, 100%);
-  }
-}
 
 .r-icon {
   font-family: "Spectral", serif;
@@ -634,25 +646,12 @@ body {
   font-size: 1.25rem;
   color: hsl(0deg, 0%, 100%);
 }
-@media only screen and (max-width: 480px) {
-  .r-icon {
-    font-family: "Spectral", serif;
-    font-weight: 600;
-    font-size: 2.313rem;
-    color: hsl(0deg, 0%, 100%);
-  }
-}
 
 .user-icon {
   width: 3.438rem;
   border-radius: 1.75rem;
   margin-bottom: 0.5rem;
   margin-left: -0.313rem;
-}
-@media only screen and (max-width: 480px) {
-  .user-icon {
-    width: 30px;
-  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -736,7 +735,7 @@ body {
 @media only screen and (max-width: 480px) {
   .orange-bg {
     margin-top: 16.75rem;
-    height: 21.125rem;
+    height: 378px;
   }
 }
 
@@ -1089,8 +1088,11 @@ body {
 @media only screen and (max-width: 480px) {
   .icons-rs {
     width: 100%;
-    gap: 32.5%;
+    gap: 10%;
     margin-bottom: 2.375rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
@@ -1132,4 +1134,8 @@ body {
 .m-footer {
   margin-top: 35px;
   margin-bottom: 19px;
+}
+
+.m-null {
+  margin-bottom: 592px;
 }

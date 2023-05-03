@@ -26,16 +26,10 @@
 .b-icon{
     @include mixins.set-font(vars.$ff-primary, vars.$fw-med, vars.$fs-42, vars.$clr-white);
     text-decoration: none;
-    @include media-queries.respond-to(media-queries.$phone){
-        @include mixins.set-font(vars.$ff-primary, vars.$fw-med, vars.$fs-77, vars.$clr-white);
-    }
 }
 
 .r-icon{
     @include mixins.set-font(vars.$ff-secondary, vars.$fw-sbold, vars.$fs-20, vars.$clr-white);
-    @include media-queries.respond-to(media-queries.$phone){
-        @include mixins.set-font(vars.$ff-secondary, vars.$fw-sbold, vars.$fs-37, vars.$clr-white);
-    }
 }
 
 .user-icon{
@@ -43,9 +37,6 @@
     border-radius: 1.75rem;
     margin-bottom: 0.5rem;
     margin-left: -0.313rem;
-    @include media-queries.respond-to(media-queries.$phone){
-        width: 30px;
-    }
 }
 
 .user-r{

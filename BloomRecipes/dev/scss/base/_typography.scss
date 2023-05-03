@@ -163,6 +163,17 @@ h2{
     @include mixins.set-font(vars.$ff-primary, vars.$fw-sbold, vars.$fs-55);
     margin-top: 12px;
 }
+
+.txt-search{
+    @include mixins.set-font(vars.$ff-secondary, vars.$fw-med, vars.$fs-30);
+    margin-top: 28px;
+}
+
+.txt-result{
+    @include mixins.set-font(vars.$ff-secondary, vars.$fw-bold, vars.$fs-30);
+    //margin-top: 12px;
+}
+
 .txt-footer{
     @include mixins.set-font(vars.$ff-primary, vars.$fw-med, vars.$fs-25, vars.$clr-white-blue);
 }
