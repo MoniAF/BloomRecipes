@@ -1,0 +1,225 @@
+@use '../abstracts/mixins';
+@use '../abstracts/vars';
+@use '../abstracts/media-queries';
+
+//principal
+
+h1{
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-sbold, vars.$fs-93);
+    line-height: 6.563rem;
+    margin-top: 2.875rem;
+    margin-right: 56.938rem;
+    @include media-queries.respond-to(media-queries.$phone){
+        @include mixins.set-font(vars.$ff-primary, vars.$fw-sbold, vars.$fs-25);
+        line-height: 2.063rem;
+        margin-top: 18.125rem;
+        margin-right: 0;
+        text-align: center;
+    }
+}
+
+h2{
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-sbold, vars.$fs-65, vars.$clr-red);
+    margin-top: 4.875rem;
+    @include media-queries.respond-to(media-queries.$phone){
+        width: 100%;
+        font-size: 2.5rem;
+        text-align: center;
+        margin-top: 6.5rem;
+        margin-bottom: 1.25rem;
+    }
+}
+
+.description-p{
+    width: 43.75rem;
+    @include mixins.set-font(vars.$ff-secondary, vars.$fw-sbold, vars.$fs-25);
+    line-height: 2.378rem;
+    margin-top: 7.188rem;
+    @include media-queries.respond-to(media-queries.$phone){
+        width: 100%;
+        font-size: 0.813rem;
+        line-height: 1.237rem;
+        margin-top: 1.75rem;
+    }
+}
+
+.info-nw{
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-med, vars.$fs-30);
+    @include media-queries.respond-to(media-queries.$phone){
+        font-size: 1.25rem;
+        text-align: center;
+    }
+}
+
+.phrase-m{
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-sbold, vars.$fs-85);
+    margin-top: 14rem;
+    line-height: 6.563rem;
+    @include media-queries.respond-to(media-queries.$phone){
+        margin-top: 0;
+        font-size: 2.188rem;
+        text-align: center;
+        line-height: 2.875rem;
+    }
+}
+
+.txt-red{
+    color: vars.$clr-red;
+}
+
+.txt-cian{
+    color: vars.$clr-cian;
+}
+
+.bc-icon{
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-med, vars.$fs-77, vars.$clr-white);
+    line-height: 2.625rem;
+    margin-top: 7.813rem;
+    @include media-queries.respond-to(media-queries.$phone){
+        @include mixins.set-font(vars.$ff-primary, vars.$fw-med, vars.$fs-42, vars.$clr-white);
+        margin-top: 1.188rem;
+        line-height: 1.563rem;
+    }
+}
+
+.rc-icon{
+    @include mixins.set-font(vars.$ff-secondary, vars.$fw-sbold, vars.$fs-37, vars.$clr-white);
+    @include media-queries.respond-to(media-queries.$phone){
+        @include mixins.set-font(vars.$ff-secondary, vars.$fw-sbold, vars.$fs-20, vars.$clr-white);
+    }
+}
+
+.phrase-pf{
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-sbold, vars.$fs-80);
+    margin-top: 10.875rem;
+    line-height: 6.875rem;
+    @include media-queries.respond-to(media-queries.$phone){
+        @include mixins.set-font(vars.$ff-primary, vars.$fw-sbold, vars.$fs-30);
+        margin-top: 0;
+        line-height: 2.5rem;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.register-f{
+    height: 2.875rem;
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-med, vars.$fs-28, vars.$clr-cian);
+    margin-top: 2.688rem;
+    margin-bottom: 3.438rem;
+    @include media-queries.respond-to(media-queries.$phone){
+        font-size: 1.375rem;
+        justify-content: center;
+        margin-top: 1.25rem;
+    }
+}
+
+.txt-f{
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-med, vars.$fs-25, vars.$clr-white-blue);
+    margin-left: 1.625rem;
+    @include media-queries.respond-to(media-queries.$phone){
+        font-size: 1.125rem;
+        margin-left: 0;
+        text-align: center;
+        margin-top: 2.375rem;
+    }
+}
+
+.link-f{
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-med, vars.$fs-25, vars.$clr-white-blue);
+    text-decoration: none;
+    @include media-queries.respond-to(media-queries.$phone){
+        font-size: 1.125rem;
+    }
+}
+
+.title-card{
+    height: 42px;
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-bold, vars.$fs-21);
+    line-height: 21px;
+    margin-bottom: 15px;
+}
+
+.categories-txt{
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-med, vars.$fs-16, vars.$clr-white-blue);
+    justify-content: center;
+}
+
+.txt-likes{
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-med, vars.$fs-18);
+    margin-top: 12px;
+}
+
+.txt-description{
+    //text-overflow: ellipsis;
+    @include mixins.set-font(vars.$ff-secondary, vars.$fw-med, vars.$fs-15);
+    line-height: 23px;
+    text-align: justify;
+}
+//principal
+
+//modal
+.modal-title{
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-sbold, vars.$fs-26);
+}
+
+.bm-icon{
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-med, vars.$fs-89);
+    line-height: 48px;
+    margin-top: 40px;
+    @include media-queries.respond-to(media-queries.$phone){
+        @include mixins.set-font(vars.$ff-primary, vars.$fw-med, vars.$fs-42);
+        margin-top: 1.188rem;
+        line-height: 1.563rem;
+    }
+}
+
+.rm-icon{
+    @include mixins.set-font(vars.$ff-secondary, vars.$fw-sbold, vars.$fs-42);
+    margin-bottom: 40px;
+    @include media-queries.respond-to(media-queries.$phone){
+        @include mixins.set-font(vars.$ff-secondary, vars.$fw-sbold, vars.$fs-20, vars.$clr-white);
+    }
+}
+
+.txt-about{
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-top: 38px;
+    line-height: 28px;
+    @include mixins.set-font(vars.$ff-secondary, vars.$fw-med, vars.$fs-18);
+}
+//modal
+
+//recipes
+.txt-menu{
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-sbold, vars.$fs-55);
+    margin-top: 12px;
+}
+
+.txt-search{
+    @include mixins.set-font(vars.$ff-secondary, vars.$fw-med, vars.$fs-30);
+    margin-top: 28px;
+}
+
+.txt-result{
+    @include mixins.set-font(vars.$ff-secondary, vars.$fw-bold, vars.$fs-30);
+}
+
+.txt-footer{
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-med, vars.$fs-25, vars.$clr-white-blue);
+}
+
+//recipes
+
+
+//dropdown
+.title-categories{
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-sbold, vars.$fs-20);
+    width: 206px;
+    height: 45px;
+    margin-bottom: 0;
+    margin-top: 5px;
+}
+

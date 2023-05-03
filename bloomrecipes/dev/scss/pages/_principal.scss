@@ -1,0 +1,286 @@
+@use '../abstracts/vars';
+@use '../abstracts/mixins';
+@use '../abstracts/media-queries';
+
+.bg-w{
+    width: 100%;
+    height: 59.375rem;
+    background: vars.$clr-white-blue;
+    @include media-queries.respond-to(media-queries.$phone){
+        width: 0;
+        height: 0;
+    }
+}
+
+.orange-bg{
+    position: absolute;
+    width: 100%;
+    height: 28.75rem;
+    background: vars.$clr-orange;
+    margin-top: 26.5rem;
+    @include media-queries.respond-to(media-queries.$phone){
+        margin-top: 16.75rem;
+        height: 378px;
+    }
+}
+
+.border-image{
+    position: absolute;
+    width: 56.72%;
+    height: 48.125rem;
+    background: vars.$clr-white-blue;
+    border-top-width: 0.25rem;
+    border-right-width: 0;
+    border-bottom-width: 0.25rem;
+    border-left-width: 0.25rem;
+    border-style: solid;
+    border-color: vars.$clr-orange;
+    border-top-left-radius: 26.25rem;
+    border-bottom-left-radius: 26.25rem;
+    margin-left: 43.28%;
+    margin-top: 1.813rem;
+    @include media-queries.respond-to(media-queries.$phone){
+        margin-left: 0;
+        margin-top: 0;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        width: 100%;
+        height: 16.75rem;
+        border-right-width: 0.25rem;
+    }
+}
+
+.nw-image{
+    width: 64.675rem;
+    height: 42.5rem;
+    border-top-left-radius: 26.25rem;
+    border-bottom-left-radius: 26.25rem;
+    margin-left: 2.563rem;
+    margin-top: 2.563rem;
+    object-fit: cover;
+    @include media-queries.respond-to(media-queries.$phone){
+        width: 90%;
+        height: 14.125rem;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        margin-left: 1.125rem;
+        margin-top: 1.125rem;
+    }
+}
+
+.icon-click{
+    width: 2.313rem;
+    height: 2.313rem;
+    color: vars.$clr-black;
+    @include media-queries.respond-to(media-queries.$phone){
+        width: 0;
+        height: 0;
+    } 
+}
+
+.cards-pp{
+    gap: 2.438rem;
+    flex-wrap: wrap;
+    margin-top: 4.938rem !important;
+}
+
+.cards-modal{
+    gap: 2.438rem;
+    flex-wrap: wrap;
+    margin-top: 32px !important;
+    margin-left: 11px;
+}
+
+.card-top{
+    width: 19.438rem;
+    height: 29rem;
+    background: vars.$clr-orange;
+    border-radius: 2.188rem;
+    overflow: hidden;
+    @include media-queries.respond-to(media-queries.$phone){
+        width: 0;
+        height: 0;
+    }
+}
+
+.card-pp{
+    width: 19.438rem;
+    height: 32.5rem;
+    background: vars.$clr-orange;
+    border-radius: 2.188rem;
+    overflow: hidden;
+    @include media-queries.respond-to(media-queries.$phone){
+        width: 0;
+        height: 0;
+    }
+}
+
+//cards
+
+.img-card{
+    width: 100%;
+    height: 275px;
+    border-radius: 2.188rem 2.188rem 0 0;
+    object-fit: cover;
+}
+
+.degraded{
+    width: 200%;
+    height: 200px;
+    margin-top: -45px;
+    margin-left: -45px;
+    background: vars.$clr-orange;
+    filter: blur(18px);
+}
+
+.info-top{
+    width: 19.438rem;
+    height: 158px;
+    position: absolute;
+    margin-top: -151px;
+}
+
+.category-card{
+    width: 265px;
+    height: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    padding-top: 3px;
+    background: vars.$clr-red;
+    margin-bottom: 10px;
+}
+
+.card-heart{
+    width: 23px;
+    height: 23px;
+    color: vars.$clr-cian;
+}
+
+.description-card{
+    overflow: hidden;
+    width: 265px;
+    height: 92px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -12px;
+    margin-bottom: 10px;
+}
+
+//cards
+
+.m-photos{
+    margin-top: 10.375rem;
+    margin-bottom: 5.25rem;
+    @include media-queries.respond-to(media-queries.$phone){
+        display: block !important;
+        margin-top: 4.063rem;
+        margin-bottom: 0;
+    }
+}
+
+.img-left{
+    width: 54rem;
+    height: 29rem;
+    border-radius: 2.188rem 0 0 2.188rem;
+    object-fit: cover;
+    @include media-queries.respond-to(media-queries.$phone){
+        width: 100%;
+        height: 11.75rem;
+        border-radius: 2.188rem 2.188rem 0 0;
+        margin-bottom: 1.438rem;
+    }
+}
+
+.img-right{
+    width: 54rem;
+    height: 29rem;
+    border-radius: 0 2.188rem 2.188rem 0;
+    object-fit: cover;
+    @include media-queries.respond-to(media-queries.$phone){
+        width: 100%;
+        height: 11.75rem;
+        border-radius: 0 0 2.188rem 2.188rem;
+    }
+}
+
+.circle-icon{
+    position: absolute;
+    width: 20.188rem;
+    height: 20.188rem;
+    background: vars.$clr-red;
+    margin-left: 43.438rem;
+    margin-top: 4.5rem;
+    border-radius: 10.625rem;
+    @include media-queries.respond-to(media-queries.$phone){
+        width: 90%;
+        height: 5.625rem;
+        border-radius: 0;
+        margin-left: 0;
+        margin-top: -15.313rem;
+    }
+}
+
+.d-fb{
+    display: flex;
+    @include media-queries.respond-to(media-queries.$phone){
+        display: block;
+    }
+}
+
+.icon-more{
+    font-size: 2.125rem;
+    font-weight: vars.$fw-xbold;
+    margin-top: 0.188rem;
+    margin-left: 0.75rem;
+    @include media-queries.respond-to(media-queries.$phone){
+        font-size: 1.688rem;
+        margin-left: 0.188rem;
+    }
+}
+
+.icon-more:hover{
+    color: vars.$clr-orange;
+}
+
+.icon-show{
+    margin-left: 0.625rem !important;
+}
+
+.icon-show:hover{
+    color: vars.$clr-white-blue !important;
+}
+
+.link-more{
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-reg, vars.$fs-26, vars.$clr-cian);
+    padding-top: 6.938rem;
+    justify-content: center;
+    text-decoration: none;
+    margin-left: 70%;
+    @include media-queries.respond-to(media-queries.$phone){
+        @include mixins.set-font(vars.$ff-primary, vars.$fw-reg, vars.$fs-20, vars.$clr-cian);
+        padding-top: 0;
+        margin-left: 0;
+    }
+}
+
+.img-cf{
+    width: 58.654rem;
+    height: 42.817rem;
+    margin-top: 3.875rem;
+    position: absolute;
+    margin-left: 49.313rem;
+    @include media-queries.respond-to(media-queries.$phone){
+        position: relative;
+        width: 110%;
+        height: 17.794rem;
+        margin-left: -5%;
+    }
+}
+
+.mt-r{
+    margin-top: 0.125rem;
+    @include media-queries.respond-to(media-queries.$phone){
+        margin-top: 0.438rem;
+    }
+}

@@ -1,0 +1,90 @@
+@use '../abstracts/vars';
+@use '../abstracts/mixins';
+@use '../abstracts/media-queries';
+
+.navbar-h{
+    background-color: vars.$clr-red;
+    height: 5.938rem;
+    padding-top: 0;
+    @include media-queries.respond-to(media-queries.$phone){
+        display: block;
+        height: 45rem;
+    }
+}
+
+.pos-icon{
+    line-height: 0.75rem;
+    margin-top: 0.813rem;
+    @include media-queries.respond-to(media-queries.$phone){
+        line-height: 18px;
+        margin-top: 60px;
+        margin-left: auto;
+        margin-right: auto
+    }
+}
+
+.b-icon{
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-med, vars.$fs-42, vars.$clr-white);
+    text-decoration: none;
+}
+
+.r-icon{
+    @include mixins.set-font(vars.$ff-secondary, vars.$fw-sbold, vars.$fs-20, vars.$clr-white);
+}
+
+.user-icon{
+    width: 3.438rem;
+    border-radius: 1.75rem;
+    margin-bottom: 0.5rem;
+    margin-left: -0.313rem;
+}
+
+.user-r{
+    @include media-queries.respond-to(media-queries.$phone){
+        margin-left: 32%;
+    }
+}
+
+.m-options{
+    display: flex;
+    margin-left: 14.5rem;
+    gap: 3.688rem;
+
+    @include media-queries.respond-to(media-queries.$phone){
+        display: block;
+        margin-left: 0;
+        gap: 0;
+    }
+}
+
+.m-form{
+    margin-top: 0.313rem;
+    margin-left: 4.125rem;
+    @include media-queries.respond-to(media-queries.$phone){
+        width: 100%;
+        margin-left: 0;
+        margin-top: 28px;
+    }
+}
+
+.search-input{
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-reg, vars.$fs-20);
+    width: 19.375rem;
+    height: 2.125rem;
+    background: vars.$clr-white-blue;
+    border: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0.5rem;
+    border-top-left-radius: 0.5rem;
+    padding-left: 0.625rem;
+    @include media-queries.respond-to(media-queries.$phone){
+        width: 74.57%;
+        height: 34px;
+        font-size: 16px;
+    }
+}
+
+/*.search-input:focus{
+    background: blueviolet;
+}*/
