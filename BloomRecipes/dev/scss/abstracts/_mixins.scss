@@ -140,3 +140,18 @@
     }
 }
 
+@mixin button-close($bg, $color:vars.$clr-black){
+    font-family: vars.$ff-primary;
+    font-weight: vars.$fw-med;
+    font-size: vars.$fs-22;
+    color: $color;
+    background: $bg;
+    width: 150px;
+    height: 45px;
+    border-radius: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    padding-top: 2px;
+}
+

@@ -152,11 +152,18 @@ h2{
 }
 
 .txt-description{
+    //text-overflow: ellipsis;
     @include mixins.set-font(vars.$ff-secondary, vars.$fw-med, vars.$fs-15);
     line-height: 23px;
     text-align: justify;
 }
 //principal
+
+//modal
+.modal-title{
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-sbold, vars.$fs-26);
+}
+//modal
 
 //recipes
 .txt-menu{

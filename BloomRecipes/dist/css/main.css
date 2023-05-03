@@ -234,6 +234,13 @@ h2 {
   text-align: justify;
 }
 
+.modal-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 1.625rem;
+  color: hsl(0deg, 0%, 15%);
+}
+
 .txt-menu {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
@@ -563,8 +570,61 @@ h2 {
   }
 }
 
+.btn-cmodal {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 1.375rem;
+  color: hsl(180deg, 43%, 96%);
+  background: hsl(20deg, 85%, 38%);
+  width: 150px;
+  height: 45px;
+  border-radius: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  border: none;
+  padding-top: 2px;
+}
+
+.btn-cmodal:hover {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 1.375rem;
+  color: hsl(180deg, 43%, 96%);
+  background: hsl(180deg, 64%, 34%);
+  width: 150px;
+  height: 45px;
+  border-radius: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  border: none;
+  padding-top: 2px;
+}
+
 body {
   background: hsl(180deg, 43%, 96%);
+}
+
+.mt-footer {
+  margin-top: 49px;
+}
+
+.custom-modal {
+  width: 1826px;
+  max-width: 100%;
+  margin: 0 auto;
+  margin-top: 28px;
+}
+
+.header-mc {
+  background: hsl(35deg, 100%, 64%);
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+
+.modal-design {
+  background: hsl(180deg, 43%, 96%);
+  border-radius: 25px;
+  border: none;
 }
 
 .container-principal {
@@ -807,6 +867,14 @@ body {
   margin-top: 4.938rem !important;
 }
 
+.cards-modal {
+  gap: 2.438rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 32px !important;
+  margin-left: 11px;
+}
+
 .card-top {
   width: 19.438rem;
   height: 29rem;
@@ -878,6 +946,7 @@ body {
 }
 
 .description-card {
+  overflow: hidden;
   width: 265px;
   height: 92px;
   margin-left: auto;

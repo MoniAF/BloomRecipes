@@ -68,3 +68,12 @@
 }
 
 //principal
+
+//modal
+.btn-cmodal{
+    @include mixins.button-close(vars.$clr-red, vars.$clr-white-blue);
+}
+.btn-cmodal:hover{
+    @include mixins.button-close(vars.$clr-cian, vars.$clr-white-blue);
+}
+//modal

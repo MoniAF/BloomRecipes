@@ -17,7 +17,45 @@
     <title>Bloom</title>
 </head>
 <body>
-    <div>
+    <div id="app">
+
+        <!-- Modal -->
+        <div class="modal fade" id="favoritesModal" tabindex="-1" role="dialog" aria-labelledby="favoritesModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered custom-modal modal-dialog-scrollable">
+              <div class="modal-content modal-design">
+                <div class="modal-header header-mc">
+                  <h5 class="modal-title" id="favoritesModalLabel">Trending recipes</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="d-flex cards-modal">
+                        <div v-for="(element, index) in showTop" class="col">
+                            <a href="#">
+                                <div class="card-top">
+                                    <img v-bind:src="element.image" class="img-card" alt="chocolate">
+                                    <div class="degraded"></div>
+                                    <div class="info-top">
+                                        <p class="title-card text-center">{{ element.name }}</p>
+                                        <p class="category-card text-center categories-txt">{{ element.category }}</p>
+                                        <p class="category-card text-center categories-txt">{{ element.difficulty }}</p>
+                                        <p class="txt-likes text-center"><span><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-heart-fill card-heart" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                                          </svg></span> {{ element.likes }}</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn-cmodal" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        <!-- Modal -->
 
         <!-- Navbar -->
 
@@ -33,7 +71,7 @@
                     <button class="btn-nav">Home</button>
                     <button class="btn-nav">Menu</button>
                     <button class="btn-nav">Gallery</button>
-                    <button type="button" class="btn-nav" data-bs-toggle="modal" data-bs-target="#exampleModal">Favorites</button>
+                    <button type="button" class="btn-nav" data-bs-toggle="modal" data-bs-target="#favoritesModal">Favorites</button>
                     <button class="btn-nav">About Us</button>
                 </section>
 
@@ -52,16 +90,31 @@
         </nav>
 
         <!-- Navbar -->
+
         <div class="container-principal">
-            <section class="d-fb justify-content-center m-null">
+            <section class="d-fb justify-content-center">
                 <p class="txt-search">Sorry, we couldn't find any recipes that match <span class="txt-result">'Pollo'</span>.</p>
             </section>
+            <div class="d-flex cards-recipes">
+                <a v-for="(element, index) in showTrending" href="#">
+                    <div class="card-pp">
+                        <img v-bind:src="element.image" class="img-card" alt="chocolate">
+                        <div class="degraded"></div>
+                        <div class="info-top">
+                            <p class="title-card text-center">{{ element.name }}</p>
+                            <p class="description-card txt-description">{{ element.description }}</p>
+                            <p class="category-card text-center categories-txt">{{ element.category }}</p>
+                            <p class="category-card text-center categories-txt">{{ element.difficulty }}</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
         </div>
 
         <!-- Footer all -->
 
         <footer class="container-total">
-            <div class="f-principal mt-5">
+            <div class="f-principal mt-footer">
                 <section class="container-pp">
                     <section class="d-fb justify-content-center m-footer">
                         <section class="icons-rs footer-icons">
@@ -104,5 +157,13 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- main script -->
+    <script src="./js/main.js"></script>
+    <!-- mounted -->
+    <script>
+      const mountedApp = app.mount("#app");
+    </script>
 </body>
 </html>
