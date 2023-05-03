@@ -27,11 +27,9 @@ const app = Vue.createApp({
     },
     methods: {
         onClickLike(index){
-            //this.likes += 1;
             this.recipes[index].likes += 1;
         },
         onClickUnlike(index){
-            //if (this.likes > 0) this.likes -= 1;
             if (this.recipes[index].likes > 0) this.recipes[index].likes -= 1;
         }
     }

@@ -163,6 +163,33 @@ h2{
 .modal-title{
     @include mixins.set-font(vars.$ff-primary, vars.$fw-sbold, vars.$fs-26);
 }
+
+.bm-icon{
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-med, vars.$fs-89);
+    line-height: 48px;
+    margin-top: 40px;
+    @include media-queries.respond-to(media-queries.$phone){
+        @include mixins.set-font(vars.$ff-primary, vars.$fw-med, vars.$fs-42);
+        margin-top: 1.188rem;
+        line-height: 1.563rem;
+    }
+}
+
+.rm-icon{
+    @include mixins.set-font(vars.$ff-secondary, vars.$fw-sbold, vars.$fs-42);
+    margin-bottom: 40px;
+    @include media-queries.respond-to(media-queries.$phone){
+        @include mixins.set-font(vars.$ff-secondary, vars.$fw-sbold, vars.$fs-20, vars.$clr-white);
+    }
+}
+
+.txt-about{
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-top: 38px;
+    line-height: 28px;
+    @include mixins.set-font(vars.$ff-secondary, vars.$fw-med, vars.$fs-18);
+}
 //modal
 
 //recipes

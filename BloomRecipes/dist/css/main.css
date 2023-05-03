@@ -241,6 +241,52 @@ h2 {
   color: hsl(0deg, 0%, 15%);
 }
 
+.bm-icon {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 5.563rem;
+  color: hsl(0deg, 0%, 15%);
+  line-height: 48px;
+  margin-top: 40px;
+}
+@media only screen and (max-width: 480px) {
+  .bm-icon {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 2.625rem;
+    color: hsl(0deg, 0%, 15%);
+    margin-top: 1.188rem;
+    line-height: 1.563rem;
+  }
+}
+
+.rm-icon {
+  font-family: "Spectral", serif;
+  font-weight: 600;
+  font-size: 2.625rem;
+  color: hsl(0deg, 0%, 15%);
+  margin-bottom: 40px;
+}
+@media only screen and (max-width: 480px) {
+  .rm-icon {
+    font-family: "Spectral", serif;
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: hsl(0deg, 0%, 100%);
+  }
+}
+
+.txt-about {
+  padding-left: 5%;
+  padding-right: 5%;
+  margin-top: 38px;
+  line-height: 28px;
+  font-family: "Spectral", serif;
+  font-weight: 500;
+  font-size: 1.125rem;
+  color: hsl(0deg, 0%, 15%);
+}
+
 .txt-menu {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
@@ -625,6 +671,14 @@ body {
   background: hsl(180deg, 43%, 96%);
   border-radius: 25px;
   border: none;
+}
+
+.modal-footer {
+  border: none;
+}
+
+.mb-cabout {
+  margin-bottom: 14px;
 }
 
 .container-principal {
