@@ -4,7 +4,7 @@
 
 .navbar-h{
     background-color: vars.$clr-red;
-    height: 5rem;
+    height: 5.938rem;
     padding-top: 0;
     @include media-queries.respond-to(media-queries.$phone){
         display: block;
@@ -42,6 +42,7 @@
     width: 3.438rem;
     border-radius: 1.75rem;
     margin-bottom: 0.5rem;
+    margin-left: -0.313rem;
     @include media-queries.respond-to(media-queries.$phone){
         width: 30px;
     }

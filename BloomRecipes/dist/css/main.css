@@ -4,7 +4,7 @@ h1 {
   font-size: 5.813rem;
   color: hsl(0deg, 0%, 15%);
   line-height: 6.563rem;
-  margin-top: 3.813rem;
+  margin-top: 2.875rem;
   margin-right: 56.938rem;
 }
 @media only screen and (max-width: 480px) {
@@ -25,7 +25,7 @@ h2 {
   font-weight: 600;
   font-size: 4.063rem;
   color: hsl(20deg, 85%, 38%);
-  margin-top: 1.5rem;
+  margin-top: 4.875rem;
 }
 @media only screen and (max-width: 480px) {
   h2 {
@@ -60,7 +60,6 @@ h2 {
   font-weight: 500;
   font-size: 1.875rem;
   color: hsl(0deg, 0%, 15%);
-  margin-top: 2.188rem;
 }
 @media only screen and (max-width: 480px) {
   .info-nw {
@@ -74,7 +73,7 @@ h2 {
   font-weight: 600;
   font-size: 5.313rem;
   color: hsl(0deg, 0%, 15%);
-  margin-top: 7.375rem;
+  margin-top: 14rem;
   line-height: 6.563rem;
 }
 @media only screen and (max-width: 480px) {
@@ -133,7 +132,7 @@ h2 {
   font-weight: 600;
   font-size: 5rem;
   color: hsl(0deg, 0%, 15%);
-  margin-top: 9.875rem;
+  margin-top: 10.875rem;
   line-height: 6.875rem;
 }
 @media only screen and (max-width: 480px) {
@@ -156,8 +155,8 @@ h2 {
   font-weight: 500;
   font-size: 1.75rem;
   color: hsl(180deg, 64%, 34%);
-  margin-top: 5.688rem;
-  margin-bottom: 0.438rem;
+  margin-top: 2.688rem;
+  margin-bottom: 3.438rem;
 }
 @media only screen and (max-width: 480px) {
   .register-f {
@@ -196,6 +195,58 @@ h2 {
   .link-f {
     font-size: 1.125rem;
   }
+}
+
+.title-card {
+  height: 42px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 1.313rem;
+  color: hsl(0deg, 0%, 15%);
+  line-height: 21px;
+  margin-bottom: 15px;
+}
+
+.categories-txt {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  color: hsl(180deg, 43%, 96%);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.txt-likes {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 1.125rem;
+  color: hsl(0deg, 0%, 15%);
+  margin-top: 12px;
+}
+
+.txt-description {
+  font-family: "Spectral", serif;
+  font-weight: 500;
+  font-size: 0.938rem;
+  color: hsl(0deg, 0%, 15%);
+  line-height: 23px;
+  text-align: justify;
+}
+
+.txt-menu {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 3.438rem;
+  color: hsl(0deg, 0%, 15%);
+  margin-top: 12px;
+}
+
+.txt-footer {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 1.563rem;
+  color: hsl(180deg, 43%, 96%);
 }
 
 .btn-nav {
@@ -358,14 +409,14 @@ h2 {
 .btn-show {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
-  font-size: 1.625rem;
+  font-size: 1.375rem;
   color: hsl(0deg, 0%, 15%);
-  width: 200px;
-  height: 55px;
-  border: solid 4px hsl(0deg, 0%, 15%);
-  border-radius: 22px;
+  border: none;
   background: transparent;
-  margin-top: 17px;
+  margin-top: 1.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 @media only screen and (max-width: 480px) {
   .btn-show {
@@ -379,14 +430,14 @@ h2 {
 .btn-show:hover {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
-  font-size: 1.625rem;
-  color: hsl(0deg, 0%, 15%);
-  width: 200px;
-  height: 55px;
-  border: solid 4px hsl(180deg, 43%, 96%);
-  border-radius: 22px;
+  font-size: 1.375rem;
+  color: hsl(180deg, 43%, 96%);
+  border: none;
   background: transparent;
-  margin-top: 17px;
+  margin-top: 1.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 @media only screen and (max-width: 480px) {
   .btn-show:hover {
@@ -401,9 +452,13 @@ h2 {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-size: 1.875rem;
-  color: hsl(20deg, 85%, 38%);
+  color: hsl(20deg, 85%, 38%) !important;
   border: none;
-  background: transparent;
+  background: hsla(180deg, 43%, 96%, 0.85);
+  width: 41.688rem;
+  height: 3.438rem;
+  border-radius: 0.938rem;
+  margin-top: 0.875rem;
 }
 @media only screen and (max-width: 480px) {
   .btn-newest {
@@ -415,9 +470,13 @@ h2 {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-size: 1.875rem;
-  color: hsl(0deg, 0%, 100%);
+  color: hsl(180deg, 64%, 34%) !important;
   border: none;
-  background: transparent;
+  background: hsla(180deg, 43%, 96%, 0.85);
+  width: 41.688rem;
+  height: 3.438rem;
+  border-radius: 0.938rem;
+  margin-top: 0.875rem;
 }
 @media only screen and (max-width: 480px) {
   .btn-newest:hover {
@@ -432,7 +491,7 @@ h2 {
   color: hsl(180deg, 64%, 34%);
   border: none;
   background: transparent;
-  padding-top: 56px;
+  padding-top: 6.938rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -451,8 +510,8 @@ h2 {
   font-weight: 500;
   font-size: 1.75rem;
   color: hsl(0deg, 0%, 15%);
-  width: 136px;
-  height: 46px;
+  width: 155px;
+  height: 50px;
   border: solid 3px hsl(180deg, 64%, 34%);
   border-radius: 25px;
   margin-left: 15px;
@@ -470,8 +529,8 @@ h2 {
   font-weight: 500;
   font-size: 1.75rem;
   color: hsl(180deg, 43%, 96%);
-  width: 136px;
-  height: 46px;
+  width: 155px;
+  height: 50px;
   border: solid 3px hsl(180deg, 64%, 34%);
   border-radius: 25px;
   margin-left: 15px;
@@ -530,7 +589,7 @@ body {
 
 .navbar-h {
   background-color: hsl(20deg, 85%, 38%);
-  height: 5rem;
+  height: 5.938rem;
   padding-top: 0;
 }
 @media only screen and (max-width: 480px) {
@@ -588,6 +647,7 @@ body {
   width: 3.438rem;
   border-radius: 1.75rem;
   margin-bottom: 0.5rem;
+  margin-left: -0.313rem;
 }
 @media only screen and (max-width: 480px) {
   .user-icon {
@@ -671,7 +731,7 @@ body {
   width: 100%;
   height: 28.75rem;
   background: hsl(35deg, 100%, 64%);
-  margin-top: 27.438rem;
+  margin-top: 26.5rem;
 }
 @media only screen and (max-width: 480px) {
   .orange-bg {
@@ -694,7 +754,7 @@ body {
   border-top-left-radius: 26.25rem;
   border-bottom-left-radius: 26.25rem;
   margin-left: 43.28%;
-  margin-top: 2.75rem;
+  margin-top: 1.813rem;
 }
 @media only screen and (max-width: 480px) {
   .border-image {
@@ -715,6 +775,8 @@ body {
   border-bottom-left-radius: 26.25rem;
   margin-left: 2.563rem;
   margin-top: 2.563rem;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media only screen and (max-width: 480px) {
   .nw-image {
@@ -730,6 +792,7 @@ body {
 .icon-click {
   width: 2.313rem;
   height: 2.313rem;
+  color: hsl(0deg, 0%, 15%);
 }
 @media only screen and (max-width: 480px) {
   .icon-click {
@@ -742,13 +805,15 @@ body {
   gap: 2.438rem;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-top: 3.875rem !important;
+  margin-top: 4.938rem !important;
 }
 
 .card-top {
   width: 19.438rem;
-  height: 25rem;
+  height: 29rem;
   background: hsl(35deg, 100%, 64%);
+  border-radius: 2.188rem;
+  overflow: hidden;
 }
 @media only screen and (max-width: 480px) {
   .card-top {
@@ -757,8 +822,73 @@ body {
   }
 }
 
+.card-pp {
+  width: 19.438rem;
+  height: 32.5rem;
+  background: hsl(35deg, 100%, 64%);
+  border-radius: 2.188rem;
+  overflow: hidden;
+}
+@media only screen and (max-width: 480px) {
+  .card-pp {
+    width: 0;
+    height: 0;
+  }
+}
+
+.img-card {
+  width: 100%;
+  height: 275px;
+  border-radius: 2.188rem 2.188rem 0 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.degraded {
+  width: 200%;
+  height: 200px;
+  margin-top: -45px;
+  margin-left: -45px;
+  background: hsl(35deg, 100%, 64%);
+  -webkit-filter: blur(18px);
+          filter: blur(18px);
+}
+
+.info-top {
+  width: 19.438rem;
+  height: 158px;
+  position: absolute;
+  margin-top: -151px;
+}
+
+.category-card {
+  width: 265px;
+  height: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  padding-top: 3px;
+  background: hsl(20deg, 85%, 38%);
+  margin-bottom: 10px;
+}
+
+.card-heart {
+  width: 23px;
+  height: 23px;
+  color: hsl(180deg, 64%, 34%);
+}
+
+.description-card {
+  width: 265px;
+  height: 92px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -12px;
+  margin-bottom: 10px;
+}
+
 .m-photos {
-  margin-top: 7.625rem;
+  margin-top: 10.375rem;
   margin-bottom: 5.25rem;
 }
 @media only screen and (max-width: 480px) {
@@ -773,6 +903,8 @@ body {
   width: 54rem;
   height: 29rem;
   border-radius: 2.188rem 0 0 2.188rem;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media only screen and (max-width: 480px) {
   .img-left {
@@ -787,6 +919,8 @@ body {
   width: 54rem;
   height: 29rem;
   border-radius: 0 2.188rem 2.188rem 0;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media only screen and (max-width: 480px) {
   .img-right {
@@ -843,12 +977,20 @@ body {
   color: hsl(35deg, 100%, 64%);
 }
 
+.icon-show {
+  margin-left: 0.625rem !important;
+}
+
+.icon-show:hover {
+  color: hsl(180deg, 43%, 96%) !important;
+}
+
 .link-more {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 1.625rem;
   color: hsl(180deg, 64%, 34%);
-  padding-top: 3.5rem;
+  padding-top: 6.938rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -866,22 +1008,10 @@ body {
   }
 }
 
-.card-pp {
-  width: 19.438rem;
-  height: 30rem;
-  background: hsl(35deg, 100%, 64%);
-}
-@media only screen and (max-width: 480px) {
-  .card-pp {
-    width: 0;
-    height: 0;
-  }
-}
-
 .img-cf {
   width: 58.654rem;
   height: 42.817rem;
-  margin-top: 2.875rem;
+  margin-top: 3.875rem;
   position: absolute;
   margin-left: 49.313rem;
 }
@@ -915,7 +1045,7 @@ body {
 }
 
 .conf-f {
-  gap: 3.875rem;
+  gap: 2.188rem;
   margin-top: 3.875rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -948,7 +1078,7 @@ body {
 }
 
 .icons-rs {
-  gap: 3.875rem;
+  gap: 2.188rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -984,4 +1114,22 @@ body {
     -webkit-transform: translateY(-10px);
             transform: translateY(-10px);
   }
+}
+.cards-recipes {
+  gap: 2.438rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 1.438rem !important;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer-icons {
+  margin-right: 2.188rem;
+}
+
+.m-footer {
+  margin-top: 35px;
+  margin-bottom: 19px;
 }

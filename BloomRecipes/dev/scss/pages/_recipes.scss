@@ -1,0 +1,19 @@
+@use '../abstracts/vars';
+@use '../abstracts/mixins';
+@use '../abstracts/media-queries';
+
+.cards-recipes{
+    gap: 2.438rem;
+    flex-wrap: wrap;
+    margin-top: 1.438rem !important;
+    justify-content: center;
+}
+
+.footer-icons{
+    margin-right: 2.188rem;
+}
+
+.m-footer{
+    margin-top: 35px;
+    margin-bottom: 19px;
+}

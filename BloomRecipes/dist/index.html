@@ -18,6 +18,26 @@
 </head>
 <body>
     <div>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h3 class="modal-title fs-5" id="exampleModalLabel">Modal title</h3>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  ...
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        <!-- Modal -->
+
         <!-- Navbar -->
 
         <nav class="navbar navbar-h">
@@ -32,7 +52,7 @@
                     <button class="btn-nav">Home</button>
                     <button class="btn-nav">Menu</button>
                     <button class="btn-nav">Gallery</button>
-                    <button class="btn-nav">Favorites</button>
+                    <button type="button" class="btn-nav" data-bs-toggle="modal" data-bs-target="#exampleModal">Favorites</button>
                     <button class="btn-nav">About Us</button>
                 </section>
 
@@ -70,11 +90,13 @@
             <section>
                 <p class="description-p">Discover delicious and healthy recipes on Bloom Recipes. From breakfast to dinner, desserts, and more, we have something for every taste and occasion. Cooking with us is easy and enjoyable. Join now!</p>
 
-                <button class="btn-show">Show more</button>
-            </section>
-            
-            <section class="info-nw">
-                <p>About our latest recipes <button class="btn-newest p-0">here</button> <svg xmlns="http://www.w3.org/2000/svg" class="icon-click" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M3 12l3 0"></path><path d="M12 3l0 3"></path><path d="M7.8 7.8l-2.2 -2.2"></path><path d="M16.2 7.8l2.2 -2.2"></path><path d="M7.8 16.2l-2.2 2.2"></path><path d="M12 12l9 3l-4 2l-2 4l-3 -9"></path></svg></p>
+                <section>
+                    <button class="btn-newest p-0"><span class="info-nw">About our latest recipes</span> here <span><svg xmlns="http://www.w3.org/2000/svg" class="icon-click" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M3 12l3 0"></path><path d="M12 3l0 3"></path><path d="M7.8 7.8l-2.2 -2.2"></path><path d="M16.2 7.8l2.2 -2.2"></path><path d="M7.8 16.2l-2.2 2.2"></path><path d="M12 12l9 3l-4 2l-2 4l-3 -9"></path></svg></span></button>
+                </section>
+
+                <button class="btn-show d-flex p-0">Show more <span class="material-symbols-outlined icon-more icon-show">
+                    double_arrow
+                    </span></button>
             </section>
 
         </div>
@@ -92,29 +114,84 @@
 
             <div class="d-flex cards-pp">
                 <div class="col">
-                    <div class="card-top">
-                    
-                    </div>
+                    <a href="#">
+                        <div class="card-top">
+                            <img src="./img/chocolate.jpg" class="img-card" alt="chocolate">
+                            <div class="degraded"></div>
+                            <div class="info-top">
+                                <p class="title-card text-center">Chocolate and Walnut Brownies</p>
+                                <p class="category-card text-center categories-txt">Desserts</p>
+                                <p class="category-card text-center categories-txt">Intermediate</p>
+                                <p class="txt-likes text-center"><span><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-heart-fill card-heart" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                                  </svg></span> 225</p>
+                            </div>
+                        </div>
+                    </a>
                 </div>
                 <div class="col">
-                    <div class="card-top">
-                    
-                    </div>
+                    <a href="#">
+                        <div class="card-top">
+                            <img src="./img/chocolate.jpg" class="img-card" alt="chocolate">
+                            <div class="degraded"></div>
+                            <div class="info-top">
+                                <p class="title-card text-center">Creamy Tomato Soup</p>
+                                <p class="category-card text-center categories-txt">Soups</p>
+                                <p class="category-card text-center categories-txt">Easy</p>
+                                <p class="txt-likes text-center"><span><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-heart-fill card-heart" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                                  </svg></span> 225</p>
+                            </div>
+                        </div>
+                    </a>
                 </div>
                 <div class="col">
-                    <div class="card-top">
-                    
-                    </div>
+                    <a href="#">
+                        <div class="card-top">
+                            <img src="./img/chocolate.jpg" class="img-card" alt="chocolate">
+                            <div class="degraded"></div>
+                            <div class="info-top">
+                                <p class="title-card text-center">Chocolate and Walnut Brownies</p>
+                                <p class="category-card text-center categories-txt">Desserts</p>
+                                <p class="category-card text-center categories-txt">Intermediate</p>
+                                <p class="txt-likes text-center"><span><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-heart-fill card-heart" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                                  </svg></span> 225</p>
+                            </div>
+                        </div>
+                    </a>
                 </div>
                 <div class="col">
-                    <div class="card-top">
-                    
-                    </div>
+                    <a href="#">
+                        <div class="card-top">
+                            <img src="./img/chocolate.jpg" class="img-card" alt="chocolate">
+                            <div class="degraded"></div>
+                            <div class="info-top">
+                                <p class="title-card text-center">Creamy Tomato Soup</p>
+                                <p class="category-card text-center categories-txt">Soups</p>
+                                <p class="category-card text-center categories-txt">Easy</p>
+                                <p class="txt-likes text-center"><span><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-heart-fill card-heart" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                                  </svg></span> 225</p>
+                            </div>
+                        </div>
+                    </a>
                 </div>
                 <div class="col">
-                    <div class="card-top">
-                    
-                    </div>
+                    <a href="#">
+                        <div class="card-top">
+                            <img src="./img/chocolate.jpg" class="img-card" alt="chocolate">
+                            <div class="degraded"></div>
+                            <div class="info-top">
+                                <p class="title-card text-center">Chocolate and Walnut Brownies</p>
+                                <p class="category-card text-center categories-txt">Desserts</p>
+                                <p class="category-card text-center categories-txt">Intermediate</p>
+                                <p class="txt-likes text-center"><span><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-heart-fill card-heart" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                                  </svg></span> 225</p>
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
 
@@ -138,29 +215,74 @@
 
             <div class="d-flex cards-pp">
                 <div class="col">
-                    <div class="card-pp">
-                    
-                    </div>
+                    <a href="#">
+                        <div class="card-pp">
+                            <img src="./img/chocolate.jpg" class="img-card" alt="chocolate">
+                            <div class="degraded"></div>
+                            <div class="info-top">
+                                <p class="title-card text-center">Creamy Tomato Soup</p>
+                                <p class="description-card txt-description">This creamy tomato soup is the ultimate comfort food on a chilly day. It's made with simple ingredients, like canned tomatoes, onion, and garlic...</p>
+                                <p class="category-card text-center categories-txt">Desserts</p>
+                                <p class="category-card text-center categories-txt">Intermediate</p>
+                            </div>
+                        </div>
+                    </a>
                 </div>
                 <div class="col">
-                    <div class="card-pp">
-                    
-                    </div>
+                    <a href="#">
+                        <div class="card-pp">
+                            <img src="./img/chocolate.jpg" class="img-card" alt="chocolate">
+                            <div class="degraded"></div>
+                            <div class="info-top">
+                                <p class="title-card text-center">Chocolate and Walnut Brownies</p>
+                                <p class="description-card txt-description">These chocolate and walnut brownies are the perfect dessert for any occasion. They're rich and decadent, with an intense chocolate flavor and crunchy...</p>
+                                <p class="category-card text-center categories-txt">Desserts</p>
+                                <p class="category-card text-center categories-txt">Intermediate</p>
+                            </div>
+                        </div>
+                    </a>
                 </div>
                 <div class="col">
-                    <div class="card-pp">
-                    
-                    </div>
+                    <a href="#">
+                        <div class="card-pp">
+                            <img src="./img/chocolate.jpg" class="img-card" alt="chocolate">
+                            <div class="degraded"></div>
+                            <div class="info-top">
+                                <p class="title-card text-center">Chocolate and Walnut Brownies</p>
+                                <p class="description-card txt-description">These chocolate and walnut brownies are the perfect dessert for any occasion. They're rich and decadent, with an intense chocolate flavor and crunchy...</p>
+                                <p class="category-card text-center categories-txt">Desserts</p>
+                                <p class="category-card text-center categories-txt">Intermediate</p>
+                            </div>
+                        </div>
+                    </a>
                 </div>
                 <div class="col">
-                    <div class="card-pp">
-                    
-                    </div>
+                    <a href="#">
+                        <div class="card-pp">
+                            <img src="./img/chocolate.jpg" class="img-card" alt="chocolate">
+                            <div class="degraded"></div>
+                            <div class="info-top">
+                                <p class="title-card text-center">Chocolate and Walnut Brownies</p>
+                                <p class="description-card txt-description">These chocolate and walnut brownies are the perfect dessert for any occasion. They're rich and decadent, with an intense chocolate flavor and crunchy...</p>
+                                <p class="category-card text-center categories-txt">Desserts</p>
+                                <p class="category-card text-center categories-txt">Intermediate</p>
+                            </div>
+                        </div>
+                    </a>
                 </div>
                 <div class="col">
-                    <div class="card-pp">
-                    
-                    </div>
+                    <a href="#">
+                        <div class="card-pp">
+                            <img src="./img/chocolate.jpg" class="img-card" alt="chocolate">
+                            <div class="degraded"></div>
+                            <div class="info-top">
+                                <p class="title-card text-center">Chocolate and Walnut Brownies</p>
+                                <p class="description-card txt-description">These chocolate and walnut brownies are the perfect dessert for any occasion. They're rich and decadent, with an intense chocolate flavor and crunchy...</p>
+                                <p class="category-card text-center categories-txt">Desserts</p>
+                                <p class="category-card text-center categories-txt">Intermediate</p>
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
 

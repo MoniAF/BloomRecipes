@@ -7,7 +7,7 @@
 h1{
     @include mixins.set-font(vars.$ff-primary, vars.$fw-sbold, vars.$fs-93);
     line-height: 6.563rem;
-    margin-top: 3.813rem;
+    margin-top: 2.875rem;
     margin-right: 56.938rem;
     @include media-queries.respond-to(media-queries.$phone){
         @include mixins.set-font(vars.$ff-primary, vars.$fw-sbold, vars.$fs-25);
@@ -20,7 +20,7 @@ h1{
 
 h2{
     @include mixins.set-font(vars.$ff-primary, vars.$fw-sbold, vars.$fs-65, vars.$clr-red);
-    margin-top: 1.5rem;
+    margin-top: 4.875rem;
     @include media-queries.respond-to(media-queries.$phone){
         width: 100%;
         font-size: 2.5rem;
@@ -45,7 +45,6 @@ h2{
 
 .info-nw{
     @include mixins.set-font(vars.$ff-primary, vars.$fw-med, vars.$fs-30);
-    margin-top: 2.188rem;
     @include media-queries.respond-to(media-queries.$phone){
         font-size: 1.25rem;
         text-align: center;
@@ -54,7 +53,7 @@ h2{
 
 .phrase-m{
     @include mixins.set-font(vars.$ff-primary, vars.$fw-sbold, vars.$fs-85);
-    margin-top: 7.375rem;
+    margin-top: 14rem;
     line-height: 6.563rem;
     @include media-queries.respond-to(media-queries.$phone){
         margin-top: 0;
@@ -92,7 +91,7 @@ h2{
 
 .phrase-pf{
     @include mixins.set-font(vars.$ff-primary, vars.$fw-sbold, vars.$fs-80);
-    margin-top: 9.875rem;
+    margin-top: 10.875rem;
     line-height: 6.875rem;
     @include media-queries.respond-to(media-queries.$phone){
         @include mixins.set-font(vars.$ff-primary, vars.$fw-sbold, vars.$fs-30);
@@ -107,8 +106,8 @@ h2{
 .register-f{
     height: 2.875rem;
     @include mixins.set-font(vars.$ff-primary, vars.$fw-med, vars.$fs-28, vars.$clr-cian);
-    margin-top: 5.688rem;
-    margin-bottom: 0.438rem;
+    margin-top: 2.688rem;
+    margin-bottom: 3.438rem;
     @include media-queries.respond-to(media-queries.$phone){
         font-size: 1.375rem;
         justify-content: center;
@@ -134,4 +133,38 @@ h2{
         font-size: 1.125rem;
     }
 }
+
+.title-card{
+    height: 42px;
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-bold, vars.$fs-21);
+    line-height: 21px;
+    margin-bottom: 15px;
+}
+
+.categories-txt{
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-med, vars.$fs-16, vars.$clr-white-blue);
+    justify-content: center;
+}
+
+.txt-likes{
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-med, vars.$fs-18);
+    margin-top: 12px;
+}
+
+.txt-description{
+    @include mixins.set-font(vars.$ff-secondary, vars.$fw-med, vars.$fs-15);
+    line-height: 23px;
+    text-align: justify;
+}
 //principal
+
+//recipes
+.txt-menu{
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-sbold, vars.$fs-55);
+    margin-top: 12px;
+}
+.txt-footer{
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-med, vars.$fs-25, vars.$clr-white-blue);
+}
+
+//recipes

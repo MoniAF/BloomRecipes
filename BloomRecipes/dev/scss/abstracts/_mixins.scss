@@ -67,36 +67,37 @@
     }
 }
 
-@mixin button-show($bg, $borderc, $color:vars.$clr-black){
+@mixin button-newest($bg, $color){
+    font-family: vars.$ff-primary;
+    font-weight: vars.$fw-sbold;
+    font-size: vars.$fs-30;
+    color: $color !important;
+    border: none;
+    background: $bg;
+    width: 41.688rem;
+    height: 3.438rem;
+    border-radius: 0.938rem;
+    margin-top: 0.875rem;
+    @include media-queries.respond-to(media-queries.$phone){
+        font-size: vars.$fs-20;
+    }
+}
+
+@mixin button-show($bg, $color:vars.$clr-black){
     font-family: vars.$ff-primary;
     font-weight: vars.$fw-med;
-    font-size: vars.$fs-26;
+    font-size: vars.$fs-22;
     color: $color;
-    width: 200px;
-    height: 55px;
-    border: solid 4px $borderc;
-    border-radius: 22px;
+    border: none;
     background: $bg;
-    margin-top: 17px;
+    margin-top: 1.5rem;
+    align-items: center;
 
     @include media-queries.respond-to(media-queries.$phone){
         width: 100%;
         height: 35px;
         font-size: 18px;
         margin-top: 10px;
-    }
-}
-
-@mixin button-newest($bg, $color){
-    font-family: vars.$ff-primary;
-    font-weight: vars.$fw-sbold;
-    font-size: vars.$fs-30;
-    color: $color;
-    border: none;
-    background: $bg;
-
-    @include media-queries.respond-to(media-queries.$phone){
-        font-size: vars.$fs-20;
     }
 }
 
@@ -107,7 +108,7 @@
     color: $color;
     border: none;
     background: $bg;
-    padding-top: 56px;
+    padding-top: 6.938rem;
     justify-content: center;
     margin-left: 57%;
 
@@ -123,8 +124,8 @@
     font-weight: vars.$fw-med;
     font-size: vars.$fs-28;
     color: $color;
-    width: 136px;
-    height: 46px;
+    width: 155px;
+    height: 50px;
     border: solid 3px $borderc;
     border-radius: 25px;
     margin-left: 15px;

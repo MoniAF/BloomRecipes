@@ -48,11 +48,11 @@
 }
 
 .btn-newest{
-    @include mixins.button-newest(transparent, vars.$clr-red);
+    @include mixins.button-newest(vars.$clr-white-blue85, vars.$clr-red);
 }
 
 .btn-newest:hover{
-    @include mixins.button-newest(transparent, vars.$clr-white);
+    @include mixins.button-newest(vars.$clr-white-blue85, vars.$clr-cian);
 }
 
 .btn-more{
