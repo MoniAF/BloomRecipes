@@ -114,3 +114,11 @@
 .btn-sign:hover{
     @include mixins.button-sign(vars.$clr-cian, vars.$clr-cian, vars.$clr-white-blue);
 }
+
+.btn-out{
+    @include mixins.button-out(vars.$clr-cian, vars.$clr-white-blue);
+}
+
+.btn-out:hover{
+    @include mixins.button-out(vars.$clr-red, vars.$clr-white-blue);
+}

@@ -465,6 +465,25 @@ h4 {
   color: hsl(0deg, 0%, 15%);
 }
 
+.title-iuser {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: hsl(0deg, 0%, 15%);
+  margin-left: 18px;
+  margin-top: 3px;
+  margin-bottom: 2px;
+}
+
+.txt-iuser {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 1.125rem;
+  color: hsl(180deg, 64%, 34%);
+  margin-left: 18px;
+  margin-bottom: -2px;
+}
+
 .btn-nav {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
@@ -599,7 +618,7 @@ h4 {
   font-size: 1.25rem;
   color: hsl(0deg, 0%, 100%);
   width: 8.125rem;
-  margin-top: 1.5rem;
+  margin-top: 18px;
   border: none;
   background: transparent;
   text-align: center;
@@ -617,7 +636,7 @@ h4 {
   font-size: 1.25rem;
   color: hsl(35deg, 100%, 64%);
   width: 8.125rem;
-  margin-top: 1.5rem;
+  margin-top: 18px;
   border: none;
   background: transparent;
   text-align: center;
@@ -928,6 +947,46 @@ h4 {
   background: hsl(180deg, 64%, 34%);
 }
 
+.btn-out {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  color: hsl(180deg, 43%, 96%);
+  width: 120px;
+  height: 34px;
+  border-radius: 12px;
+  border: none;
+  background: hsl(180deg, 64%, 34%);
+  gap: 6px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 12px;
+}
+
+.btn-out:hover {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  color: hsl(180deg, 43%, 96%);
+  width: 120px;
+  height: 34px;
+  border-radius: 12px;
+  border: none;
+  background: hsl(20deg, 85%, 38%);
+  gap: 6px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 12px;
+}
+
 body {
   background: hsl(180deg, 43%, 96%);
   min-height: 100vh;
@@ -976,6 +1035,18 @@ body {
   margin-top: 31px !important;
   width: 1728px;
   height: 300px;
+  border: none;
+  border-radius: 0 0 25px 25px;
+  background: hsl(180deg, 43%, 96%);
+  -webkit-box-shadow: 0px 4px 6px 2px hsla(0deg, 0%, 0%, 0.25);
+          box-shadow: 0px 4px 6px 2px hsla(0deg, 0%, 0%, 0.25);
+}
+
+.custom-user {
+  margin-left: -170px;
+  margin-top: 20px !important;
+  width: 372px;
+  height: 192px;
   border: none;
   border-radius: 0 0 25px 25px;
   background: hsl(180deg, 43%, 96%);
@@ -1081,7 +1152,7 @@ body {
 .user-icon {
   width: 3.438rem;
   border-radius: 1.75rem;
-  margin-bottom: 0.5rem;
+  margin-top: 7px;
   margin-left: -0.313rem;
 }
 

@@ -48,7 +48,7 @@
     font-size: vars.$fs-20;
     color: $color;
     width: 8.125rem;
-    margin-top: 1.5rem;
+    margin-top: 18px;
     border: none;
     background: $bg;
     text-align: center;
@@ -196,5 +196,21 @@
     border-radius: 26px;
     margin-left: 15px;
     background: $bg;
+}
+
+@mixin button-out($bg, $color:vars.$clr-black){
+    font-family: vars.$ff-primary;
+    font-weight: vars.$fw-med;
+    font-size: vars.$fs-16;
+    color: $color;
+    width: 120px;
+    height: 34px;
+    border-radius: 12px;
+    border: none;
+    background: $bg;
+    gap: 6px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 12px;
 }
 

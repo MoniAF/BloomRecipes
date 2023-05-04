@@ -24,7 +24,44 @@
             <div class="modal-dialog modal-dialog-centered custom-modal modal-dialog-scrollable">
               <div class="modal-content modal-design">
                 <div class="modal-header header-mc">
-                  <h5 class="modal-title" id="favoritesModalLabel">Trending recipes</h5>
+                  <h5 class="modal-title" id="favoritesModalLabel">Favorites</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+
+                    <section class="d-flex cards-modal justify-content-center">
+                        <div v-for="(element, index) in showFav" class="d-flex">
+                            <a href="#">
+                                <div class="card-top">
+                                    <img v-bind:src="element.image" class="img-card" alt="chocolate">
+                                    <div class="degraded"></div>
+                                    <div class="info-top">
+                                        <p class="title-card text-center">{{ element.name }}</p>
+                                        <p class="category-card text-center categories-txt">{{ element.category }}</p>
+                                        <p class="category-card text-center categories-txt">{{ element.difficulty }}</p>
+                                        <p class="txt-likes text-center"><span><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-heart-fill card-heart" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                                          </svg></span> {{ element.likes }}</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </section>
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn-cmodal" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal fade" id="trendingModal" tabindex="-1" role="dialog" aria-labelledby="trendingModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered custom-modal modal-dialog-scrollable">
+              <div class="modal-content modal-design">
+                <div class="modal-header header-mc">
+                  <h5 class="modal-title" id="trendingModalLabel">Trending recipes</h5>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -201,8 +238,22 @@
 
                 </form>
 
-                <section class="user-r">
-                    <button class="btn-user">Sign Up</button>
+                <section class="user-r d-flex">
+                    <div class="dropdown-center">
+                        <button class="btn-user" type="button" data-bs-toggle="dropdown" aria-expanded="false">Sign Up</button>
+                        <ul class="dropdown-menu custom-user">
+                            <p class="title-iuser">E-mail:</p>
+                            <p class="txt-iuser">artaviafloresmonica@gmail.com</p>
+                            <p class="title-iuser">Full name:</p>
+                            <p class="txt-iuser">Mónica Artavia Flores</p>
+                            <section class="d-flex justify-content-center">
+                                <button class="btn-out d-flex">Log out <span class="material-symbols-outlined">
+                                    logout
+                                    </span></button>
+                            </section>
+                        </ul>
+                    </div>
+                    <!--<button class="btn-user">Sign Up</button>-->
                     <img src="./img/icon-admin.jpg" class="user-icon" alt="icon-admin">
                 </section>
             </div>
@@ -245,7 +296,7 @@
             <div class="bg-w"></div>
             <section class="d-fb">
                 <h2>Trending recipes</h2>
-                <button class="btn-more d-flex">See more <span class="material-symbols-outlined icon-more">
+                <button class="btn-more d-flex" type="button" data-bs-toggle="modal" data-bs-target="#trendingModal">See more <span class="material-symbols-outlined icon-more">
                     double_arrow
                     </span></button>
             </section>

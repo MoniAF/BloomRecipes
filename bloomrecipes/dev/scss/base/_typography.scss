@@ -310,3 +310,15 @@ h4{
     @include mixins.set-font(vars.$ff-secondary, vars.$fw-med, vars.$fs-15);
 }
 
+.title-iuser{
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-sbold, vars.$fs-20);
+    margin-left: 18px;
+    margin-top: 3px;
+    margin-bottom: 2px;
+}
+
+.txt-iuser{
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-med, vars.$fs-18, vars.$clr-cian);
+    margin-left: 18px;
+    margin-bottom: -2px;
+}
