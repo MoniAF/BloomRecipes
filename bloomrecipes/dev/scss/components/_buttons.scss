@@ -97,3 +97,13 @@
     @include mixins.button-close(vars.$clr-cian, vars.$clr-white-blue);
 }
 //modal
+
+
+//log
+.btn-sign{
+    @include mixins.button-sign(transparent, vars.$clr-cian);
+}
+
+.btn-sign:hover{
+    @include mixins.button-sign(vars.$clr-cian, vars.$clr-cian, vars.$clr-white-blue);
+}

@@ -185,3 +185,16 @@
     margin-bottom: 36px;
 }
 
+@mixin button-sign($bg, $borderc, $color:vars.$clr-black){
+    font-family: vars.$ff-primary;
+    font-weight: vars.$fw-med;
+    font-size: vars.$fs-15;
+    color: $color;
+    width: 83px;
+    height: 28px;
+    border: solid 2px $borderc;
+    border-radius: 26px;
+    margin-left: 15px;
+    background: $bg;
+}
+

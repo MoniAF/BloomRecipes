@@ -261,3 +261,44 @@ h4{
     margin-bottom: 44px;
 }
 
+
+//log
+
+.bu-icon{
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-med, vars.$fs-89);
+    line-height: 48px;
+    margin-top: 58px;
+    @include media-queries.respond-to(media-queries.$phone){
+        @include mixins.set-font(vars.$ff-primary, vars.$fw-med, vars.$fs-42);
+        margin-top: 1.188rem;
+        line-height: 1.563rem;
+    }
+}
+
+.ru-icon{
+    @include mixins.set-font(vars.$ff-secondary, vars.$fw-sbold, vars.$fs-42);
+    margin-bottom: 40px;
+    @include media-queries.respond-to(media-queries.$phone){
+        @include mixins.set-font(vars.$ff-secondary, vars.$fw-sbold, vars.$fs-20, vars.$clr-white);
+    }
+}
+
+.title-user{
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-sbold, vars.$fs-37);
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding-top: 25px;
+    margin-bottom: 34px;
+}
+
+.txt-input{
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-med, vars.$fs-18, vars.$clr-black);
+}
+
+.txt-question{
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-med, vars.$fs-15, vars.$clr-cian);
+    padding-top: 4px;
+    text-decoration: none;
+}
+
