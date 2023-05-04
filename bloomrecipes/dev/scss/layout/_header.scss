@@ -10,6 +10,10 @@
         display: block;
         height: 45rem;
     }
+
+    @include media-queries.respond-to(media-queries.$large-desktop){
+        height: 72px;
+    }
 }
 
 .pos-icon{
@@ -19,17 +23,28 @@
         line-height: 18px;
         margin-top: 60px;
         margin-left: auto;
-        margin-right: auto
+        margin-right: auto;
+    }
+
+    @include media-queries.respond-to(media-queries.$large-desktop){
+        line-height: 1rem;
     }
 }
 
 .b-icon{
     @include mixins.set-font(vars.$ff-primary, vars.$fw-med, vars.$fs-42, vars.$clr-white);
     text-decoration: none;
+    @include media-queries.respond-to(media-queries.$large-desktop){
+        font-size: 32px;
+    }
 }
 
 .r-icon{
     @include mixins.set-font(vars.$ff-secondary, vars.$fw-sbold, vars.$fs-20, vars.$clr-white);
+    @include media-queries.respond-to(media-queries.$large-desktop){
+        font-size: 19px;
+        font-weight: vars.$fw-reg;
+    }
 }
 
 .user-icon{
@@ -37,11 +52,21 @@
     border-radius: 1.75rem;
     margin-top: 7px;
     margin-left: -0.313rem;
+    @include media-queries.respond-to(media-queries.$phone){
+        height: 3.438rem;
+    }
+    @include media-queries.respond-to(media-queries.$large-desktop){
+        width: 38px;
+        height: 38px;
+    }
 }
 
 .user-r{
     @include media-queries.respond-to(media-queries.$phone){
-        margin-left: 32%;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        margin-top: 40px;
     }
 }
 
@@ -52,8 +77,14 @@
 
     @include media-queries.respond-to(media-queries.$phone){
         display: block;
-        margin-left: 0;
+        margin-left: auto;
+        margin-right: auto;
         gap: 0;
+    }
+
+    @include media-queries.respond-to(media-queries.$large-desktop){
+        margin-left: 165px;
+        gap: 25px;
     }
 }
 
@@ -64,6 +95,10 @@
         width: 100%;
         margin-left: 0;
         margin-top: 28px;
+    }
+
+    @include media-queries.respond-to(media-queries.$large-desktop){
+        margin-left: 25px;
     }
 }
 
@@ -82,6 +117,11 @@
         width: 74.57%;
         height: 34px;
         font-size: 16px;
+    }
+    @include media-queries.respond-to(media-queries.$large-desktop){
+        width: 190px;
+        height: 28px;
+        @include mixins.set-font(vars.$ff-primary, vars.$fw-reg, vars.$fs-15);
     }
 }
 

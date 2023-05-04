@@ -16,6 +16,13 @@ h1{
         margin-right: 0;
         text-align: center;
     }
+
+    @include media-queries.respond-to(media-queries.$large-desktop){
+        font-size: 67px;
+        margin-right: 39.938rem;
+        line-height: 4.563rem;
+        margin-top: 2rem;
+    }
 }
 
 h2{
@@ -56,9 +63,8 @@ h2{
     margin-top: 14rem;
     line-height: 6.563rem;
     @include media-queries.respond-to(media-queries.$phone){
-        margin-top: 0;
+        margin-top: 95px;
         font-size: 2.188rem;
-        text-align: center;
         line-height: 2.875rem;
     }
 }
@@ -95,7 +101,7 @@ h2{
     line-height: 6.875rem;
     @include media-queries.respond-to(media-queries.$phone){
         @include mixins.set-font(vars.$ff-primary, vars.$fw-sbold, vars.$fs-30);
-        margin-top: 0;
+        margin-top: 95px;
         line-height: 2.5rem;
         text-align: center;
         margin-left: auto;
@@ -112,6 +118,7 @@ h2{
         font-size: 1.375rem;
         justify-content: center;
         margin-top: 1.25rem;
+        @include mixins.set-font(vars.$ff-primary, vars.$fw-med, vars.$fs-22, vars.$clr-cian);
     }
 }
 
@@ -139,6 +146,10 @@ h2{
     @include mixins.set-font(vars.$ff-primary, vars.$fw-bold, vars.$fs-21);
     line-height: 21px;
     margin-bottom: 15px;
+    @include media-queries.respond-to(media-queries.$phone){
+        margin-left: 5%;
+        margin-right: 5%;
+    }
 }
 
 .categories-txt{

@@ -33,6 +33,12 @@
         margin-left: 6%;
         position: relative;
     }
+
+    @include media-queries.respond-to(media-queries.$large-desktop){
+        width: 1222px;
+        margin-right: 5%;
+        margin-left: 5%;
+    }
 }
 
 .container-total{
