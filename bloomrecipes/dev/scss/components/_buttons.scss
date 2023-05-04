@@ -96,6 +96,13 @@
 .btn-cmodal:hover{
     @include mixins.button-close(vars.$clr-cian, vars.$clr-white-blue);
 }
+
+.btn-ok{
+    @include mixins.button-close(hsla(126, 93%, 32%, 1), vars.$clr-white-blue);
+}
+.btn-ok:hover{
+    @include mixins.button-close(vars.$clr-cian, vars.$clr-white-blue);
+}
 //modal
 
 

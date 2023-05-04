@@ -37,6 +37,11 @@
     color: vars.$clr-white-blue;
 }
 
+.icon-msg{
+    width: 50px;
+    color: hsla(126, 93%, 32%, 1);
+}
+
 .material-symbols-outlined {
   font-variation-settings:
   'FILL' 1,
@@ -59,4 +64,13 @@
 
 .m-input{
     margin-bottom: 24px;
+}
+
+.custom-msg{
+    width: 600px; 
+    height: 281px;
+}
+
+.border-msg{
+    border-radius: 50px;
 }

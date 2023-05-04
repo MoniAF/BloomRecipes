@@ -302,3 +302,11 @@ h4{
     text-decoration: none;
 }
 
+.txt-message{
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-med, vars.$fs-25);
+}
+
+.txt-msgxs{
+    @include mixins.set-font(vars.$ff-secondary, vars.$fw-med, vars.$fs-15);
+}
+
