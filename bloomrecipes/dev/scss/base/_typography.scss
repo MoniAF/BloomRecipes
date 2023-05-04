@@ -223,3 +223,41 @@ h2{
     margin-top: 5px;
 }
 
+
+
+
+//details
+
+.name-dt{
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-sbold, vars.$fs-65, vars.$clr-white-blue);
+    margin-top: 10px;
+}
+
+.details-text{
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-sbold, vars.$fs-26);
+}
+
+.details-title{
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-sbold, vars.$fs-26, vars.$clr-cian);
+    width: 324px;
+    height: 75px;
+    text-align: center;
+}
+
+h4{
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-sbold, vars.$fs-37, vars.$clr-cian);
+    width: 300px;
+    height: 53px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 36px;
+}
+
+.txt-recipes{
+    @include mixins.set-font(vars.$ff-secondary, vars.$fw-med, vars.$fs-22);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 44px;
+}
+

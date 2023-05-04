@@ -26,6 +26,9 @@ const app = Vue.createApp({
         },
         showOne(){
             return this.recipes.slice(0, 1);
+        },
+        showRelated(){
+            return this.recipes.slice(0, 3);
         }
     },
     methods: {

@@ -328,6 +328,62 @@ h2 {
   margin-top: 5px;
 }
 
+.name-dt {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 4.063rem;
+  color: hsl(180deg, 43%, 96%);
+  margin-top: 10px;
+}
+
+.details-text {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 1.625rem;
+  color: hsl(0deg, 0%, 15%);
+}
+
+.details-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 1.625rem;
+  color: hsl(180deg, 64%, 34%);
+  width: 324px;
+  height: 75px;
+  text-align: center;
+}
+
+h4 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 2.313rem;
+  color: hsl(180deg, 64%, 34%);
+  width: 300px;
+  height: 53px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 36px;
+}
+
+.txt-recipes {
+  font-family: "Spectral", serif;
+  font-weight: 500;
+  font-size: 1.375rem;
+  color: hsl(0deg, 0%, 15%);
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 44px;
+}
+
 .btn-nav {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
@@ -1384,4 +1440,37 @@ body {
 
 .m-null {
   margin-bottom: 592px;
+}
+
+.img-details {
+  width: 100%;
+  height: 782px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-top: 31px;
+  border-radius: 25px;
+}
+
+.details-name {
+  width: 90%;
+  height: 160px;
+  background: hsla(0deg, 0%, 15%, 0.5);
+  position: absolute;
+  margin-top: 342px;
+}
+
+.dt-gap {
+  gap: 139px;
+}
+
+.heart-dt {
+  width: 59px;
+  height: 59px;
+  color: hsl(180deg, 64%, 34%);
+  margin-right: 14px;
+}
+
+.m-details {
+  margin-top: 72px;
+  margin-bottom: 44px;
 }

@@ -1,0 +1,35 @@
+@use '../abstracts/vars';
+@use '../abstracts/mixins';
+@use '../abstracts/media-queries';
+
+.img-details{
+    width: 100%;
+    height: 782px;
+    object-fit: cover;
+    margin-top: 31px;
+    border-radius: 25px;
+}
+
+.details-name{
+    width: 90%;
+    height: 160px;
+    background: hsla(0, 0%, 15%, 0.50);
+    position: absolute;
+    margin-top: 342px;
+}
+
+.dt-gap{
+    gap: 139px;
+}
+
+.heart-dt{
+    width: 59px;
+    height: 59px;
+    color: vars.$clr-cian;
+    margin-right: 14px;
+}
+
+.m-details{
+    margin-top: 72px;
+    margin-bottom: 44px;
+}
