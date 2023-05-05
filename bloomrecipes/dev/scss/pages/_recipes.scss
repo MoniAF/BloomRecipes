@@ -7,6 +7,9 @@
     flex-wrap: wrap;
     margin-top: 1.438rem !important;
     justify-content: center;
+    @include media-queries.respond-to(media-queries.$large-desktop){
+        gap: 26px;
+    }
 }
 
 .footer-icons{

@@ -52,6 +52,12 @@ body{
         margin-left: -10%;
         width: 120%;
     }
+    @include media-queries.respond-to(media-queries.$large-desktop){
+        margin-left: -370px;
+        margin-top: 24px !important;
+        width: 1229px;
+        height: 209px;
+    }
 }
 
 .custom-user{
@@ -72,8 +78,15 @@ body{
 .menu-options{
     margin-left: 118px;
     margin-right: 118px;
+    @include media-queries.respond-to(media-queries.$large-desktop){
+        margin-left: 86px;
+        margin-right: 86px;
+    }
 }
 
 .menu-gap{
     gap: 51px;
+    @include media-queries.respond-to(media-queries.$large-desktop){
+        gap: 37px;
+    }
 }

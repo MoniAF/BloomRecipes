@@ -26,6 +26,11 @@
         margin-top: 1.438rem;
     }
 
+    @include media-queries.respond-to(media-queries.$tablet-portrait){
+        width: 100%;
+        margin-top: 1.438rem;
+    }
+
     @include media-queries.respond-to(media-queries.$large-desktop){
         font-size: vars.$fs-15;
     }
@@ -41,6 +46,11 @@
     background: $bg;
 
     @include media-queries.respond-to(media-queries.$phone){
+        width: 100%;
+        margin-top: 1.438rem;
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-portrait){
         width: 100%;
         margin-top: 1.438rem;
     }
@@ -62,6 +72,11 @@
     text-align: center;
 
     @include media-queries.respond-to(media-queries.$phone){
+        width: 115px;
+        margin-top: 3px;
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-portrait){
         width: 115px;
         margin-top: 3px;
     }
@@ -117,6 +132,13 @@
         margin-top: 0;
         margin-bottom: 40px;
     }
+    @include media-queries.respond-to(media-queries.$large-desktop){
+        font-size: 21px;
+        width: 30rem;
+        height: 39px;
+        border-radius: 11px;
+        margin-top: 4px;
+    }
 }
 
 @mixin button-show($bg, $color:vars.$clr-black){
@@ -136,6 +158,10 @@
         margin-right: auto;
         margin-top: 10px;
     }
+    @include media-queries.respond-to(media-queries.$large-desktop){
+        font-size: 16px;
+        margin-top: 14px;
+    }
 }
 
 @mixin button-more($bg, $color){
@@ -154,6 +180,12 @@
         padding-top: 0;
         margin: auto;
     }
+
+    @include media-queries.respond-to(media-queries.$large-desktop){
+        font-size: 20px;
+        padding-top: 123px;
+        margin-left: 55%;
+    }
 }
 
 @mixin button-register($bg, $borderc, $color:vars.$clr-black){
@@ -171,6 +203,12 @@
     @include media-queries.respond-to(media-queries.$phone){
         font-size: 22px;
         margin-left: 5px;
+    }
+
+    @include media-queries.respond-to(media-queries.$large-desktop){
+        font-size: 20px;
+        width: 109px;
+        height: 39px;
     }
 }
 
@@ -202,6 +240,15 @@
     border-radius: 15px;
     text-decoration: none;
     margin-bottom: 36px;
+    @include media-queries.respond-to(media-queries.$large-desktop){
+        font-size: 15px;
+        width: 145px;
+        height: 32px;
+        padding-top: 4px;
+        border-radius: 10px;
+        margin-bottom: 35px;
+        margin-top: -14px;
+    }
 }
 
 @mixin button-sign($bg, $borderc, $color:vars.$clr-black){

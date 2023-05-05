@@ -9,6 +9,14 @@
     @include media-queries.respond-to(media-queries.$phone){
         height: 14.688rem;
     }
+
+    @include media-queries.respond-to(media-queries.$tablet-portrait){
+        height: 14.688rem;
+    }
+    
+    @include media-queries.respond-to(media-queries.$large-desktop){
+        height: 6.063rem;
+    }
 }
 
 .f-search{
@@ -25,18 +33,35 @@
         margin-top: 1.75rem;
         padding-top: 1.688rem;
     }
+    @include media-queries.respond-to(media-queries.$tablet-portrait){
+        margin-left: 5%;
+        margin-top: 1.75rem;
+        padding-top: 1.688rem;
+    }
+    
+    @include media-queries.respond-to(media-queries.$large-desktop){
+        margin-top: 1.875rem;
+        gap: 21px;
+    }
 }
 
 .icons-footer{
     width: 2.438rem;
     height: 2.438rem;
     color: vars.$clr-white-blue;
+    @include media-queries.respond-to(media-queries.$large-desktop){
+        width: 29px;
+        height: 29px;
+    }
 }
 
 .icons-footer:hover{
     color: vars.$clr-orange;
     animation: moveBtn 3s;
     @include media-queries.respond-to(media-queries.$phone){
+        animation: moveBtn 0s;
+    }
+    @include media-queries.respond-to(media-queries.$tablet-portrait){
         animation: moveBtn 0s;
     }
 }
@@ -50,6 +75,15 @@
         gap: 10%;
         margin-bottom: 2.375rem;
         justify-content: center;
+    }
+    @include media-queries.respond-to(media-queries.$tablet-portrait){
+        width: 100%;
+        gap: 10%;
+        margin-bottom: 2.375rem;
+        justify-content: center;
+    }
+    @include media-queries.respond-to(media-queries.$large-desktop){
+        gap: 21px;
     }
 }
 

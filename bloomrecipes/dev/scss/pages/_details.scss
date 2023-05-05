@@ -27,6 +27,16 @@
     height: 59px;
     color: vars.$clr-cian;
     margin-right: 14px;
+    @include media-queries.respond-to(media-queries.$large-desktop){
+        width: 40px;
+        height: 40px;
+    }
+}
+
+.m-dtk{
+    @include media-queries.respond-to(media-queries.$large-desktop){
+        margin-top: -6px;
+    }
 }
 
 .m-details{
