@@ -2,91 +2,6 @@
 @use '../abstracts/vars';
 @use '../abstracts/media-queries';
 
-//principal
-
-h1{
-    @include mixins.set-font(vars.$ff-primary, vars.$fw-sbold, vars.$fs-93);
-    line-height: 6.563rem;
-    margin-top: 2.875rem;
-    margin-right: 56.938rem;
-    @include media-queries.respond-to(media-queries.$phone){
-        @include mixins.set-font(vars.$ff-primary, vars.$fw-sbold, vars.$fs-25);
-        line-height: 2.063rem;
-        margin-top: 18.125rem;
-        margin-right: 0;
-        text-align: center;
-    }
-
-    @include media-queries.respond-to(media-queries.$large-desktop){
-        font-size: 67px;
-        margin-right: 39.938rem;
-        line-height: 4.563rem;
-        margin-top: 2rem;
-    }
-}
-
-h2{
-    @include mixins.set-font(vars.$ff-primary, vars.$fw-sbold, vars.$fs-65, vars.$clr-red);
-    margin-top: 4.875rem;
-    @include media-queries.respond-to(media-queries.$phone){
-        width: 100%;
-        font-size: 2.5rem;
-        text-align: center;
-        margin-top: 6.5rem;
-        margin-bottom: 1.25rem;
-    }
-    @include media-queries.respond-to(media-queries.$large-desktop){
-        font-size: 46px;
-        margin-top: 101px;
-    }
-}
-
-.description-p{
-    width: 43.75rem;
-    @include mixins.set-font(vars.$ff-secondary, vars.$fw-sbold, vars.$fs-25);
-    line-height: 2.378rem;
-    margin-top: 7.188rem;
-
-    @include media-queries.respond-to(media-queries.$phone){
-        width: 100%;
-        font-size: 0.813rem;
-        line-height: 1.237rem;
-        margin-top: 1.75rem;
-    }
-
-    @include media-queries.respond-to(media-queries.$large-desktop){
-        width: 30rem;
-        font-size: 17px;
-        line-height: 28px;
-        margin-top: 80px;
-    }
-}
-
-.info-nw{
-    @include mixins.set-font(vars.$ff-primary, vars.$fw-med, vars.$fs-30);
-    @include media-queries.respond-to(media-queries.$phone){
-        font-size: 1.25rem;
-        text-align: center;
-    }
-    @include media-queries.respond-to(media-queries.$large-desktop){
-        font-size: 21px;
-    }
-}
-
-.phrase-m{
-    @include mixins.set-font(vars.$ff-primary, vars.$fw-sbold, vars.$fs-85);
-    margin-top: 14rem;
-    line-height: 6.563rem;
-    @include media-queries.respond-to(media-queries.$phone){
-        margin-top: 95px;
-        font-size: 2.188rem;
-        line-height: 2.875rem;
-    }
-    @include media-queries.respond-to(media-queries.$large-desktop){
-        font-size: 5.313rem;
-    }
-}
-
 .txt-red{
     color: vars.$clr-red;
 }
@@ -95,94 +10,11 @@ h2{
     color: vars.$clr-cian;
 }
 
-.bc-icon{
-    @include mixins.set-font(vars.$ff-primary, vars.$fw-med, vars.$fs-77, vars.$clr-white);
-    line-height: 2.625rem;
-    margin-top: 7.813rem;
-    @include media-queries.respond-to(media-queries.$phone){
-        @include mixins.set-font(vars.$ff-primary, vars.$fw-med, vars.$fs-42, vars.$clr-white);
-        margin-top: 1.188rem;
-        line-height: 1.563rem;
-    }
-
-    @include media-queries.respond-to(media-queries.$large-desktop){
-        font-size: 55px;
-        line-height: 31px;
-        margin-top: 89px;
-    }
+.txt-black{
+    color: vars.$clr-black;
 }
 
-.rc-icon{
-    @include mixins.set-font(vars.$ff-secondary, vars.$fw-sbold, vars.$fs-37, vars.$clr-white);
-    @include media-queries.respond-to(media-queries.$phone){
-        @include mixins.set-font(vars.$ff-secondary, vars.$fw-sbold, vars.$fs-20, vars.$clr-white);
-    }
-    @include media-queries.respond-to(media-queries.$large-desktop){
-        font-size: 26px;
-    }
-}
-
-.phrase-pf{
-    @include mixins.set-font(vars.$ff-primary, vars.$fw-sbold, vars.$fs-80);
-    margin-top: 10.875rem;
-    line-height: 6.875rem;
-    @include media-queries.respond-to(media-queries.$phone){
-        @include mixins.set-font(vars.$ff-primary, vars.$fw-sbold, vars.$fs-30);
-        margin-top: 95px;
-        line-height: 2.5rem;
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    @include media-queries.respond-to(media-queries.$large-desktop){
-        font-size: 3.5rem;
-        margin-top: 7.6rem;
-        line-height: 4.875rem;
-    }
-}
-
-.register-f{
-    height: 2.875rem;
-    @include mixins.set-font(vars.$ff-primary, vars.$fw-med, vars.$fs-28, vars.$clr-cian);
-    margin-top: 2.688rem;
-    margin-bottom: 3.438rem;
-    @include media-queries.respond-to(media-queries.$phone){
-        font-size: 1.375rem;
-        justify-content: center;
-        margin-top: 1.25rem;
-        @include mixins.set-font(vars.$ff-primary, vars.$fw-med, vars.$fs-22, vars.$clr-cian);
-    }
-    @include media-queries.respond-to(media-queries.$large-desktop){
-        font-size: 20px;
-        margin-bottom: 1.438rem;
-    }
-}
-
-.txt-f{
-    @include mixins.set-font(vars.$ff-primary, vars.$fw-med, vars.$fs-25, vars.$clr-white-blue);
-    margin-left: 1.625rem;
-    @include media-queries.respond-to(media-queries.$phone){
-        font-size: 1.125rem;
-        margin-left: 0;
-        text-align: center;
-        margin-top: 2.375rem;
-    }
-    @include media-queries.respond-to(media-queries.$large-desktop){
-        font-size: 17px;
-        margin-top: 6px
-    }
-}
-
-.link-f{
-    @include mixins.set-font(vars.$ff-primary, vars.$fw-med, vars.$fs-25, vars.$clr-white-blue);
-    text-decoration: none;
-    @include media-queries.respond-to(media-queries.$phone){
-        font-size: 1.125rem;
-    }
-    @include media-queries.respond-to(media-queries.$large-desktop){
-        font-size: 17px;
-    }
-}
+//cards likes
 
 .title-card{
     height: 42px;
@@ -218,23 +50,30 @@ h2{
     }
 }
 
+//cards likes
+
+//cards description
+
 .txt-description{
-    //text-overflow: ellipsis;
     @include mixins.set-font(vars.$ff-secondary, vars.$fw-med, vars.$fs-15);
     line-height: 23px;
     text-align: justify;
     @include media-queries.respond-to(media-queries.$large-desktop){
         font-size: 10px;
         line-height: 15px;
+        font-weight: vars.$fw-sbold;
     }
 }
-//principal
+
+//cards description
 
 //modal
 .modal-title{
     @include mixins.set-font(vars.$ff-primary, vars.$fw-sbold, vars.$fs-26);
 }
+//modal
 
+//about us modal
 .bm-icon{
     @include mixins.set-font(vars.$ff-primary, vars.$fw-med, vars.$fs-89);
     line-height: 48px;
@@ -250,7 +89,7 @@ h2{
     @include mixins.set-font(vars.$ff-secondary, vars.$fw-sbold, vars.$fs-42);
     margin-bottom: 40px;
     @include media-queries.respond-to(media-queries.$phone){
-        @include mixins.set-font(vars.$ff-secondary, vars.$fw-sbold, vars.$fs-20, vars.$clr-white);
+        @include mixins.set-font(vars.$ff-secondary, vars.$fw-sbold, vars.$fs-20);
     }
 }
 
@@ -261,30 +100,29 @@ h2{
     line-height: 28px;
     @include mixins.set-font(vars.$ff-secondary, vars.$fw-med, vars.$fs-18);
 }
-//modal
+//about us modal
 
 //recipes
-.txt-menu{
-    @include mixins.set-font(vars.$ff-primary, vars.$fw-sbold, vars.$fs-55);
-    margin-top: 12px;
-    @include media-queries.respond-to(media-queries.$large-desktop){
-        font-size: 2.438rem
-    }
-}
-
-.txt-search{
-    @include mixins.set-font(vars.$ff-secondary, vars.$fw-med, vars.$fs-30);
-    margin-top: 28px;
-}
-
-.txt-result{
-    @include mixins.set-font(vars.$ff-secondary, vars.$fw-bold, vars.$fs-30);
-}
-
 .txt-footer{
     @include mixins.set-font(vars.$ff-primary, vars.$fw-med, vars.$fs-25, vars.$clr-white-blue);
-}
+    @include media-queries.respond-to(media-queries.$large-desktop){
+        font-size: 17px;
+    }
+    
+    @include media-queries.respond-to(media-queries.$tablet-landscape){
+        font-size: 20px;
+        margin-left: 0;
+    }
 
+    @include media-queries.respond-to(media-queries.$tablet-portrait){
+        font-size: 20px;
+        margin-left: 0;
+    }
+
+    @include media-queries.respond-to(media-queries.$phone){
+        font-size: 1.125rem;
+    }
+}
 //recipes
 
 
@@ -301,6 +139,18 @@ h2{
         height: 29px;
         margin-bottom: 12px;
     }
+    @include media-queries.respond-to(media-queries.$phone){
+        margin-top: -26px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+    @include media-queries.respond-to(media-queries.$tablet-portrait){
+        margin-top: -26px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
 }
 
 
@@ -312,24 +162,53 @@ h2{
     @include mixins.set-font(vars.$ff-primary, vars.$fw-sbold, vars.$fs-65, vars.$clr-white-blue);
     margin-top: 10px;
     @include media-queries.respond-to(media-queries.$large-desktop){
-        font-size: 52px;
+        font-size: 45px;
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-landscape){
+        font-size: 30px;
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-portrait){
+        font-size: 24px;
+    }
+
+    @include media-queries.respond-to(media-queries.$phone){
+        font-size: 27px;
+        margin-top: 20px;
+        margin-left: 10%;
+        margin-right: 10%;
+        text-align: center;
     }
 }
 
 .details-text{
-    @include mixins.set-font(vars.$ff-primary, vars.$fw-sbold, vars.$fs-26);
-    @include media-queries.respond-to(media-queries.$large-desktop){
-        font-size: 17px;
-    }
-}
-
-.details-title{
     @include mixins.set-font(vars.$ff-primary, vars.$fw-sbold, vars.$fs-26, vars.$clr-cian);
     width: 324px;
     height: 75px;
     text-align: center;
+
+    @include media-queries.respond-to(media-queries.$tablet-landscape){
+        width: 100%;
+        text-align: start;
+        font-size: 21px;
+        height: 65px;
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-portrait){
+        width: 100%;
+        text-align: start;
+        font-size: 19px;
+        height: 56px;
+    }
+
     @include media-queries.respond-to(media-queries.$large-desktop){
-        font-size: 17px;
+        font-size: 20px;
+    }
+
+    @include media-queries.respond-to(media-queries.$phone){
+        font-size: 19px;
+        text-align: start;
     }
 }
 
@@ -347,7 +226,8 @@ h4{
     width: 100%;
     display: flex;
     align-items: center;
-    margin-bottom: 44px;
+    line-height: 38px;
+    margin-bottom: 5px;
 }
 
 
@@ -356,29 +236,70 @@ h4{
 .bu-icon{
     @include mixins.set-font(vars.$ff-primary, vars.$fw-med, vars.$fs-89);
     line-height: 48px;
-    margin-top: 58px;
+
+    @include media-queries.respond-to(media-queries.$large-desktop){
+        font-size: 63px;
+        line-height: 36px;
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-portrait){
+        font-size: 63px;
+        line-height: 36px;
+    }
+
     @include media-queries.respond-to(media-queries.$phone){
-        @include mixins.set-font(vars.$ff-primary, vars.$fw-med, vars.$fs-42);
-        margin-top: 1.188rem;
-        line-height: 1.563rem;
+        font-size: 63px;
+        line-height: 36px;
     }
 }
 
 .ru-icon{
     @include mixins.set-font(vars.$ff-secondary, vars.$fw-sbold, vars.$fs-42);
     margin-bottom: 40px;
+
+    @include media-queries.respond-to(media-queries.$large-desktop){
+        font-size: 30px;
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-portrait){
+        font-size: 30px;
+    }
+
     @include media-queries.respond-to(media-queries.$phone){
-        @include mixins.set-font(vars.$ff-secondary, vars.$fw-sbold, vars.$fs-20, vars.$clr-white);
+        font-size: 30px;
     }
 }
 
 .title-user{
-    @include mixins.set-font(vars.$ff-primary, vars.$fw-sbold, vars.$fs-37);
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-sbold, 35px);
     height: 70px;
     display: flex;
     align-items: center;
     padding-top: 25px;
     margin-bottom: 34px;
+
+    @include media-queries.respond-to(media-queries.$large-desktop){
+        font-size: 26px;
+        padding-top: 0px;
+        height: auto;
+        margin-bottom: 28px;
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-landscape){
+        font-size: 30px;
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-portrait){
+        font-size: 30px;
+        padding-top: 0px;
+        height: auto;
+    }
+
+    @include media-queries.respond-to(media-queries.$phone){
+        font-size: 26px;
+        padding-top: 0px;
+        height: auto;
+    }
 }
 
 .txt-input{
@@ -393,6 +314,9 @@ h4{
 
 .txt-message{
     @include mixins.set-font(vars.$ff-primary, vars.$fw-med, vars.$fs-25);
+    @include media-queries.respond-to(media-queries.$phone){
+        font-size: 22px;
+    }
 }
 
 .txt-msgxs{

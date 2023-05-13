@@ -44,6 +44,7 @@
     margin-top: 0.5rem;
     border: none;
     background: $bg;
+    height: auto;
 
     @include media-queries.respond-to(media-queries.$phone){
         width: 100%;
@@ -132,6 +133,15 @@
         margin-top: 0;
         margin-bottom: 40px;
     }
+
+    @include media-queries.respond-to(media-queries.$tablet-landscape){
+        width: 100%;
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-portrait){
+        width: 100%;
+    }
+
     @include media-queries.respond-to(media-queries.$large-desktop){
         font-size: 21px;
         width: 30rem;
@@ -158,6 +168,7 @@
         margin-right: auto;
         margin-top: 10px;
     }
+
     @include media-queries.respond-to(media-queries.$large-desktop){
         font-size: 16px;
         margin-top: 14px;
@@ -179,6 +190,18 @@
         font-size: vars.$fs-20;
         padding-top: 0;
         margin: auto;
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-landscape){
+        padding-top: 1.938rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-portrait){
+        padding-top: 1.938rem;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     @include media-queries.respond-to(media-queries.$large-desktop){
@@ -249,6 +272,14 @@
         margin-bottom: 35px;
         margin-top: -14px;
     }
+    @include media-queries.respond-to(media-queries.$phone){
+        margin-left: auto;
+        margin-right: auto;
+    }
+    @include media-queries.respond-to(media-queries.$tablet-portrait){
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 @mixin button-sign($bg, $borderc, $color:vars.$clr-black){
@@ -278,5 +309,28 @@
     justify-content: center;
     align-items: center;
     margin-top: 12px;
+}
+
+@mixin button-next($bg, $color:vars.$clr-black){
+    font-family: vars.$ff-primary;
+    font-weight: vars.$fw-med;
+    font-size: vars.$fs-22;
+    color: $color;
+    background: $bg;
+    width: 96%;
+    height: 45px;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    @include media-queries.respond-to(media-queries.$large-desktop){
+        width: 91%;
+    }
+    @include media-queries.respond-to(media-queries.$tablet-portrait){
+        width: 91%;
+    }
+    @include media-queries.respond-to(media-queries.$phone){
+        width: 100%;
+    }
 }
 

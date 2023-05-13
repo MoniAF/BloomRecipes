@@ -86,7 +86,6 @@
 .btn-register:hover{
     @include mixins.button-register(vars.$clr-cian, vars.$clr-cian, vars.$clr-white-blue);
 }
-
 //principal
 
 //modal
@@ -107,8 +106,12 @@
 
 
 //log
+.btn-next{
+    @include mixins.button-next(vars.$clr-red, vars.$clr-white-blue);
+}
+
 .btn-sign{
-    @include mixins.button-sign(transparent, vars.$clr-cian);
+    @include mixins.button-sign(transparent, vars.$clr-cian, vars.$clr-cian);
 }
 
 .btn-sign:hover{
@@ -122,3 +125,4 @@
 .btn-out:hover{
     @include mixins.button-out(vars.$clr-red, vars.$clr-white-blue);
 }
+//log

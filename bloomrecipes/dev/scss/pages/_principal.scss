@@ -2,6 +2,282 @@
 @use '../abstracts/mixins';
 @use '../abstracts/media-queries';
 
+
+//fonts
+
+h1{
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-sbold, vars.$fs-93);
+    line-height: 6.563rem;
+    margin-top: 2.875rem;
+    margin-right: 56.938rem;
+    @include media-queries.respond-to(media-queries.$phone){
+        @include mixins.set-font(vars.$ff-primary, vars.$fw-sbold, vars.$fs-25);
+        line-height: 2.063rem;
+        margin-top: 18.125rem;
+        margin-right: 0;
+        text-align: center;
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-landscape){
+        font-size: 3.813rem;
+        margin-right: 0rem; 
+        text-align: center;
+        line-height: 5.563rem;
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-portrait){
+        font-size: 2.813rem;
+        margin-right: 0rem; 
+        text-align: center;
+        line-height: 4.563rem;
+    }
+
+    @include media-queries.respond-to(media-queries.$large-desktop){
+        font-size: 67px;
+        margin-right: 39.938rem;
+        line-height: 4.563rem;
+        margin-top: 2rem;
+    }
+}
+
+h2{
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-sbold, vars.$fs-65, vars.$clr-red);
+    margin-top: 4.875rem;
+    @include media-queries.respond-to(media-queries.$phone){
+        width: 100%;
+        font-size: 2.5rem;
+        text-align: center;
+        margin-top: 6.5rem;
+        margin-bottom: 1.25rem;
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-landscape){
+        text-align: center;
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-portrait){
+        text-align: center;
+    }
+
+    @include media-queries.respond-to(media-queries.$large-desktop){
+        font-size: 46px;
+        margin-top: 101px;
+    }
+}
+
+.description-p{
+    width: 43.75rem;
+    @include mixins.set-font(vars.$ff-secondary, vars.$fw-sbold, vars.$fs-25);
+    line-height: 2.378rem;
+    margin-top: 7.188rem;
+
+    @include media-queries.respond-to(media-queries.$phone){
+        width: 100%;
+        font-size: 0.813rem;
+        line-height: 1.237rem;
+        margin-top: 1.75rem;
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-landscape){
+        width: 100%;
+        margin-top: 39.188rem;
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-portrait){
+        width: 100%;
+        margin-top: 36.188rem;
+        font-size: 21px;
+    }
+
+    @include media-queries.respond-to(media-queries.$large-desktop){
+        width: 30rem;
+        font-size: 17px;
+        line-height: 28px;
+        margin-top: 80px;
+    }
+}
+
+.info-nw{
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-med, vars.$fs-30);
+    @include media-queries.respond-to(media-queries.$phone){
+        font-size: 1.25rem;
+        text-align: center;
+    }
+    @include media-queries.respond-to(media-queries.$large-desktop){
+        font-size: 21px;
+    }
+}
+
+.phrase-m{
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-sbold, vars.$fs-85);
+    margin-top: 14rem;
+    line-height: 6.563rem;
+    @include media-queries.respond-to(media-queries.$phone){
+        margin-top: 95px;
+        font-size: 2.188rem;
+        line-height: 2.875rem;
+    }
+    @include media-queries.respond-to(media-queries.$tablet-landscape){
+        font-size: 4.313rem;
+        line-height: 5.563rem;
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-portrait){
+        font-size: 4.313rem;
+        line-height: 5.563rem;
+    }
+    @include media-queries.respond-to(media-queries.$large-desktop){
+        font-size: 5.313rem;
+    }
+}
+
+.bc-icon{
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-med, vars.$fs-77, vars.$clr-white);
+    line-height: 2.625rem;
+    margin-top: 7.813rem;
+    @include media-queries.respond-to(media-queries.$phone){
+        @include mixins.set-font(vars.$ff-primary, vars.$fw-med, vars.$fs-42, vars.$clr-white);
+        margin-top: 1.188rem;
+        line-height: 1.563rem;
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-landscape){
+        margin-top: 36px;
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-portrait){
+        font-size: 55px;
+        line-height: 31px;
+        margin-top: 25px;
+    }
+
+    @include media-queries.respond-to(media-queries.$large-desktop){
+        font-size: 55px;
+        line-height: 31px;
+        margin-top: 89px;
+    }
+}
+
+.rc-icon{
+    @include mixins.set-font(vars.$ff-secondary, vars.$fw-sbold, vars.$fs-37, vars.$clr-white);
+    @include media-queries.respond-to(media-queries.$phone){
+        @include mixins.set-font(vars.$ff-secondary, vars.$fw-sbold, vars.$fs-20, vars.$clr-white);
+    }
+    @include media-queries.respond-to(media-queries.$large-desktop){
+        font-size: 26px;
+    }
+}
+
+.phrase-pf{
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-sbold, vars.$fs-80);
+    margin-top: 10.875rem;
+    line-height: 6.875rem;
+    @include media-queries.respond-to(media-queries.$phone){
+        @include mixins.set-font(vars.$ff-primary, vars.$fw-sbold, vars.$fs-30);
+        margin-top: 95px;
+        line-height: 2.5rem;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-landscape){
+        font-size: 4rem;
+        line-height: 5.875rem;
+        text-align: center;
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-portrait){
+        font-size: 4rem;
+        line-height: 5.875rem;
+        text-align: center;
+    }
+
+    @include media-queries.respond-to(media-queries.$large-desktop){
+        font-size: 3.5rem;
+        margin-top: 7.6rem;
+        line-height: 4.875rem;
+    }
+}
+
+.register-f{
+    height: 2.875rem;
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-med, vars.$fs-28, vars.$clr-cian);
+    margin-top: 2.688rem;
+    margin-bottom: 3.438rem;
+    @include media-queries.respond-to(media-queries.$phone){
+        font-size: 1.375rem;
+        justify-content: center;
+        margin-top: 1.25rem;
+        @include mixins.set-font(vars.$ff-primary, vars.$fw-med, vars.$fs-22, vars.$clr-cian);
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-landscape){
+        justify-content: center;
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-portrait){
+        justify-content: center;
+    }
+
+    @include media-queries.respond-to(media-queries.$large-desktop){
+        font-size: 20px;
+        margin-bottom: 1.438rem;
+    }
+}
+
+.txt-f{
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-med, vars.$fs-25, vars.$clr-white-blue);
+    margin-left: 1.625rem;
+    @include media-queries.respond-to(media-queries.$phone){
+        font-size: 1.125rem;
+        margin-left: 0;
+        text-align: center;
+        margin-top: 2.375rem;
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-landscape){
+        font-size: 20px;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-portrait){
+        font-size: 20px;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    @include media-queries.respond-to(media-queries.$large-desktop){
+        font-size: 17px;
+        margin-top: 6px
+    }
+}
+
+.link-f{
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-med, vars.$fs-25, vars.$clr-white-blue);
+    text-decoration: none;
+    @include media-queries.respond-to(media-queries.$phone){
+        font-size: 1.125rem;
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-landscape){
+        font-size: 20px;
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-portrait){
+        font-size: 20px;
+    }
+
+    @include media-queries.respond-to(media-queries.$large-desktop){
+        font-size: 17px;
+    }
+}
+
+
+//fonts
+
+
 .bg-w{
     width: 100%;
     height: 59.375rem;
@@ -10,6 +286,15 @@
         width: 0;
         height: 0;
     }
+
+    @include media-queries.respond-to(media-queries.$tablet-landscape){
+        height: 77.395rem;
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-portrait){
+        height: 70.375rem;
+    }
+
     @include media-queries.respond-to(media-queries.$large-desktop){
         height: 39.375rem;
     }
@@ -25,6 +310,15 @@
         margin-top: 16.75rem;
         height: 378px;
     }
+
+    @include media-queries.respond-to(media-queries.$tablet-landscape){
+        margin-top: 46.5rem;
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-portrait){
+        margin-top: 41.5rem;
+    }
+
     @include media-queries.respond-to(media-queries.$large-desktop){
         margin-top: 18.5rem;
         width: 100%;
@@ -57,6 +351,28 @@
         border-right-width: 0.25rem;
     }
 
+    @include media-queries.respond-to(media-queries.$tablet-landscape){
+        width: 100%;
+        height: 33.125rem;
+        border-right-width: 0;
+        border-left-width: 0;
+        border-top-left-radius: 0rem; 
+        border-bottom-left-radius: 0rem;
+        margin-left: 0;
+        margin-top: 17.813rem;
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-portrait){
+        width: 100%;
+        height: 30.125rem;
+        border-right-width: 0;
+        border-left-width: 0;
+        border-top-left-radius: 0rem; 
+        border-bottom-left-radius: 0rem;
+        margin-left: 0;
+        margin-top: 15.813rem;
+    }
+
     @include media-queries.respond-to(media-queries.$large-desktop){
         margin-top: 0.813rem;
         margin-left: 44.28%;
@@ -82,6 +398,20 @@
         margin-top: 1.125rem;
     }
 
+    @include media-queries.respond-to(media-queries.$tablet-landscape){
+        height: 27.5rem;
+        border-top-left-radius: 0rem; 
+        border-bottom-left-radius: 0rem; 
+        margin-left: 0rem; 
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-portrait){
+        height: 24.5rem;
+        border-top-left-radius: 0rem; 
+        border-bottom-left-radius: 0rem; 
+        margin-left: 0rem; 
+    }
+
     @include media-queries.respond-to(media-queries.$large-desktop){
         height: 478px;
         margin-left: 34px;
@@ -104,146 +434,7 @@
     }
 }
 
-.cards-pp{
-    gap: 2.438rem;
-    flex-wrap: wrap;
-    margin-top: 4.938rem !important;
-    @include media-queries.respond-to(media-queries.$phone){
-        margin-top: 40px !important;
-    }
-    @include media-queries.respond-to(media-queries.$large-desktop){
-        gap: 26px;
-        margin-top: 56px;
-    }
-}
 
-.cards-modal{
-    gap: 2.438rem;
-    flex-wrap: wrap;
-    margin-top: 32px !important;
-    margin-left: 11px;
-    @include media-queries.respond-to(media-queries.$phone){
-        margin-left: 0;
-    }
-    //@include media-queries.respond-to(media-queries.$large-desktop){
-        //gap: 26px;
-        //margin-top: 56px;
-    //}
-}
-
-.card-top{
-    width: 19.438rem;
-    height: 29rem;
-    background: vars.$clr-orange;
-    border-radius: 2.188rem;
-    overflow: hidden;
-    @include media-queries.respond-to(media-queries.$phone){
-        width: 100%;
-        margin-bottom: 38px;
-    }
-    @include media-queries.respond-to(media-queries.$large-desktop){
-        width: 222px;
-        height: 331px;
-    }
-}
-
-.card-pp{
-    width: 19.438rem;
-    height: 32.5rem;
-    background: vars.$clr-orange;
-    border-radius: 2.188rem;
-    overflow: hidden;
-    @include media-queries.respond-to(media-queries.$phone){
-        width: 100%;
-        margin-bottom: 38px;
-    }
-    @include media-queries.respond-to(media-queries.$large-desktop){
-        width: 222px;
-        height: 371px;
-    }
-}
-
-//cards
-
-.img-card{
-    width: 100%;
-    height: 275px;
-    border-radius: 2.188rem 2.188rem 0 0;
-    object-fit: cover;
-    @include media-queries.respond-to(media-queries.$large-desktop){
-        height: 198px;
-    }
-}
-
-.degraded{
-    width: 200%;
-    height: 200px;
-    margin-top: -45px;
-    margin-left: -45px;
-    background: vars.$clr-orange;
-    filter: blur(18px);
-    @include media-queries.respond-to(media-queries.$large-desktop){
-        width: 171%;
-    }
-}
-
-.info-top{
-    width: 19.438rem;
-    height: 158px;
-    position: absolute;
-    margin-top: -151px;
-    @include media-queries.respond-to(media-queries.$phone){
-        width: 90%;
-    }
-    @include media-queries.respond-to(media-queries.$large-desktop){
-        width: 222px;
-        height: 158px;
-        margin-top: -151px;
-    }
-}
-
-.category-card{
-    width: 265px;
-    height: 30px;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 10px;
-    padding-top: 3px;
-    background: vars.$clr-red;
-    margin-bottom: 10px;
-
-    @include media-queries.respond-to(media-queries.$large-desktop){
-        width: 188px;
-        height: 23px;
-        margin-bottom: 7px;
-    }
-}
-
-.card-heart{
-    width: 23px;
-    height: 23px;
-    color: vars.$clr-cian;
-    @include media-queries.respond-to(media-queries.$large-desktop){
-        width: 17px;
-        height: 17px;
-    }
-}
-
-.description-card{
-    overflow: hidden;
-    width: 265px;
-    height: 92px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: -12px;
-    margin-bottom: 10px;
-    @include media-queries.respond-to(media-queries.$large-desktop){
-        width: 187px;
-        height: 58px;
-    }
-}
-
-//cards
 
 .m-photos{
     margin-top: 10.375rem;
@@ -252,6 +443,14 @@
         display: block !important;
         margin-top: 4.063rem;
         margin-bottom: 0;
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-landscape){
+        display: block !important;
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-portrait){
+        display: block !important;
     }
 }
 
@@ -266,6 +465,19 @@
         border-radius: 2.188rem 2.188rem 0 0;
         margin-bottom: 1.438rem;
     }
+
+    @include media-queries.respond-to(media-queries.$tablet-landscape){
+        width: 100%;
+        height: 25rem;
+        border-radius: 2.188rem 2.188rem 0 0;
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-portrait){
+        width: 100%;
+        height: 20rem;
+        border-radius: 2.188rem 2.188rem 0 0;
+    }
+
     @include media-queries.respond-to(media-queries.$large-desktop){
         width: 607px;
         height: 330px;
@@ -282,6 +494,19 @@
         height: 11.75rem;
         border-radius: 0 0 2.188rem 2.188rem;
     }
+
+    @include media-queries.respond-to(media-queries.$tablet-landscape){
+        width: 100%;
+        height: 25rem;
+        border-radius: 0 0 2.188rem 2.188rem;
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-portrait){
+        width: 100%;
+        height: 20rem;
+        border-radius: 0 0 2.188rem 2.188rem;
+    }
+
     @include media-queries.respond-to(media-queries.$large-desktop){
         width: 607px;
         height: 330px;
@@ -296,6 +521,7 @@
     margin-left: 43.438rem;
     margin-top: 4.5rem;
     border-radius: 10.625rem;
+
     @include media-queries.respond-to(media-queries.$phone){
         width: 90%;
         height: 5.625rem;
@@ -303,6 +529,23 @@
         margin-left: 0;
         margin-top: -15.313rem;
     }
+
+    @include media-queries.respond-to(media-queries.$tablet-landscape){
+        width: 90%;
+        height: 10.188rem;
+        margin-left: 0;
+        margin-top: -481px;
+        border-radius: 0;
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-portrait){
+        width: 90%;
+        height: 7.188rem;
+        margin-left: 0;
+        margin-top: -378px;
+        border-radius: 0;
+    }
+
     @include media-queries.respond-to(media-queries.$large-desktop){
         width: 231px;
         height: 231px;
@@ -363,6 +606,19 @@
         padding-top: 0;
         margin-left: 0;
     }
+
+    @include media-queries.respond-to(media-queries.$tablet-landscape){
+        padding-top: 1.938rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-portrait){
+        padding-top: 1.938rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     @include media-queries.respond-to(media-queries.$large-desktop){
         font-size: 20px;
         padding-top: 120px;
@@ -382,10 +638,25 @@
         height: auto;
         margin-left: -5%;
     }
+
+    @include media-queries.respond-to(media-queries.$tablet-landscape){
+        position: relative;
+        margin-left: 0;
+        width: 100%;
+        height: auto;
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-portrait){
+        position: relative;
+        margin-left: 0;
+        width: 100%;
+        height: auto;
+    }
+
     @include media-queries.respond-to(media-queries.$large-desktop){
         width: 669px;
         height: auto;
-        margin-top: 87px;
+        margin-top: 53px;
         margin-left: 569px;
     }
 }

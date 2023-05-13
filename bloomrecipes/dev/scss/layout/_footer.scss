@@ -10,8 +10,12 @@
         height: 14.688rem;
     }
 
+    @include media-queries.respond-to(media-queries.$tablet-landscape){
+        height: 8.063rem;
+    }
+
     @include media-queries.respond-to(media-queries.$tablet-portrait){
-        height: 14.688rem;
+        height: 12.063rem;
     }
     
     @include media-queries.respond-to(media-queries.$large-desktop){
@@ -33,10 +37,17 @@
         margin-top: 1.75rem;
         padding-top: 1.688rem;
     }
+
+    @include media-queries.respond-to(media-queries.$tablet-landscape){
+        justify-content: center;
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+
     @include media-queries.respond-to(media-queries.$tablet-portrait){
-        margin-left: 5%;
-        margin-top: 1.75rem;
-        padding-top: 1.688rem;
+        justify-content: center;
+        margin-top: 26px;
+        margin-bottom: 26px;
     }
     
     @include media-queries.respond-to(media-queries.$large-desktop){
@@ -49,6 +60,16 @@
     width: 2.438rem;
     height: 2.438rem;
     color: vars.$clr-white-blue;
+    @include media-queries.respond-to(media-queries.$tablet-landscape){
+        width: 30px;
+        height: 30px;
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-portrait){
+        width: 30px;
+        height: 30px;
+    }
+
     @include media-queries.respond-to(media-queries.$large-desktop){
         width: 29px;
         height: 29px;
@@ -76,16 +97,68 @@
         margin-bottom: 2.375rem;
         justify-content: center;
     }
-    @include media-queries.respond-to(media-queries.$tablet-portrait){
-        width: 100%;
+    @include media-queries.respond-to(media-queries.$tablet-landscape){
+        width: 50%;
         gap: 10%;
-        margin-bottom: 2.375rem;
+        margin-bottom: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: start;
+    }
+    @include media-queries.respond-to(media-queries.$tablet-portrait){
+        width: 50%;
+        gap: 10%;
+        margin-bottom: 20px;
+        margin-left: auto;
+        margin-right: auto;
         justify-content: center;
     }
     @include media-queries.respond-to(media-queries.$large-desktop){
         gap: 21px;
     }
 }
+
+.jc-tl{
+    @include media-queries.respond-to(media-queries.$tablet-landscape){
+        justify-content: end !important;
+    }
+}
+//footer recipes
+
+.footer-icons{
+    margin-right: 2.188rem;
+    @include media-queries.respond-to(media-queries.$large-desktop){
+        margin-right: 21px;
+    }
+    @include media-queries.respond-to(media-queries.$tablet-portrait){
+        margin-right: auto;
+    }
+}
+
+.m-footer{
+    margin-top: 35px;
+    margin-bottom: 19px;
+    @include media-queries.respond-to(media-queries.$large-desktop){
+        margin-top: 16px;
+        margin-bottom: 12px;
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-landscape){
+        margin-top: 22px;
+        margin-bottom: 0px;
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-portrait){
+        margin-top: 30px;
+        padding-top: 2px;
+    }
+
+    @include media-queries.respond-to(media-queries.$phone){
+        padding-top: 25px;
+    }
+}
+
+//footer recipes
 
 //icons footer animations
 
