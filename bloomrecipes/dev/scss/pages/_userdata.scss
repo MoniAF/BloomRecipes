@@ -2,29 +2,6 @@
 @use '../abstracts/mixins';
 @use '../abstracts/media-queries';
 
-.bg-log{
-    background: vars.$clr-red;
-}
-
-.logo-base{
-    display: inline-block;
-    width: 100%;
-    height: 222px;
-    background: vars.$clr-white-blue;
-    border-radius: 50px;
-    margin-top: 93px;
-    margin-bottom: 38px;
-}
-
-.data-bg{
-    display: inline-block;
-    width: 100%;
-    height: 490px;
-    background: vars.$clr-white-blue;
-    border-radius: 50px;
-    margin-bottom: 94px;
-}
-
 .icon-log{
     width: 55px;
     height: 40px;
@@ -42,14 +19,6 @@
     color: hsla(126, 93%, 32%, 1);
 }
 
-.material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 1,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 48
-}
-
 .input-log{
     width: 355px;
     height: 40px;
@@ -58,14 +27,6 @@
     border: none;
     @include media-queries.respond-to(media-queries.$phone){
         width: 300px;
-    }
-
-    @include media-queries.respond-to(media-queries.$tablet-landscape){
-        //g
-    }
-
-    @include media-queries.respond-to(media-queries.$tablet-portrait){
-        //g
     }
 
     @include media-queries.respond-to(media-queries.$large-desktop){

@@ -10,7 +10,7 @@
     width: 22.25%;
     margin-right: auto;
     margin-left: auto;
-    //position: static;
+    
     @include media-queries.respond-to(media-queries.$phone){
         width: 85%;
     }

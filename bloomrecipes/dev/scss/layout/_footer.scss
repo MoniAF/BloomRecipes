@@ -2,31 +2,12 @@
 @use '../abstracts/mixins';
 @use '../abstracts/media-queries';
 
-.f-principal{
-    width: 100%;
-    height: 10.063rem;
-    background: vars.$clr-red;
-    @include media-queries.respond-to(media-queries.$phone){
-        height: 14.688rem;
-    }
-
-    @include media-queries.respond-to(media-queries.$tablet-landscape){
-        height: 8.063rem;
-    }
-
-    @include media-queries.respond-to(media-queries.$tablet-portrait){
-        height: 12.063rem;
-    }
-    
-    @include media-queries.respond-to(media-queries.$large-desktop){
-        height: 6.063rem;
-    }
-}
-
-.f-search{
+/*.f-search{
     position: fixed;
     bottom: 0;
-}
+}*/
+
+//principal page footer
 
 .conf-f{
     gap: 2.188rem;
@@ -53,6 +34,31 @@
     @include media-queries.respond-to(media-queries.$large-desktop){
         margin-top: 1.875rem;
         gap: 21px;
+    }
+}
+
+//principal page footer
+
+//footer
+
+.f-principal{
+    width: 100%;
+    height: 10.063rem;
+    background: vars.$clr-red;
+    @include media-queries.respond-to(media-queries.$phone){
+        height: 14.688rem;
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-landscape){
+        height: 8.063rem;
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-portrait){
+        height: 12.063rem;
+    }
+    
+    @include media-queries.respond-to(media-queries.$large-desktop){
+        height: 6.063rem;
     }
 }
 
@@ -123,7 +129,6 @@
         justify-content: end !important;
     }
 }
-//footer recipes
 
 .footer-icons{
     margin-right: 2.188rem;
@@ -158,7 +163,7 @@
     }
 }
 
-//footer recipes
+//footer
 
 //icons footer animations
 

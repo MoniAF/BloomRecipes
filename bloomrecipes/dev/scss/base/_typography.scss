@@ -2,6 +2,8 @@
 @use '../abstracts/vars';
 @use '../abstracts/media-queries';
 
+//colors
+
 .txt-red{
     color: vars.$clr-red;
 }
@@ -14,13 +16,353 @@
     color: vars.$clr-black;
 }
 
-//cards likes
+//colors
+
+//search
+
+/*.txt-search{
+    @include mixins.set-font(vars.$ff-secondary, vars.$fw-med, vars.$fs-30);
+    margin-top: 28px;
+}
+
+.txt-result{
+    @include mixins.set-font(vars.$ff-secondary, vars.$fw-bold, vars.$fs-30);
+}*/
+
+//search
+
+//principal
+
+h1{
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-sbold, vars.$fs-93);
+    line-height: 6.563rem;
+    margin-top: 2.875rem;
+    margin-right: 56.938rem;
+
+    @include media-queries.respond-to(media-queries.$phone){
+        @include mixins.set-font(vars.$ff-primary, vars.$fw-sbold, vars.$fs-25);
+        line-height: 2.063rem;
+        margin-top: 18.125rem;
+        margin-right: 0;
+        text-align: center;
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-landscape){
+        font-size: 3.813rem;
+        margin-right: 0rem; 
+        text-align: center;
+        line-height: 5.563rem;
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-portrait){
+        font-size: 2.813rem;
+        margin-right: 0rem; 
+        text-align: center;
+        line-height: 4.563rem;
+    }
+
+    @include media-queries.respond-to(media-queries.$large-desktop){
+        font-size: 67px;
+        margin-right: 39.938rem;
+        line-height: 4.563rem;
+        margin-top: 2rem;
+    }
+}
+
+h2{
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-sbold, vars.$fs-65, vars.$clr-red);
+    margin-top: 4.875rem;
+
+    @include media-queries.respond-to(media-queries.$phone){
+        width: 100%;
+        font-size: 2.5rem;
+        text-align: center;
+        margin-top: 6.5rem;
+        margin-bottom: 1.25rem;
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-landscape){
+        text-align: center;
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-portrait){
+        text-align: center;
+    }
+
+    @include media-queries.respond-to(media-queries.$large-desktop){
+        font-size: 46px;
+        margin-top: 101px;
+    }
+}
+
+.description-p{
+    width: 43.75rem;
+    @include mixins.set-font(vars.$ff-secondary, vars.$fw-sbold, vars.$fs-25);
+    line-height: 2.378rem;
+    margin-top: 7.188rem;
+
+    @include media-queries.respond-to(media-queries.$phone){
+        width: 100%;
+        font-size: 0.813rem;
+        line-height: 1.237rem;
+        margin-top: 1.75rem;
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-landscape){
+        width: 100%;
+        margin-top: 39.188rem;
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-portrait){
+        width: 100%;
+        margin-top: 36.188rem;
+        font-size: 21px;
+    }
+
+    @include media-queries.respond-to(media-queries.$large-desktop){
+        width: 30rem;
+        font-size: 17px;
+        line-height: 28px;
+        margin-top: 80px;
+    }
+}
+
+.info-nw{
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-med, vars.$fs-30);
+    @include media-queries.respond-to(media-queries.$phone){
+        font-size: 1.25rem;
+        text-align: center;
+    }
+    @include media-queries.respond-to(media-queries.$large-desktop){
+        font-size: 21px;
+    }
+}
+
+.phrase-m{
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-sbold, vars.$fs-89);
+    margin-top: 14rem;
+    line-height: 6.563rem;
+    @include media-queries.respond-to(media-queries.$phone){
+        margin-top: 95px;
+        font-size: 2.188rem;
+        line-height: 2.875rem;
+    }
+    @include media-queries.respond-to(media-queries.$tablet-landscape){
+        font-size: 4.313rem;
+        line-height: 5.563rem;
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-portrait){
+        font-size: 4.313rem;
+        line-height: 5.563rem;
+    }
+    @include media-queries.respond-to(media-queries.$large-desktop){
+        font-size: 5.313rem;
+    }
+}
+
+.bc-icon{
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-med, vars.$fs-77, vars.$clr-white);
+    line-height: 2.625rem;
+    margin-top: 7.813rem;
+    @include media-queries.respond-to(media-queries.$phone){
+        @include mixins.set-font(vars.$ff-primary, vars.$fw-med, vars.$fs-42, vars.$clr-white);
+        margin-top: 1.188rem;
+        line-height: 1.563rem;
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-landscape){
+        margin-top: 36px;
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-portrait){
+        font-size: 55px;
+        line-height: 31px;
+        margin-top: 25px;
+    }
+
+    @include media-queries.respond-to(media-queries.$large-desktop){
+        font-size: 55px;
+        line-height: 31px;
+        margin-top: 89px;
+    }
+}
+
+.rc-icon{
+    @include mixins.set-font(vars.$ff-secondary, vars.$fw-sbold, vars.$fs-37, vars.$clr-white);
+    @include media-queries.respond-to(media-queries.$phone){
+        @include mixins.set-font(vars.$ff-secondary, vars.$fw-sbold, vars.$fs-20, vars.$clr-white);
+    }
+    @include media-queries.respond-to(media-queries.$large-desktop){
+        font-size: 26px;
+    }
+}
+
+.link-more{
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-reg, vars.$fs-26, vars.$clr-cian);
+    padding-top: 6.938rem;
+    justify-content: center;
+    text-decoration: none;
+    margin-left: 70%;
+    @include media-queries.respond-to(media-queries.$phone){
+        @include mixins.set-font(vars.$ff-primary, vars.$fw-reg, vars.$fs-20, vars.$clr-cian);
+        padding-top: 0;
+        margin-left: 0;
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-landscape){
+        padding-top: 1.938rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-portrait){
+        padding-top: 1.938rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @include media-queries.respond-to(media-queries.$large-desktop){
+        font-size: 20px;
+        padding-top: 120px;
+        margin-left: 68%;
+    }
+}
+
+.phrase-pf{
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-sbold, vars.$fs-77);
+    margin-top: 10.875rem;
+    line-height: 6.875rem;
+    @include media-queries.respond-to(media-queries.$phone){
+        @include mixins.set-font(vars.$ff-primary, vars.$fw-sbold, vars.$fs-30);
+        margin-top: 95px;
+        line-height: 2.5rem;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-landscape){
+        font-size: 4rem;
+        line-height: 5.875rem;
+        text-align: center;
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-portrait){
+        font-size: 4rem;
+        line-height: 5.875rem;
+        text-align: center;
+    }
+
+    @include media-queries.respond-to(media-queries.$large-desktop){
+        font-size: 3.5rem;
+        margin-top: 7.6rem;
+        line-height: 4.875rem;
+    }
+}
+
+.register-f{
+    height: 2.875rem;
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-med, vars.$fs-26, vars.$clr-cian);
+    margin-top: 2.688rem;
+    margin-bottom: 3.438rem;
+    @include media-queries.respond-to(media-queries.$phone){
+        font-size: 1.375rem;
+        justify-content: center;
+        margin-top: 1.25rem;
+        @include mixins.set-font(vars.$ff-primary, vars.$fw-med, vars.$fs-22, vars.$clr-cian);
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-landscape){
+        justify-content: center;
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-portrait){
+        justify-content: center;
+    }
+
+    @include media-queries.respond-to(media-queries.$large-desktop){
+        font-size: 20px;
+        margin-bottom: 1.438rem;
+    }
+}
+
+.txt-f{
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-med, vars.$fs-25, vars.$clr-white-blue);
+    margin-left: 1.625rem;
+    @include media-queries.respond-to(media-queries.$phone){
+        font-size: 1.125rem;
+        margin-left: 0;
+        text-align: center;
+        margin-top: 2.375rem;
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-landscape){
+        font-size: 20px;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-portrait){
+        font-size: 20px;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    @include media-queries.respond-to(media-queries.$large-desktop){
+        font-size: 17px;
+        margin-top: 6px
+    }
+}
+
+.link-f{
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-med, vars.$fs-25, vars.$clr-white-blue);
+    text-decoration: none;
+    @include media-queries.respond-to(media-queries.$phone){
+        font-size: 1.125rem;
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-landscape){
+        font-size: 20px;
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-portrait){
+        font-size: 20px;
+    }
+
+    @include media-queries.respond-to(media-queries.$large-desktop){
+        font-size: 17px;
+    }
+}
+
+//principal
+
+//categories
+
+.txt-menu{
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-sbold, vars.$fs-30);
+    margin-top: 39px;
+    @include media-queries.respond-to(media-queries.$large-desktop){
+        font-size: vars.$fs-26;
+        margin-top: 30px;
+    }
+    @include media-queries.respond-to(media-queries.$phone){
+        text-align: center;
+    }
+}
+
+//categories
+
+
+//cards
 
 .title-card{
     height: 42px;
-    @include mixins.set-font(vars.$ff-primary, vars.$fw-bold, vars.$fs-21);
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-bold, vars.$fs-22);
     line-height: 21px;
     margin-bottom: 15px;
+    padding-left: 22px;
+    padding-right: 22px;
     @include media-queries.respond-to(media-queries.$phone){
         margin-left: 5%;
         margin-right: 5%;
@@ -30,11 +372,13 @@
         font-size: 15px;
         line-height: 15px;
         margin-bottom: -5px;
+        padding-left: 16px;
+        padding-right: 16px;
     }
 }
 
 .categories-txt{
-    @include mixins.set-font(vars.$ff-primary, vars.$fw-med, vars.$fs-16, vars.$clr-white-blue);
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-med, 1rem, vars.$clr-white-blue);
     justify-content: center;
     @include media-queries.respond-to(media-queries.$large-desktop){
         font-size: 12px;
@@ -50,10 +394,6 @@
     }
 }
 
-//cards likes
-
-//cards description
-
 .txt-description{
     @include mixins.set-font(vars.$ff-secondary, vars.$fw-med, vars.$fs-15);
     line-height: 23px;
@@ -65,15 +405,14 @@
     }
 }
 
-//cards description
+//cards
 
 //modal
+
 .modal-title{
     @include mixins.set-font(vars.$ff-primary, vars.$fw-sbold, vars.$fs-26);
 }
-//modal
 
-//about us modal
 .bm-icon{
     @include mixins.set-font(vars.$ff-primary, vars.$fw-med, vars.$fs-89);
     line-height: 48px;
@@ -100,9 +439,17 @@
     line-height: 28px;
     @include mixins.set-font(vars.$ff-secondary, vars.$fw-med, vars.$fs-18);
 }
-//about us modal
 
-//recipes
+.txt-message{
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-med, vars.$fs-25);
+    @include media-queries.respond-to(media-queries.$phone){
+        font-size: 22px;
+    }
+}
+
+//modal
+
+//footer
 .txt-footer{
     @include mixins.set-font(vars.$ff-primary, vars.$fw-med, vars.$fs-25, vars.$clr-white-blue);
     @include media-queries.respond-to(media-queries.$large-desktop){
@@ -123,10 +470,11 @@
         font-size: 1.125rem;
     }
 }
-//recipes
+//footer
 
 
 //dropdown
+
 .title-categories{
     @include mixins.set-font(vars.$ff-primary, vars.$fw-sbold, vars.$fs-20);
     width: 206px;
@@ -153,8 +501,20 @@
     }
 }
 
+.title-iuser{
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-sbold, vars.$fs-20);
+    margin-left: 18px;
+    margin-top: 3px;
+    margin-bottom: 2px;
+}
 
+.txt-iuser{
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-med, vars.$fs-18, vars.$clr-cian);
+    margin-left: 18px;
+    margin-bottom: -2px;
+}
 
+//dropdown
 
 //details
 
@@ -229,6 +589,8 @@ h4{
     line-height: 38px;
     margin-bottom: 5px;
 }
+
+//details
 
 
 //log
@@ -312,26 +674,8 @@ h4{
     text-decoration: none;
 }
 
-.txt-message{
-    @include mixins.set-font(vars.$ff-primary, vars.$fw-med, vars.$fs-25);
-    @include media-queries.respond-to(media-queries.$phone){
-        font-size: 22px;
-    }
-}
-
 .txt-msgxs{
     @include mixins.set-font(vars.$ff-secondary, vars.$fw-med, vars.$fs-15);
 }
 
-.title-iuser{
-    @include mixins.set-font(vars.$ff-primary, vars.$fw-sbold, vars.$fs-20);
-    margin-left: 18px;
-    margin-top: 3px;
-    margin-bottom: 2px;
-}
-
-.txt-iuser{
-    @include mixins.set-font(vars.$ff-primary, vars.$fw-med, vars.$fs-18, vars.$clr-cian);
-    margin-left: 18px;
-    margin-bottom: -2px;
-}
+//log
