@@ -460,6 +460,7 @@ h2 {
 
 .title-card {
   height: 42px;
+  overflow: hidden;
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   font-size: 1.375rem;

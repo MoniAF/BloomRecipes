@@ -358,6 +358,7 @@ h2{
 
 .title-card{
     height: 42px;
+    overflow: hidden;
     @include mixins.set-font(vars.$ff-primary, vars.$fw-bold, vars.$fs-22);
     line-height: 21px;
     margin-bottom: 15px;
