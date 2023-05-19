@@ -178,10 +178,10 @@
     
             <div class="section-se ms-auto me-auto"></div>
             
-            <form class="d-flex m-form" role="search">
+            <form class="d-flex m-form" role="search" @submit.prevent="onClickSearchRecipe">
     
-                <input class="search-input mt-auto pt-0 pb-0" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success btn-search mt-auto pt-0 pb-0" type="submit">Search</button>
+                <input class="search-input mt-auto pt-0 pb-0" type="text" placeholder="Search" aria-label="Search" v-model="searchTerm">
+                <button  class="btn btn-outline-success btn-search mt-auto pt-0 pb-0" type="submit">Search</button>
     
             </form>
     
@@ -208,7 +208,7 @@
         <!-- Navbar -->
         <div class="container-principal">
             <section class="d-fb justify-content-center">
-                <p class="txt-menu">All Recipes</p>
+                <p class="txt-menu">{{ message }}</p>
             </section>
     
             <div class="d-flex cards-recipes">
