@@ -1,39 +1,11 @@
 app.component('index-page',{
     props:{
-        /*index:{
-            type: Number,
-            default: 0
-        },
-        name:{
-            type: String,
-            default: "default name"
-        },
-        image:{
-            type: String
-        },
-        category:{
-            type: String,
-            default: "default category"
-        },
-        difficulty:{
-            type: String,
-            default: "default difficulty"
-        },
-        likes:{
-            type: String,
-            default: "default likes"
-        },
-        description:{
-            type: String,
-            default: "default description"
-        }*/
         recipes:{
             type: Array
         }
     },
     mounted() {
-       //this.recipes.sort((a, b) => b.likes - a.likes);
-        //console.log(this.recipes);
+        console.log(this.recipes);
     },
     computed:{
         showTop(){

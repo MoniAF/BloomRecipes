@@ -1,38 +1,41 @@
-app.component('weather-card',{
+app.component('recipes-section',{
     props:{
         name:{
-            name: String,
+            type: String,
             default: "default name"
         },
-        condition:{
+        image:{
+            type: String
+        },
+        category:{
             type: String,
             default: "default category"
         },
-        icon:{
+        difficulty:{
             type: String,
+            default: "default difficulty"
         },
-        temp:{
+        likes:{
             type: Number,
             default: 0
         },
-        humidity:{
-            type: Number,
-            default: 0
-        },
-        wind:{
-            type: Number,
-            default: 0
-        },
-        feelslike:{
-            type: Number,
-            default: 0
-        },
-        uv:{
+        description:{
             type: String,
-            default: "default uv"
+            default: "default description"
         }
     },
     template:
     /*html*/
-    ``
+    `<a href="#"> <!--  v-for="(element, index) in recipes" -->
+        <div class="card-pp">
+            <img v-bind:src="image" class="img-card" alt="name">
+            <div class="degraded"></div>
+            <div class="info-top">
+                <p class="title-card text-center">{{ name }}</p>
+                <p class="description-card txt-description">{{ description }}</p>
+                <p class="category-card text-center categories-txt">{{ category }}</p>
+                <p class="category-card text-center categories-txt">{{ difficulty }}</p>
+            </div>
+        </div>
+    </a>`
 })
