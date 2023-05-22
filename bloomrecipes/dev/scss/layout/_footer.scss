@@ -2,10 +2,10 @@
 @use '../abstracts/mixins';
 @use '../abstracts/media-queries';
 
-/*.f-search{
+.f-footer{
     position: fixed;
     bottom: 0;
-}*/
+}
 
 //principal page footer
 
@@ -40,6 +40,9 @@
 //principal page footer
 
 //footer
+.f-admin{
+    background: vars.$clr-cian !important;
+}
 
 .f-principal{
     width: 100%;

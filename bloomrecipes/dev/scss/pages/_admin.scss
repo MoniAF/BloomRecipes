@@ -1,0 +1,55 @@
+@use '../abstracts/vars';
+@use '../abstracts/mixins';
+
+.bg-admin{
+    width: 100%;
+    height: 100vh;
+    background: vars.$clr-black;
+}
+
+.pos-icona{
+    line-height: 24px;
+    margin-top: 54px;
+}
+
+.ba-icon{
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-med, 70px, vars.$clr-white);
+    text-decoration: none;
+}
+
+.ra-icon{
+    @include mixins.set-font(vars.$ff-secondary, vars.$fw-sbold, 33px, vars.$clr-white);
+}
+
+.user-admin{
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-reg, 22px, vars.$clr-white);
+    margin-top: 68px;
+    margin-right: 20px;
+}
+
+.admin-icon{
+    width: 85px;
+    height: 85px;
+    margin-top: 40px;
+    border-radius: 48px;
+}
+
+.btn-admin{
+    width: 323px;
+    height: 70px;
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-reg, 22px, vars.$clr-white);
+    background: vars.$clr-cian;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    margin-bottom: 64px;
+}
+
+.gap-admin{
+    margin-top: 198px;
+    gap: 78px;
+}
+
+
+

@@ -358,7 +358,7 @@ app.component('index-page',{
 
             <section class="d-fbd">
                 <h2>All recipes</h2>
-                <a class="link-more d-flex" href="">See more <span class="material-symbols-outlined icon-more">
+                <a class="link-more d-flex" href="./recipes.html">See more <span class="material-symbols-outlined icon-more">
                     double_arrow
                     </span></a>
             </section>

@@ -26,7 +26,45 @@ const app = Vue.createApp({
             return this.recipes.slice(0, 10);
         },
         showOne(){
-            return this.recipes.slice(0, 1);
+                //mostrar una receta
+                axios({
+                    method: 'get',
+                    url:'https://www.themealdb.com/api/json/v1/1/lookup.php?i=52928'
+                })
+                .then(
+                    (response) => {
+                        let item = response.data.meals;
+                        console.log(item);
+                        //console.log(this.recipes);
+    
+    
+                        //let ingredientsList = "";
+                        let likesGenerate = Math.floor(Math.random() * 900);
+    
+                        item.forEach(element => {
+                                    id= element.idMeal,
+                                    image= element.strMealThumb,
+                                    name= element.strMeal,
+                                    likes= likesGenerate,
+                                    category = element.strCategory,
+                                    description = "This recipe is a delightful combination of flavors and textures that will leave you wanting more. With fresh ingredients and a careful selection of spices, this recipe offers a unique culinary experience. Start by mixing the main ingredients in a bowl and seasoning them with a pinch of salt and pepper to enhance the flavors. Then, heat a skillet over medium heat and add a drizzle of oil to brown the ingredients. As they cook, the irresistible aroma fills the kitchen, creating an anticipation that is hard to resist.",
+                                    difficulty = "Intermediate",
+                                    totalTime= 35,
+                                    cookTime=20,
+                                    prepTime=15,
+                                    servings=5,
+                                    occasion="Summer"
+                                    console.log(id);
+                        });
+                        
+                        /*for (let i = 0; i < item.extendedIngredients.length; i++) {
+                            ingredientsList += item.extendedIngredients[i].original + "*"
+                        }*/
+                    }
+                )
+                .catch(
+                    error => console.log(error)
+                );
         },
         showRelated(){
             return this.recipes.slice(0, 3);
@@ -35,7 +73,7 @@ const app = Vue.createApp({
             return this.recipes.slice(0, 7);
         }
     },
-    mounted() {
+    mounted(){
         //agregar Dessert
         axios({
             method: 'get',
@@ -235,6 +273,46 @@ const app = Vue.createApp({
             .catch(
                 error => console.log(error)
             );
-        }
+        },
+        /*showDetails(){
+            //mostrar una receta
+            axios({
+                method: 'get',
+                url:'https://www.themealdb.com/api/json/v1/1/lookup.php?i=52928'
+            })
+            .then(
+                (response) => {
+                    let item = response.data.meals;
+                    console.log(item);
+                    console.log(this.recipes);
+
+
+                    //let ingredientsList = "";
+                    let likesGenerate = Math.floor(Math.random() * 900);
+
+                    item.forEach(element => {
+                                id= element.idMeal,
+                                image= element.strMealThumb,
+                                name= element.strMeal,
+                                likes= likesGenerate,
+                                category = element.strCategory,
+                                description = "This recipe is a delightful combination of flavors and textures that will leave you wanting more. With fresh ingredients and a careful selection of spices, this recipe offers a unique culinary experience. Start by mixing the main ingredients in a bowl and seasoning them with a pinch of salt and pepper to enhance the flavors. Then, heat a skillet over medium heat and add a drizzle of oil to brown the ingredients. As they cook, the irresistible aroma fills the kitchen, creating an anticipation that is hard to resist.",
+                                difficulty = "Intermediate",
+                                totalTime= 35,
+                                cookTime=20,
+                                prepTime=15,
+                                servings=5,
+                                occasion="Summer"
+                    });
+                    
+                    /*for (let i = 0; i < item.extendedIngredients.length; i++) {
+                        ingredientsList += item.extendedIngredients[i].original + "*"
+                    }
+                }
+            )
+            .catch(
+                error => console.log(error)
+            );
+        }*/
     }
 })
