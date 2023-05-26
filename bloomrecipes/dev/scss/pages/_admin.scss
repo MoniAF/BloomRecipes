@@ -51,5 +51,114 @@
     gap: 78px;
 }
 
+.arrow-back{
+    width: 40px;
+    height: 40px;
+    font-size: 40px !important;
+    color: vars.$clr-white;
+    margin-left: -5px;
+}
 
+.title-add{
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-med, 35px, vars.$clr-white);
+    width: 200px;
+    margin-top: 33px;
+}
 
+.pos-add{
+    line-height: 24px;
+    margin-top: 40px;
+}
+
+.label-add{
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-med, vars.$fs-18, vars.$clr-cian);
+    width: 184px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+}
+
+.w-form{
+    width: 100%;
+}
+
+.mt-form{
+    margin-top: 26px;
+}
+
+.section-info{
+    display: grid;
+}
+
+.custom-info{
+    width: 396px;
+    height: 48px;
+    border-radius: 15px;
+    background: vars.$clr-white-blue;
+    padding: 5px;
+    border: none;
+    color: vars.$clr-black;
+}
+
+.custom-drop{
+    width: 173px;
+    height: 48px;
+    border-radius: 15px;
+    background: vars.$clr-white-blue;
+    padding: 5px;
+    border: none;
+    color: vars.$clr-cian;
+    text-align: center;
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-sbold, vars.$fs-15, vars.$clr-cian);
+}
+
+.custom-input{
+    width: 155px;
+    height: 48px;
+    border-radius: 15px 0 0 15px;
+    background: vars.$clr-white-blue;
+    padding: 5px;
+    border: none;
+    color: vars.$clr-black;
+    text-align: center;
+    appearance: textfield;
+}
+
+.custom-input::-webkit-inner-spin-button,
+.custom-input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.bg-btns{
+    width: 18px;
+    height: 48px;
+    background: vars.$clr-cian;
+    border-radius: 0 15px 15px 0;
+}
+
+.btn-input{
+    background: transparent;
+    border: none;
+    width: 18px;
+    height: 24px;
+    padding: 0;
+    padding-bottom: 2px !important;
+}
+
+.icon-caret{
+    width: 16px;
+    height: 16px;
+    margin-bottom: 4px;
+    color: vars.$clr-white-blue;
+}
+
+.icon-drop{
+    width: 20px;
+    height: 20px;
+    color: vars.$clr-cian;
+    position: absolute;
+    margin-left: 139px;
+    margin-top: 14px;
+    pointer-events: none;
+}

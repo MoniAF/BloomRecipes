@@ -54,7 +54,7 @@ app.component('register-user',{
         <div class="d-flex justify-content-center mb-2">
             <p class="txt-question">Do you have account?</p>
             <button class="btn-sign">Log In</button>
-        </div>  
+        </div>
         
     </section>`
 })

@@ -255,7 +255,6 @@ h2 {
       -ms-flex-pack: center;
           justify-content: center;
   text-decoration: none;
-  margin-left: 70%;
 }
 @media only screen and (max-width: 480px) {
   .link-more {
@@ -1435,7 +1434,6 @@ h4 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-left: 57%;
 }
 @media only screen and (max-width: 480px) {
   .btn-more {
@@ -1734,7 +1732,7 @@ body {
 }
 @media only screen and (max-width: 480px) {
   .card-top {
-    width: 100%;
+    width: 350px;
     margin-bottom: 38px;
   }
 }
@@ -1780,7 +1778,7 @@ body {
 }
 @media only screen and (max-width: 480px) {
   .card-pp {
-    width: 100%;
+    width: 350px;
     margin-bottom: 38px;
   }
 }
@@ -1821,30 +1819,44 @@ body {
   }
 }
 
+.conf-cards {
+  border: none;
+  background: transparent;
+  padding: 0;
+}
+
 .cards-pp {
-  gap: 2.438rem;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin-top: 4.938rem !important;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 @media only screen and (max-width: 480px) {
   .cards-pp {
     margin-top: 40px !important;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 979px) {
   .cards-pp {
-    gap: 0;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
   }
 }
 @media only screen and (min-width: 500px) and (max-width: 767px) {
   .cards-pp {
-    gap: 0;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
   }
 }
 @media only screen and (min-width: 1200px) and (max-width: 1400px) {
   .cards-pp {
-    gap: 26px;
     margin-top: 56px;
   }
 }
@@ -2078,8 +2090,7 @@ body {
 }
 
 .container-admin {
-  width: 80%;
-  background: white;
+  width: 44%;
   height: 100vh;
   margin-right: auto;
   margin-left: auto;
@@ -2786,6 +2797,134 @@ body {
 .gap-admin {
   margin-top: 198px;
   gap: 78px;
+}
+
+.arrow-back {
+  width: 40px;
+  height: 40px;
+  font-size: 40px !important;
+  color: hsl(0deg, 0%, 100%);
+  margin-left: -5px;
+}
+
+.title-add {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 35px;
+  color: hsl(0deg, 0%, 100%);
+  width: 200px;
+  margin-top: 33px;
+}
+
+.pos-add {
+  line-height: 24px;
+  margin-top: 40px;
+}
+
+.label-add {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 1.125rem;
+  color: hsl(180deg, 64%, 34%);
+  width: 184px;
+  height: 52px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.w-form {
+  width: 100%;
+}
+
+.mt-form {
+  margin-top: 26px;
+}
+
+.section-info {
+  display: -ms-grid;
+  display: grid;
+}
+
+.custom-info {
+  width: 396px;
+  height: 48px;
+  border-radius: 15px;
+  background: hsl(180deg, 43%, 96%);
+  padding: 5px;
+  border: none;
+  color: hsl(0deg, 0%, 15%);
+}
+
+.custom-drop {
+  width: 173px;
+  height: 48px;
+  border-radius: 15px;
+  background: hsl(180deg, 43%, 96%);
+  padding: 5px;
+  border: none;
+  color: hsl(180deg, 64%, 34%);
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 0.938rem;
+  color: hsl(180deg, 64%, 34%);
+}
+
+.custom-input {
+  width: 155px;
+  height: 48px;
+  border-radius: 15px 0 0 15px;
+  background: hsl(180deg, 43%, 96%);
+  padding: 5px;
+  border: none;
+  color: hsl(0deg, 0%, 15%);
+  text-align: center;
+  -webkit-appearance: textfield;
+     -moz-appearance: textfield;
+          appearance: textfield;
+}
+
+.custom-input::-webkit-inner-spin-button,
+.custom-input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.bg-btns {
+  width: 18px;
+  height: 48px;
+  background: hsl(180deg, 64%, 34%);
+  border-radius: 0 15px 15px 0;
+}
+
+.btn-input {
+  background: transparent;
+  border: none;
+  width: 18px;
+  height: 24px;
+  padding: 0;
+  padding-bottom: 2px !important;
+}
+
+.icon-caret {
+  width: 16px;
+  height: 16px;
+  margin-bottom: 4px;
+  color: hsl(180deg, 43%, 96%);
+}
+
+.icon-drop {
+  width: 20px;
+  height: 20px;
+  color: hsl(180deg, 64%, 34%);
+  position: absolute;
+  margin-left: 139px;
+  margin-top: 14px;
+  pointer-events: none;
 }
 
 .bg-w {

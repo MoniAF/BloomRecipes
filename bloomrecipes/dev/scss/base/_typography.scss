@@ -203,7 +203,7 @@ h2{
     padding-top: 6.938rem;
     justify-content: center;
     text-decoration: none;
-    margin-left: 70%;
+    //margin-left: 70%;
     @include media-queries.respond-to(media-queries.$phone){
         @include mixins.set-font(vars.$ff-primary, vars.$fw-reg, vars.$fs-20, vars.$clr-cian);
         padding-top: 0;
@@ -340,6 +340,7 @@ h2{
 //categories
 
 .txt-menu{
+    
     @include mixins.set-font(vars.$ff-primary, vars.$fw-sbold, vars.$fs-30);
     margin-top: 39px;
     @include media-queries.respond-to(media-queries.$large-desktop){

@@ -19,10 +19,11 @@
 <body>
     <div id="app">
 
-        <!--<div v-for="(item) in recipes">
-            <index-page :index="recipes.id" :name="recipes.name" :image="recipes.image" :category="recipes.category" :difficulty="recipes.difficulty" :likes="recipes.likes" :description="recipes.description"></index-page>
-        </div>-->
-        <index-page :recipes="recipes"></index-page>
+        <nav-bar :recipes="recipes" v-on:mostrarecetas="showRecipes" v-on:mostrarhome="showHome" v-on:searchrecipes="onClickSearchRecipe"></nav-bar>
+
+        <recipes-section  :results="searchData" :recipes="recipes" :message="message" v-if="allRecipes"></recipes-section>
+
+        <index-page :recipes="recipes" v-if="principal"></index-page>
 
     </div>
 
@@ -36,8 +37,10 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <!-- main script -->
     <script src="./js/main.js"></script>
-    <!-- index script -->
+    <!-- components -->
     <script src="./js/components/IndexPage.js"></script>
+    <script src="./js/components/NavBar.js"></script>
+    <script src="./js/components/RecipesSection.js"></script>
     <!-- mounted -->
     <script>
       const mountedApp = app.mount("#app");
