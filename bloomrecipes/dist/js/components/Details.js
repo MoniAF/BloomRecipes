@@ -1,5 +1,8 @@
 app.component('recipe-details',{
     props:{
+        recipes:{
+            type: Array
+        },
         id:{
             type: String
         },
@@ -22,15 +25,15 @@ app.component('recipe-details',{
             type: Number,
             default: 0
         },
-        totalTime:{
+        totalt:{
             type: Number,
             default: 0
         },
-        cookTime:{
+        cookt:{
             type: Number,
             default: 0
         },
-        prepTime:{
+        prept:{
             type: Number,
             default: 0
         },
@@ -56,7 +59,7 @@ app.component('recipe-details',{
         }
     },
     mounted() {
-        console.log(this.ingredients);
+        console.log(this.totalt, this.cookt, this.prept);
     },
     computed: {
         showIngredients() {
@@ -66,6 +69,14 @@ app.component('recipe-details',{
         showInstructions() {
             let formatted = this.instructions.split("*");
             return formatted;
+        },
+        showRelated(){
+            return this.recipes.slice(0, 3);
+        }
+    },
+    methods: {
+        onClickShowDetails(id){
+            this.$emit('showdetails', id);
         }
     },
     template:
@@ -87,12 +98,12 @@ app.component('recipe-details',{
                 <section class="d-fbd justify-content-center dt-gap">
                     <p class="details-text">Difficulty: <span class="txt-black"> {{ difficulty }}</span></p>
                     <p class="details-text">Category: <span class="txt-black"> {{ category }}</span></p>
-                    <p class="details-text">Total time: <span class="txt-black"> {{ totalTime }} min</span></p>
+                    <p class="details-text">Total time: <span class="txt-black"> {{ totalt }} min</span></p>
                     <p class="details-text">Servings: <span class="txt-black">{{ servings }}</span></p>
                 </section>
                 <section class="d-fbd justify-content-center dt-gap">
-                    <p class="details-text">Prep time: <span class="txt-black">{{ prepTime }} min</span></p>
-                    <p class="details-text">Cook time: <span class="txt-black">{{ cookTime }} min</span></p>
+                    <p class="details-text">Prep time: <span class="txt-black">{{ prept }} min</span></p>
+                    <p class="details-text">Cook time: <span class="txt-black">{{ cookt }} min</span></p>
                     <p class="details-text">Occasion: <span class="txt-black">{{ occasion }}</span></p>
                     <p class="details-text m-dtk"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-heart-fill heart-dt" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
@@ -113,7 +124,26 @@ app.component('recipe-details',{
                 </section>
                 <p class="txt-recipes"></p>
 
-                    <h4>Related recipes</h4>
+                <h4>Related recipes</h4>
+
+                <div class="d-flex cards-recipes mb-5">
+                    <div v-for="(element, index) in showRelated">
+                        <button v-on:click="onClickShowDetails(element.id)" type="button" class="conf-cards">
+                            <div class="card-top">
+                                <img v-bind:src="element.image" class="img-card" alt="{{element.name}}">
+                                <div class="degraded"></div>
+                                <div class="info-top">
+                                    <p class="title-card text-center">{{ element.name }}</p>
+                                    <p class="category-card text-center categories-txt">{{ element.category }}</p>
+                                    <p class="category-card text-center categories-txt">{{ element.difficulty }}</p>
+                                    <p class="txt-likes text-center"><span><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-heart-fill card-heart" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                                        </svg></span> {{ element.likes }}</p>
+                                </div>
+                            </div>
+                        </button>
+                    </div>
+                </div>
             </section>
         </div>`
 })

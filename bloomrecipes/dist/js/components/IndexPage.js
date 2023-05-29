@@ -1,5 +1,5 @@
 app.component('index-page',{
-    emits: ['showdetails'],
+    emits: ['showdetails', 'recipelike', 'recipeunlike'],
     props:{
         recipes:{
             type: Array
@@ -19,9 +19,17 @@ app.component('index-page',{
         },
         showRecipes(){
             return this.recipes.slice(0, 5);
-        },
+        }
+    },
+    methods: {
         onClickShowDetails(id){
             this.$emit('showdetails', id);
+        },
+        onClickRecipeLike(id){
+            this.$emit('recipelike', id);
+        },
+        onClickRecipeUnlike(id){
+            this.$emit('recipeunlike', id);
         }
     },
     template:
@@ -69,8 +77,18 @@ app.component('index-page',{
             <div class="d-fb cards-pp">
 
                 <div v-for="element in showTrending">
-                    <button type="button" class="conf-cards" v-on:click="onClickShowDetails(element.id)">
+                    <button v-on:click="onClickShowDetails(element.id)" type="button" class="conf-cards">
                         <div class="card-top">
+
+
+                            <button v-show="element.onLike" v-on:click.stop="onClickRecipeLike(element.id)" class="btn-heart"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-heart-fill like-icon" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                          </svg></button>
+
+                          <button v-show="element.onUnlike" v-on:click.stop="onClickRecipeUnlike(element.id)" class="btn-heart"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-heart-fill unlike-icon" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                          </svg></button>
+
                             <img v-bind:src="element.image" class="img-card" alt="{{element.name}}">
                             <div class="degraded"></div>
                             <div class="info-top">
@@ -107,8 +125,17 @@ app.component('index-page',{
             <div class="d-fb cards-pp justify-content-between">
                 
                 <div v-for="element in showRecipes">
-                    <button type="button" class="conf-cards">
+                    <button type="button" class="conf-cards" v-on:click="onClickShowDetails(element.id)">
                         <div class="card-pp">
+
+                            <button v-show="element.onLike" v-on:click.stop="onClickRecipeLike(element.id)" class="btn-heart"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-heart-fill like-icon" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                            </svg></button>
+
+                            <button v-show="element.onUnlike" v-on:click.stop="onClickRecipeUnlike(element.id)" class="btn-heart"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-heart-fill unlike-icon" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                            </svg></button>
+
                             <img v-bind:src="element.image" class="img-card" alt="{{element.name}}">
                             <div class="degraded"></div>
                             <div class="info-top">

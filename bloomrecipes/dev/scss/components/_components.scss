@@ -141,6 +141,35 @@ body{
 
 
 //cards
+
+.like-icon{
+    width: 43px;
+    height: 43px;
+    color: vars.$clr-white-blue;
+    @include media-queries.respond-to(media-queries.$large-desktop){
+        width: 33px;
+        height: 33px;
+    }
+}
+
+.like-icon:hover{
+    color: vars.$clr-orange;
+}
+
+.unlike-icon{
+    width: 43px;
+    height: 43px;
+    color: vars.$clr-orange;
+    @include media-queries.respond-to(media-queries.$large-desktop){
+        width: 33px;
+        height: 33px;
+    }
+}
+
+.unlike-icon:hover{
+    color: vars.$clr-white-blue;
+}
+
 .conf-cards{
     border: none;
     background: transparent;

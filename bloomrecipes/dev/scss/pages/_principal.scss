@@ -175,6 +175,7 @@
 .m-photos{
     margin-top: 10.375rem;
     margin-bottom: 5.25rem;
+    justify-content: center;
     @include media-queries.respond-to(media-queries.$phone){
         display: block !important;
         margin-top: 4.063rem;
@@ -254,7 +255,6 @@
     width: 20.188rem;
     height: 20.188rem;
     background: vars.$clr-red;
-    margin-left: 43.438rem;
     margin-top: 4.5rem;
     border-radius: 10.625rem;
 
@@ -262,14 +262,12 @@
         width: 90%;
         height: 5.625rem;
         border-radius: 0;
-        margin-left: 0;
         margin-top: -15.313rem;
     }
 
     @include media-queries.respond-to(media-queries.$tablet-landscape){
         width: 90%;
         height: 10.188rem;
-        margin-left: 0;
         margin-top: -481px;
         border-radius: 0;
     }
@@ -277,7 +275,6 @@
     @include media-queries.respond-to(media-queries.$tablet-portrait){
         width: 90%;
         height: 7.188rem;
-        margin-left: 0;
         margin-top: -378px;
         border-radius: 0;
     }
@@ -285,7 +282,6 @@
     @include media-queries.respond-to(media-queries.$large-desktop){
         width: 231px;
         height: 231px;
-        margin-left: 491px;
         margin-top: 49px;
     }
 }
@@ -334,7 +330,7 @@
     height: 42.817rem;
     margin-top: 3.875rem;
     position: absolute;
-    margin-left: 49.313rem;
+    margin-left: 60.313rem;
     @include media-queries.respond-to(media-queries.$phone){
         position: relative;
         width: 110%;

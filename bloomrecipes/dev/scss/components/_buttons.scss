@@ -128,3 +128,16 @@
     @include mixins.button-out(vars.$clr-red, vars.$clr-white-blue);
 }
 //log
+
+//card
+.btn-heart{
+    position: absolute;
+    width: 76px;
+    height: 66px;
+    border: none;
+    background: transparent;
+    @include media-queries.respond-to(media-queries.$large-desktop){
+        width: 66px;
+        height: 56px;
+    }
+}

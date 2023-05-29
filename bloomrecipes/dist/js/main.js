@@ -74,6 +74,8 @@ const app = Vue.createApp({
                                 this.recipes[index].totalTime = 20;
                                 this.recipes[index].servings = 5;
                                 this.recipes[index].occasion = element.strArea;
+                                this.recipes[index].onLike=true;
+                                this.recipes[index].onUnlike=false;
                             });
                         }
                     )
@@ -127,6 +129,8 @@ const app = Vue.createApp({
                                 this.recipes[index].totalTime = 20;
                                 this.recipes[index].servings = 5;
                                 this.recipes[index].occasion = element.strArea;
+                                this.recipes[index].onLike=true;
+                                this.recipes[index].onUnlike=false;
                             });
                         }
                     )
@@ -179,6 +183,8 @@ const app = Vue.createApp({
                                 this.recipes[index].totalTime = 20;
                                 this.recipes[index].servings = 5;
                                 this.recipes[index].occasion = element.strArea;
+                                this.recipes[index].onLike=true;
+                                this.recipes[index].onUnlike=false;
                             });
                         }
                     )
@@ -218,7 +224,9 @@ const app = Vue.createApp({
                                 name: element.strMeal,
                                 category: element.strCategory,
                                 description: "This recipe is a delightful combination of flavors and textures that will leave you wanting more. With fresh ingredients and a careful selection of spices, this recipe offers a unique culinary experience. Start by mixing the main ingredients in a bowl and seasoning them with a pinch of salt and pepper to enhance the flavors. Then, heat a skillet over medium heat and add a drizzle of oil to brown the ingredients. As they cook, the irresistible aroma fills the kitchen, creating an anticipation that is hard to resist.",
-                                difficulty: "Intermediate"
+                                difficulty: "Intermediate",
+                                onLike:true,
+                                onUnlike:false
                             })
                     });
 
@@ -260,6 +268,7 @@ const app = Vue.createApp({
 
         showRecipes(){
             this.$root.principal = false;
+            this.$root.detailsView = false;
             this.$root.allRecipes = true;
             this.$root.footer = true;
             this.cleanResults();
@@ -270,6 +279,7 @@ const app = Vue.createApp({
         showHome(){
             this.$root.principal = true;
             this.$root.allRecipes = false;
+            this.$root.detailsView = false;
             this.$root.footer = false;
             console.log("princ hhhhhhhh "+this.principal);
             console.log("recip hhhhhhhh "+this.allRecipes);
@@ -292,10 +302,11 @@ const app = Vue.createApp({
                     console.log(item);
                     console.log(id);
                     this.recipeDetails = [];
-                        this.$root.principal = false;
-                        this.$root.allRecipes = false;
-                        this.$root.detailsView = true;
-                        this.$root.footer = true;
+
+                    this.$root.principal = false;
+                    this.$root.allRecipes = false;
+                    this.$root.detailsView = true;
+                    this.$root.footer = true;
 
                     let ingredientsList = "";
                     let ingredientsA = [];
@@ -326,7 +337,9 @@ const app = Vue.createApp({
                                 servings: 5,
                                 occasion: "Summer",
                                 ingredients: ingredientsList,
-                                instructions:"Preheat the oven to 350°F (175°C). Grease an 8-inch (20 cm) square baking pan and line it with parchment paper. *In a medium saucepan over medium heat, melt the butter. Add the sugar and mix until well combined. Remove from heat and let cool for a few minutes.*Add the eggs and vanilla to the butter-sugar mixture and beat until well combined.*In a separate bowl, sift together the flour, cocoa powder, salt, and baking soda. Add the dry ingredients to the egg mixture and mix until well combined.*Add the chopped walnuts and mix gently.*Pour the mixture into the prepared baking pan and bake for 25-30 minutes or until a toothpick inserted into the center comes out clean.*Let cool in the pan for 10 minutes before cutting into squares and serving."
+                                instructions:"Preheat the oven to 350°F (175°C). Grease an 8-inch (20 cm) square baking pan and line it with parchment paper. *In a medium saucepan over medium heat, melt the butter. Add the sugar and mix until well combined. Remove from heat and let cool for a few minutes.*Add the eggs and vanilla to the butter-sugar mixture and beat until well combined.*In a separate bowl, sift together the flour, cocoa powder, salt, and baking soda. Add the dry ingredients to the egg mixture and mix until well combined.*Add the chopped walnuts and mix gently.*Pour the mixture into the prepared baking pan and bake for 25-30 minutes or until a toothpick inserted into the center comes out clean.*Let cool in the pan for 10 minutes before cutting into squares and serving.",
+                                onLike:true,
+                                onUnlike:false
                             })
                     });
                     console.log(this.recipeDetails);
@@ -335,6 +348,24 @@ const app = Vue.createApp({
             .catch(
                 error => console.log(error)
             );
+        },
+
+        onClickRecipeLike(id){
+            let recipe = this.recipes.find(r => r.id === id);
+            if (recipe) {
+                recipe.likes++;
+                recipe.onlike=false;
+                recipe.onUnlike=true;
+            }
+        },
+
+        onClickRecipeUnlike(id){
+            let recipe = this.recipes.find(r => r.id === id);
+            if (recipe) {
+                recipe.likes--;
+                recipe.onlike=true;
+                recipe.onUnlike=false;
+            }
         }
     }
 })
