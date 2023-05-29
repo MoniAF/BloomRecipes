@@ -1,5 +1,5 @@
 app.component('nav-bar',{
-    emits: ['mostrarecetas', 'mostrarhome', 'searchrecipes'],
+    emits: ['openrecipes', 'openhome', 'searchrecipes', 'showdetails'],
     props:{
         recipes:{
             type: Array
@@ -12,14 +12,17 @@ app.component('nav-bar',{
     },
     methods: {
         showRecipes(){
-            this.$emit('mostrarecetas', this);
+            this.$emit('openrecipes', this);
         },
         showHome(){
-            this.$emit('mostrarhome', this);
+            this.$emit('openhome', this);
         },
         onClickSearchRecipe(){
             this.$emit('searchrecipes', this.searchTerm);
             this.searchTerm="";
+        },
+        onClickShowDetails(id){
+            this.$emit('showdetails', id);
         }
     },
     computed:{
@@ -47,12 +50,11 @@ app.component('nav-bar',{
                 </div>
                 <div class="modal-body">
 
-
                     <section class="d-flex cards-modal justify-content-center">
                         <div v-for="element in showFav" class="d-flex">
-                            <a href="#">
+                            <button v-on:click="onClickShowDetails(element.id)" type="button" class="conf-cards">
                                 <div class="card-top">
-                                    <img v-bind:src="element.image" class="img-card" alt="chocolate">
+                                    <img v-bind:src="element.image" class="img-card" alt="{{element.name}}">
                                     <div class="degraded"></div>
                                     <div class="info-top">
                                         <p class="title-card text-center">{{ element.name }}</p>
@@ -63,7 +65,7 @@ app.component('nav-bar',{
                                           </svg></span> {{ element.likes }}</p>
                                     </div>
                                 </div>
-                            </a>
+                            </button>
                         </div>
                     </section>
 
@@ -86,7 +88,7 @@ app.component('nav-bar',{
 
                     <div class="d-fb cards-modal">
                         <div v-for="element in showTop" class="col">
-                            <a href="#">
+                            <button v-on:click="onClickShowDetails(element.id)" type="button" class="conf-cards">
                                 <div class="card-top">
                                     <img v-bind:src="element.image" class="img-card" alt="chocolate">
                                     <div class="degraded"></div>
@@ -99,7 +101,7 @@ app.component('nav-bar',{
                                           </svg></span> {{ element.likes }}</p>
                                     </div>
                                 </div>
-                            </a>
+                            </button>
                         </div>
                     </div>
 
@@ -122,7 +124,7 @@ app.component('nav-bar',{
 
                     <div class="d-fb cards-modal">
                         <div v-for="element in showTrending" class="col">
-                            <a href="#">
+                            <button v-on:click="onClickShowDetails(element.id)" type="button" class="conf-cards">
                                 <div class="card-top">
                                     <img v-bind:src="element.image" class="img-card" alt="chocolate">
                                     <div class="degraded"></div>
@@ -135,7 +137,7 @@ app.component('nav-bar',{
                                           </svg></span> {{ element.likes }}</p>
                                     </div>
                                 </div>
-                            </a>
+                            </button>
                         </div>
                     </div>
 
@@ -218,43 +220,43 @@ app.component('nav-bar',{
                                     <div class="d-block">
                                         <p class="title-categories">Difficulty</p>
                                         <li><a class="btn-do text-center" v-on:click="showRecipes">Easy</a></li>
-                                        <li><a class="btn-do text-center" href="#">Intermediate</a></li>
-                                        <li><a class="btn-do text-center" href="#">Difficult</a></li>
+                                        <li><a class="btn-do text-center" v-on:click="showRecipes">Intermediate</a></li>
+                                        <li><a class="btn-do text-center" v-on:click="showRecipes">Difficult</a></li>
                                     </div>
         
                                     <div class="d-block">
                                         <p class="title-categories">Category</p>
-                                        <li><a class="btn-category text-center" href="#">Breakfast</a></li>
-                                        <li><a class="btn-category text-center" href="#">Desserts</a></li>
-                                        <li><a class="btn-category text-center" href="#">Drinks</a></li>
+                                        <li><a class="btn-category text-center" v-on:click="showRecipes">Breakfast</a></li>
+                                        <li><a class="btn-category text-center" v-on:click="showRecipes">Desserts</a></li>
+                                        <li><a class="btn-category text-center" v-on:click="showRecipes">Drinks</a></li>
                                     </div>
         
                                     <div class="d-block">
                                         <p class="title-categories h-transparent"></p>
-                                        <li><a class="btn-category text-center" href="#">Appetizers</a></li>
-                                        <li><a class="btn-category text-center" href="#">Lunch</a></li>
-                                        <li><a class="btn-category text-center" href="#">Soups</a></li>
+                                        <li><a class="btn-category text-center" v-on:click="showRecipes">Appetizers</a></li>
+                                        <li><a class="btn-category text-center" v-on:click="showRecipes">Lunch</a></li>
+                                        <li><a class="btn-category text-center" v-on:click="showRecipes">Soups</a></li>
                                     </div>
                                 </section>
                                 <section class="menu-options d-fb menu-gap">
                                     <div class="d-block">
                                         <p class="title-categories">Occasion</p>
-                                        <li><a class="btn-do text-center" href="./recipes.html">All</a></li>
-                                        <li><a class="btn-do text-center" href="#">Birthday</a></li>
-                                        <li><a class="btn-do text-center" href="#">Easter</a></li>
+                                        <li><a class="btn-do text-center" v-on:click="showRecipes">All</a></li>
+                                        <li><a class="btn-do text-center" v-on:click="showRecipes">Birthday</a></li>
+                                        <li><a class="btn-do text-center" v-on:click="showRecipes">Easter</a></li>
                                     </div>
         
                                     <div class="d-block">
                                         <p class="title-categories h-transparent"></p>
-                                        <li><a class="btn-do text-center" href="#">Father's Day</a></li>
-                                        <li><a class="btn-do text-center" href="#">Children's Day</a></li>
-                                        <li><a class="btn-do text-center" href="#">Summer</a></li>
+                                        <li><a class="btn-do text-center" v-on:click="showRecipes">Father's Day</a></li>
+                                        <li><a class="btn-do text-center" v-on:click="showRecipes">Children's Day</a></li>
+                                        <li><a class="btn-do text-center" v-on:click="showRecipes">Summer</a></li>
                                     </div>
         
                                     <div class="d-block">
                                         <p class="title-categories h-transparent"></p>
-                                        <li><a class="btn-do text-center" href="#">Mother's Day</a></li>
-                                        <li><a class="btn-do text-center" href="#">Christmas</a></li>
+                                        <li><a class="btn-do text-center" v-on:click="showRecipes">Mother's Day</a></li>
+                                        <li><a class="btn-do text-center" v-on:click="showRecipes">Christmas</a></li>
                                     </div>
                                 </section>
     

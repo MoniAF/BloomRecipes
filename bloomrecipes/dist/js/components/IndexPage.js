@@ -1,4 +1,5 @@
 app.component('index-page',{
+    emits: ['showdetails'],
     props:{
         recipes:{
             type: Array
@@ -18,6 +19,9 @@ app.component('index-page',{
         },
         showRecipes(){
             return this.recipes.slice(0, 5);
+        },
+        onClickShowDetails(id){
+            this.$emit('showdetails', id);
         }
     },
     template:
@@ -65,9 +69,9 @@ app.component('index-page',{
             <div class="d-fb cards-pp">
 
                 <div v-for="element in showTrending">
-                    <button type="button" class="conf-cards">
+                    <button type="button" class="conf-cards" v-on:click="onClickShowDetails(element.id)">
                         <div class="card-top">
-                            <img v-bind:src="element.image" class="img-card" alt="chocolate">
+                            <img v-bind:src="element.image" class="img-card" alt="{{element.name}}">
                             <div class="degraded"></div>
                             <div class="info-top">
                                 <p class="title-card text-center">{{ element.name }}</p>
@@ -105,7 +109,7 @@ app.component('index-page',{
                 <div v-for="element in showRecipes">
                     <button type="button" class="conf-cards">
                         <div class="card-pp">
-                            <img v-bind:src="element.image" class="img-card" alt="chocolate">
+                            <img v-bind:src="element.image" class="img-card" alt="{{element.name}}">
                             <div class="degraded"></div>
                             <div class="info-top">
                                 <p class="title-card text-center">{{ element.name }}</p>

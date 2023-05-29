@@ -3,8 +3,11 @@ const app = Vue.createApp({
         return {
             message: "All Recipes",
             searchTerm: "",
+            idRecipe: "",
             principal: true,
             allRecipes: false,
+            footer: false,
+            detailsView: false,
             prepValue: 0,
             cookValue: 0,
             recipes:[
@@ -13,7 +16,8 @@ const app = Vue.createApp({
                 },
                 {category: "Breakfast", cookTime: 10, description: "This recipe is a delightful combination of flavors and textures that will leave you wanting more. With fresh ingredients and a careful selection of spices, this recipe offers a unique culinary experience. Start by mixing the main ingredients in a bowl and seasoning them with a pinch of salt and pepper to enhance the flavors. Then, heat a skillet over medium heat and add a drizzle of oil to brown the ingredients. As they cook, the irresistible aroma fills the kitchen, creating an anticipation that is hard to resist.", difficulty: "Intermediate", id: "52895",image: "https://www.themealdb.com/images/media/meals/utxryw1511721587.jpg", likes: 397, name: "English Breakfast", occasion: "British", prepTime: 10, servings: 5, totalTime: 20}*/
             ],
-            searchData:[]
+            searchData:[],
+            recipeDetails:[]
         }
     },
     computed:{
@@ -187,14 +191,7 @@ const app = Vue.createApp({
         .catch(
             error => console.log(error)
         );
-
-        //recipe details
-        /*this.recipes.forEach((recipe) => {
-            recipe.ingredients = recipe.ingredients.split('*');
-        });
-        this.recipes.forEach((recipe) => {
-            recipe.instructions = recipe.instructions.split('*');
-        });*/
+        
     },
     methods: {
         searchRecipes(){
@@ -206,19 +203,13 @@ const app = Vue.createApp({
                 (response) => {
                     let items = response.data.meals;
                     this.searchData = [];
+
                     if(this.searchTerm != ""){
                         this.$root.principal = false;
                         this.$root.allRecipes = true;
                     }
-                    //+
-                    //console.log(items);
+
                     console.log("palabra " +this.searchTerm);
-                    /*if(items == null){
-                        this.message= "No se ha encontrado "+this.searchTerm;
-                    }else{
-                        this.message= "Search results for "+this.searchTerm;
-                    }
-                    //searchData=items;*/
 
                     items.forEach(element => {
                         this.searchData.push({ 
@@ -234,90 +225,116 @@ const app = Vue.createApp({
                     if(this.searchData != null){
                         this.message= "Search results for "+this.searchTerm;
                     }
-                    console.log(this.searchData);
                 }
             )
             .catch(
                 error => console.log(error)
             );
         },
+
         onClickSearchRecipe(searchTerm){
             this.searchTerm=searchTerm;
             console.log(searchTerm);
             this.searchRecipes();
         },
+
         prepIncrease(){
             this.prepValue++;
         },
+
         prepDecrease(){
             if (this.prepValue > 0) {
                 this.prepValue--;
             }
         },
+
         cookIncrease(){
             this.cookValue++;
         },
+
         cookDecrease(){
             if (this.cookValue > 0) {
                 this.cookValue--;
             }
         },
+
         showRecipes(){
             this.$root.principal = false;
             this.$root.allRecipes = true;
+            this.$root.footer = true;
             this.cleanResults();
             console.log("princ reee "+this.principal);
             console.log("recip reee "+this.allRecipes);
         },
+
         showHome(){
             this.$root.principal = true;
             this.$root.allRecipes = false;
+            this.$root.footer = false;
             console.log("princ hhhhhhhh "+this.principal);
             console.log("recip hhhhhhhh "+this.allRecipes);
         },
+
         cleanResults(){
             this.searchData= [];
             this.message= "All recipes";
         },
-        /*showDetails(){
+
+        onClickShowDetails(id){
             //mostrar una receta
             axios({
                 method: 'get',
-                url:'https://www.themealdb.com/api/json/v1/1/lookup.php?i=52928'
-            })
+                url:'https://www.themealdb.com/api/json/v1/1/lookup.php?i='+id
+                })
             .then(
                 (response) => {
                     let item = response.data.meals;
                     console.log(item);
-                    console.log(this.recipes);
+                    console.log(id);
+                    this.recipeDetails = [];
+                        this.$root.principal = false;
+                        this.$root.allRecipes = false;
+                        this.$root.detailsView = true;
+                        this.$root.footer = true;
 
-
-                    //let ingredientsList = "";
+                    let ingredientsList = "";
+                    let ingredientsA = [];
                     let likesGenerate = Math.floor(Math.random() * 900);
+                    for (let vars in item[0]) {
+                        if (vars.startsWith("strIngredient") && item[0][vars]) {
+                        let measureVars = vars.replace("strIngredient", "strMeasure");
+                        let measure = item[0][measureVars];
+                        let ingredient = item[0][vars];
+                    
+                        ingredientsA.push(`${measure} ${ingredient}`);
+                        }
+                    }
+                    ingredientsList = ingredientsA.join('*');
 
                     item.forEach(element => {
-                                id= element.idMeal,
-                                image= element.strMealThumb,
-                                name= element.strMeal,
-                                likes= likesGenerate,
-                                category = element.strCategory,
-                                description = "This recipe is a delightful combination of flavors and textures that will leave you wanting more. With fresh ingredients and a careful selection of spices, this recipe offers a unique culinary experience. Start by mixing the main ingredients in a bowl and seasoning them with a pinch of salt and pepper to enhance the flavors. Then, heat a skillet over medium heat and add a drizzle of oil to brown the ingredients. As they cook, the irresistible aroma fills the kitchen, creating an anticipation that is hard to resist.",
-                                difficulty = "Intermediate",
-                                totalTime= 35,
-                                cookTime=20,
-                                prepTime=15,
-                                servings=5,
-                                occasion="Summer"
+                        this.recipeDetails.push({ 
+                                id: element.idMeal,
+                                image: element.strMealThumb,
+                                name: element.strMeal,
+                                likes: likesGenerate,
+                                category: element.strCategory,
+                                description: "This recipe is a delightful combination of flavors and textures that will leave you wanting more. With fresh ingredients and a careful selection of spices, this recipe offers a unique culinary experience. Start by mixing the main ingredients in a bowl and seasoning them with a pinch of salt and pepper to enhance the flavors. Then, heat a skillet over medium heat and add a drizzle of oil to brown the ingredients. As they cook, the irresistible aroma fills the kitchen, creating an anticipation that is hard to resist.",
+                                difficulty: "Intermediate",
+                                totalTime: 35,
+                                cookTime: 20,
+                                prepTime: 15,
+                                servings: 5,
+                                occasion: "Summer",
+                                ingredients: ingredientsList,
+                                instructions:"Preheat the oven to 350°F (175°C). Grease an 8-inch (20 cm) square baking pan and line it with parchment paper. *In a medium saucepan over medium heat, melt the butter. Add the sugar and mix until well combined. Remove from heat and let cool for a few minutes.*Add the eggs and vanilla to the butter-sugar mixture and beat until well combined.*In a separate bowl, sift together the flour, cocoa powder, salt, and baking soda. Add the dry ingredients to the egg mixture and mix until well combined.*Add the chopped walnuts and mix gently.*Pour the mixture into the prepared baking pan and bake for 25-30 minutes or until a toothpick inserted into the center comes out clean.*Let cool in the pan for 10 minutes before cutting into squares and serving."
+                            })
                     });
-                    
-                    /*for (let i = 0; i < item.extendedIngredients.length; i++) {
-                        ingredientsList += item.extendedIngredients[i].original + "*"
-                    }
+                    console.log(this.recipeDetails);
                 }
             )
             .catch(
                 error => console.log(error)
             );
-        }*/
+        }
     }
 })

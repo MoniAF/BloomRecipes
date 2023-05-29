@@ -11,30 +11,13 @@ app.component('recipes-section',{
             default: "Results"
         }
     },
-    mounted(){
-        //this.$emit('results', this.searchResults);
-        //console.log(this.recipes);
-        //console.log(this.searchResults);
-    },
     computed:{
         showResults(){
             if (this.results.length > 0) {
                 return this.results;
-              } else {
+            } else {
                 return this.recipes;
-              }
-            /*if (this.searchResults>0) {
-                console.log("prueba if");
-                console.log("if "+this.recipes);
-                console.log("aki" +this.searchResults);
-                //console.log("if results "+this.searchResults);
-                return this.recipes;
-            }else{
-                console.log("prueba else");
-                console.log("aki 2 " +this.searchResults);
-                //console.log("else "+this.searchResults);
-                return this.searchResults;
-            }*/
+            }
         }
     },
     template:
