@@ -74,7 +74,7 @@ app.component('index-page',{
                     </span></button>
             </section>
 
-            <div class="d-fb cards-pp">
+            <div class="d-flex cards-pp">
 
                 <div v-for="element in showTrending">
                     <button v-on:click="onClickShowDetails(element.id)" type="button" class="conf-cards">
@@ -122,7 +122,7 @@ app.component('index-page',{
                     </span></a>
             </section>
 
-            <div class="d-fb cards-pp justify-content-between">
+            <div class="d-flex cards-pp">
                 
                 <div v-for="element in showRecipes">
                     <button type="button" class="conf-cards" v-on:click="onClickShowDetails(element.id)">

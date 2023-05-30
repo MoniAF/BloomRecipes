@@ -35,7 +35,7 @@ app.component('nav-bar',{
             return recipesCopy.sort((a, b) => b.likes - a.likes).slice(0, 5);
         },
         showFav(){
-            return this.recipes.slice(0, 7);
+            return this.recipes.slice();
         }
     },
     template:
@@ -50,9 +50,9 @@ app.component('nav-bar',{
                 </div>
                 <div class="modal-body">
 
-                    <section class="d-flex cards-modal justify-content-center">
+                    <section class="d-flex cards-modal">
                         <div v-for="element in showFav" class="d-flex">
-                            <button v-on:click="onClickShowDetails(element.id)" type="button" class="conf-cards">
+                            <button v-if="element.onUnlike" v-on:click="onClickShowDetails(element.id)" type="button" class="conf-cards">
                                 <div class="card-top">
                                     <img v-bind:src="element.image" class="img-card" alt="{{element.name}}">
                                     <div class="degraded"></div>

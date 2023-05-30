@@ -36,7 +36,7 @@
 h1{
     @include mixins.set-font(vars.$ff-primary, vars.$fw-sbold, vars.$fs-93);
     line-height: 6.563rem;
-    margin-top: 2.875rem;
+    margin-top: 65px;
     margin-right: 56.938rem;
 
     @include media-queries.respond-to(media-queries.$phone){
@@ -99,7 +99,7 @@ h2{
     width: 43.75rem;
     @include mixins.set-font(vars.$ff-secondary, vars.$fw-sbold, vars.$fs-25);
     line-height: 2.378rem;
-    margin-top: 7.188rem;
+    margin-top: 162px;
 
     @include media-queries.respond-to(media-queries.$phone){
         width: 100%;
