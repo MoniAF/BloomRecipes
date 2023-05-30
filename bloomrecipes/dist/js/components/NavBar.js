@@ -1,5 +1,5 @@
 app.component('nav-bar',{
-    emits: ['openrecipes', 'openhome', 'searchrecipes', 'showdetails', 'recipelike', 'recipeunlike'],
+    emits: ['openrecipes', 'openhome', 'searchrecipes', 'showdetails', 'recipelike', 'recipeunlike'],//emision de eventos
     props:{
         recipes:{
             type: Array
@@ -7,41 +7,41 @@ app.component('nav-bar',{
     },
     data() {
         return {
-            searchTerm:""
+            searchTerm:""//Termino de busqueda
         }
     },
     methods: {
         showRecipes(){
-            this.$emit('openrecipes', this);
+            this.$emit('openrecipes', this); //Emite el evento y muestra todas las recetas
         },
         showHome(){
-            this.$emit('openhome', this);
+            this.$emit('openhome', this); //Emite el evento y muestra la pantalla principal
         },
         onClickSearchRecipe(){
-            this.$emit('searchrecipes', this.searchTerm);
-            this.searchTerm="";
+            this.$emit('searchrecipes', this.searchTerm); //Emite el evento y envia el termino de busqueda para mostrar las recetas
+            this.searchTerm=""; //limpia el buscador
         },
         onClickShowDetails(id){
-            this.$emit('showdetails', id);
+            this.$emit('showdetails', id); //Emite el evento y envia el id para mostrar los detalles de la receta
         },
         onClickRecipeLike(id){
-            this.$emit('recipelike', id);
+            this.$emit('recipelike', id); //Emite el evento y envia el id para aumentar los likes
         },
         onClickRecipeUnlike(id){
-            this.$emit('recipeunlike', id);
+            this.$emit('recipeunlike', id); //Emite el evento y envia el id para disminuir los likes
         }
     },
     computed:{
         showTop(){
-            let recipesCopy = this.recipes.slice();
-            return recipesCopy.sort((a, b) => b.likes - a.likes).slice(0, 10);
+            let recipesCopy = this.recipes.slice(); //copia del array para no afectar el original
+            return recipesCopy.sort((a, b) => b.likes - a.likes).slice(0, 10); //Ordena de mayor a menor segun los likes y muestra unicamente 10 elementos del array
         },
         showTrending(){
-            let recipesCopy = this.recipes.slice();
-            return recipesCopy.sort((a, b) => b.likes - a.likes).slice(0, 5);
+            let recipesCopy = this.recipes.slice(); //copia del array para no afectar el original
+            return recipesCopy.sort((a, b) => b.likes - a.likes).slice(0, 5); //Ordena de mayor a menor segun los likes y muestra unicamente 5 elementos del array
         },
         showFav(){
-            return this.recipes.slice();
+            return this.recipes.slice(); //muestra las recetas favoritas sin afectar la original
         }
     },
     template:

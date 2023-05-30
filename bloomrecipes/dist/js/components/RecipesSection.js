@@ -1,5 +1,5 @@
 app.component('recipes-section',{
-    emits: ['showdetails', 'recipelike', 'recipeunlike'],
+    emits: ['showdetails', 'recipelike', 'recipeunlike'], //emision de eventos
     props:{
         recipes:{
             type: Array
@@ -14,17 +14,17 @@ app.component('recipes-section',{
     },
     methods: {
         onClickShowDetails(id){
-            this.$emit('showdetails', id);
+            this.$emit('showdetails', id); //Emite el evento y envia el id para mostrar los detalles de la receta
         },
         onClickRecipeLike(id){
-            this.$emit('recipelike', id);
+            this.$emit('recipelike', id); //Emite el evento y envia el id para aumentar los likes
         },
         onClickRecipeUnlike(id){
-            this.$emit('recipeunlike', id);
+            this.$emit('recipeunlike', id); //Emite el evento y envia el id para disminuir los likes
         }
     },
     computed:{
-        showResults(){
+        showResults(){ //define si se hará la muestra de todas las recetas o de unicamente los resultados de busqueda
             if (this.results.length > 0) {
                 return this.results;
             } else {

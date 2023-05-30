@@ -1,35 +1,31 @@
 app.component('index-page',{
-    emits: ['showdetails', 'recipelike', 'recipeunlike'],
+    emits: ['showdetails', 'recipelike', 'recipeunlike'],//emision de eventos
     props:{
         recipes:{
-            type: Array
+            type: Array 
         }
     },
     mounted() {
         console.log(this.recipes);
     },
     computed:{
-        showTop(){
-            let recipesCopy = this.recipes.slice();
-            return recipesCopy.sort((a, b) => b.likes - a.likes).slice(0, 10);
-        },
         showTrending(){
-            let recipesCopy = this.recipes.slice();
-            return recipesCopy.sort((a, b) => b.likes - a.likes).slice(0, 5);
+            let recipesCopy = this.recipes.slice(); //copia del array para no afectar el original
+            return recipesCopy.sort((a, b) => b.likes - a.likes).slice(0, 5); //Ordena de mayor a menor segun los likes y muestra unicamente 5 elementos del array
         },
         showRecipes(){
-            return this.recipes.slice(0, 5);
+            return this.recipes.slice(0, 5); //Muestra unicamente 5 elementos del array
         }
     },
     methods: {
         onClickShowDetails(id){
-            this.$emit('showdetails', id);
+            this.$emit('showdetails', id); //Emite el evento y envia el id para mostrar los detalles de la receta
         },
         onClickRecipeLike(id){
-            this.$emit('recipelike', id);
+            this.$emit('recipelike', id); //Emite el evento y envia el id para aumentar los likes
         },
         onClickRecipeUnlike(id){
-            this.$emit('recipeunlike', id);
+            this.$emit('recipeunlike', id); //Emite el evento y envia el id para disminuir los likes
         }
     },
     template:
@@ -117,7 +113,7 @@ app.component('index-page',{
 
             <section class="d-fbd justify-content-between">
                 <h2>All recipes</h2>
-                <a class="link-more d-flex" href="./recipes.html">See more <span class="material-symbols-outlined icon-more">
+                <a class="link-more d-flex">See more <span class="material-symbols-outlined icon-more">
                     double_arrow
                     </span></a>
             </section>

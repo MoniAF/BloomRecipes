@@ -10,31 +10,15 @@ const app = Vue.createApp({
             detailsView: false,
             prepValue: 0,
             cookValue: 0,
-            recipes:[
-                /*{
-                    category: "Breakfast", cookTime: 10, description: "This recipe is a delightful combination of flavors and textures that will leave you wanting more. With fresh ingredients and a careful selection of spices, this recipe offers a unique culinary experience. Start by mixing the main ingredients in a bowl and seasoning them with a pinch of salt and pepper to enhance the flavors. Then, heat a skillet over medium heat and add a drizzle of oil to brown the ingredients. As they cook, the irresistible aroma fills the kitchen, creating an anticipation that is hard to resist.", difficulty: "Intermediate", id: "52965", image: "https://www.themealdb.com/images/media/meals/1550441882.jpg", likes: 77, name: "Breakfast Potatoes", occasion: "Canadian", prepTime : 10,servings: 5, totalTime: 20
-                },
-                {category: "Breakfast", cookTime: 10, description: "This recipe is a delightful combination of flavors and textures that will leave you wanting more. With fresh ingredients and a careful selection of spices, this recipe offers a unique culinary experience. Start by mixing the main ingredients in a bowl and seasoning them with a pinch of salt and pepper to enhance the flavors. Then, heat a skillet over medium heat and add a drizzle of oil to brown the ingredients. As they cook, the irresistible aroma fills the kitchen, creating an anticipation that is hard to resist.", difficulty: "Intermediate", id: "52895",image: "https://www.themealdb.com/images/media/meals/utxryw1511721587.jpg", likes: 397, name: "English Breakfast", occasion: "British", prepTime: 10, servings: 5, totalTime: 20}*/
-            ],
+            recipes:[],
             searchData:[],
             recipeDetails:[]
         }
     },
-    computed:{
-        showTrending(){
-            return this.recipes.slice(0, 5);
-        },
-        showTop(){
-            return this.recipes.slice(0, 10);
-        },
-        showRelated(){
-            return this.recipes.slice(0, 3);
-        },
-        showFav(){
-            return this.recipes.slice(0, 7);
-        }
-    },
     mounted(){
+
+        //Se añaden 3 categorias al array recipes desde el api
+
         //agregar Dessert
         axios({
             method: 'get',
@@ -200,7 +184,7 @@ const app = Vue.createApp({
         
     },
     methods: {
-        searchRecipes(){
+        searchRecipes(){ //realiza la busqueda de las recetas y las añade al array de resultados
             axios({
                 method: 'get',
                 url:'https://www.themealdb.com/api/json/v1/1/search.php?s='+this.searchTerm
@@ -240,33 +224,33 @@ const app = Vue.createApp({
             );
         },
 
-        onClickSearchRecipe(searchTerm){
+        onClickSearchRecipe(searchTerm){ //recibe el termino y ejecuta el buscar 
             this.searchTerm=searchTerm;
             console.log(searchTerm);
             this.searchRecipes();
         },
 
-        prepIncrease(){
+        prepIncrease(){ //incrementa el valor de prepTime (administración)
             this.prepValue++;
         },
 
-        prepDecrease(){
+        prepDecrease(){ //decrementa el valor de prepTime(administración)
             if (this.prepValue > 0) {
                 this.prepValue--;
             }
         },
 
-        cookIncrease(){
+        cookIncrease(){ //incrementa el valor de cookTime (administración)
             this.cookValue++;
         },
 
-        cookDecrease(){
+        cookDecrease(){ //decrementa el valor de cookTime (administración)
             if (this.cookValue > 0) {
                 this.cookValue--;
             }
         },
 
-        showRecipes(){
+        showRecipes(){ //mostrar pagina de recetas y footer
             this.$root.principal = false;
             this.$root.detailsView = false;
             this.$root.allRecipes = true;
@@ -276,7 +260,7 @@ const app = Vue.createApp({
             console.log("recip reee "+this.allRecipes);
         },
 
-        showHome(){
+        showHome(){ //mostrar pagina principal
             this.$root.principal = true;
             this.$root.allRecipes = false;
             this.$root.detailsView = false;
@@ -285,12 +269,12 @@ const app = Vue.createApp({
             console.log("recip hhhhhhhh "+this.allRecipes);
         },
 
-        cleanResults(){
+        cleanResults(){ //borrar datos de busqueda
             this.searchData= [];
             this.message= "All recipes";
         },
 
-        onClickShowDetails(id){
+        onClickShowDetails(id){ //mostrar detalles de la receta seleccionada
             //mostrar una receta
             axios({
                 method: 'get',
@@ -350,7 +334,7 @@ const app = Vue.createApp({
             );
         },
 
-        onClickRecipeLike(id){
+        onClickRecipeLike(id){ //aumentar likes
             let recipe = this.recipes.find(r => r.id === id);
             if (recipe) {
                 recipe.likes++;
@@ -359,7 +343,7 @@ const app = Vue.createApp({
             }
         },
 
-        onClickRecipeUnlike(id){
+        onClickRecipeUnlike(id){ //disminuir likes
             let recipe = this.recipes.find(r => r.id === id);
             if (recipe) {
                 recipe.likes--;

@@ -1,5 +1,5 @@
 app.component('recipe-details',{
-    emits:['recipelike', 'recipeunlike'],
+    emits:['recipelike', 'recipeunlike'], //emision de eventos
     props:{
         recipes:{
             type: Array
@@ -64,26 +64,26 @@ app.component('recipe-details',{
     },
     computed: {
         showIngredients() {
-            let formatted = this.ingredients.split("*");
+            let formatted = this.ingredients.split("*"); //divide los ingredientes por los asteriscos
             return formatted;
         },
         showInstructions() {
-            let formatted = this.instructions.split("*");
+            let formatted = this.instructions.split("*"); //divide las instrucciones por los asteriscos
             return formatted;
         },
         showRelated(){
-            return this.recipes.slice(0, 3);
+            return this.recipes.slice(0, 3); //muestra unicamente 3 recetas del array
         }
     },
     methods: {
         onClickShowDetails(id){
-            this.$emit('showdetails', id);
+            this.$emit('showdetails', id); //Emite el evento y envia el id para mostrar los detalles de la receta
         },
         onClickRecipeLike(id){
-            this.$emit('recipelike', id);
+            this.$emit('recipelike', id); //Emite el evento y envia el id para aumentar los likes
         },
         onClickRecipeUnlike(id){
-            this.$emit('recipeunlike', id);
+            this.$emit('recipeunlike', id); //Emite el evento y envia el id para disminuir los likes
         }
     },
     template:
