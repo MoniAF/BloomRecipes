@@ -41,10 +41,14 @@ body{
     gap: 2.438rem;
     flex-wrap: wrap;
     margin-top: 32px !important;
-    margin-left: 11px;
     @include media-queries.respond-to(media-queries.$phone){
         margin-left: 0;
     }
+}
+
+.mm-modal{
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 //modales
@@ -260,8 +264,15 @@ body{
     margin-top: 28px !important;
     justify-content: center;
     @include media-queries.respond-to(media-queries.$large-desktop){
-        gap: 26px;
+        gap: 0;
         margin-top: 19px !important;
+    }
+    @include media-queries.respond-to(media-queries.$tablet-landscape){
+        justify-content: space-evenly;
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-portrait){
+        justify-content: space-evenly;
     }
     @include media-queries.respond-to(media-queries.$phone){
         margin-top: 44px !important;

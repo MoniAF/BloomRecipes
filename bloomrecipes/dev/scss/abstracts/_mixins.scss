@@ -140,6 +140,7 @@
 
     @include media-queries.respond-to(media-queries.$tablet-portrait){
         width: 100%;
+        font-size: vars.$fs-26;
     }
 
     @include media-queries.respond-to(media-queries.$large-desktop){

@@ -127,6 +127,14 @@
     }
 }
 
+.icons-frs{
+    @include media-queries.respond-to(media-queries.$tablet-landscape){
+        justify-content: start !important;
+    }
+    @include media-queries.respond-to(media-queries.$tablet-portrait){
+    }
+}
+
 .jc-tl{
     @include media-queries.respond-to(media-queries.$tablet-landscape){
         justify-content: end !important;
@@ -152,7 +160,7 @@
     }
 
     @include media-queries.respond-to(media-queries.$tablet-landscape){
-        margin-top: 22px;
+        margin-top: 38px;
         margin-bottom: 0px;
     }
 

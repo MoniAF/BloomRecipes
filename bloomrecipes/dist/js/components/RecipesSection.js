@@ -35,22 +35,22 @@ app.component('recipes-section',{
     template:
     /*html*/
     `<div class="container-principal">
-        <section class="d-fb justify-content-center">
+        <section class="d-flex justify-content-center">
             <p class="txt-menu">{{ message }}</p>
         </section>
 
-        <div class="d-fb cards-recipes justify-content-between">
+        <div class="d-flex cards-recipes">
             <div v-for="element in showResults">
-                <button v-on:click="onClickShowDetails(element.id)" type="button" class="conf-cards">
+                <button v-on:click="onClickShowDetails(element.id)" type="button" class="conf-cards mb-4">
                     <div class="card-pp">
 
-                            <button v-show="element.onLike" v-on:click.stop="onClickRecipeLike(element.id)" class="btn-heart"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-heart-fill like-icon" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
-                            </svg></button>
+                        <button v-show="element.onLike" v-on:click.stop="onClickRecipeLike(element.id)" class="btn-heart"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-heart-fill like-icon" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                        </svg></button>
 
-                            <button v-show="element.onUnlike" v-on:click.stop="onClickRecipeUnlike(element.id)" class="btn-heart"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-heart-fill unlike-icon" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
-                            </svg></button>
+                        <button v-show="element.onUnlike" v-on:click.stop="onClickRecipeUnlike(element.id)" class="btn-heart"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-heart-fill unlike-icon" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                        </svg></button>
 
                         <img v-bind:src="element.image" class="img-card" alt="element.name">
                         <div class="degraded"></div>

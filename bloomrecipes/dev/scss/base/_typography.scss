@@ -133,6 +133,9 @@ h2{
         font-size: 1.25rem;
         text-align: center;
     }
+    @include media-queries.respond-to(media-queries.$tablet-portrait){
+        font-size: vars.$fs-26;
+    }
     @include media-queries.respond-to(media-queries.$large-desktop){
         font-size: 21px;
     }

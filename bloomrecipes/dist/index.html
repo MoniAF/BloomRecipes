@@ -19,14 +19,14 @@
 <body>
     <div id="app">
 
-        <nav-bar :recipes="recipes" v-on:openrecipes="showRecipes" v-on:openhome="showHome" v-on:searchrecipes="onClickSearchRecipe" v-on:showdetails="onClickShowDetails"></nav-bar>
+        <nav-bar :recipes="recipes" v-on:openrecipes="showRecipes" v-on:openhome="showHome" v-on:searchrecipes="onClickSearchRecipe" v-on:showdetails="onClickShowDetails" v-on:recipelike="onClickRecipeLike"  v-on:recipeunlike="onClickRecipeUnlike"></nav-bar>
 
-        <recipes-section  :results="searchData" :recipes="recipes" :message="message" v-if="allRecipes" v-on:showdetails="onClickShowDetails"></recipes-section>
+        <recipes-section  :results="searchData" :recipes="recipes" :message="message" v-if="allRecipes" v-on:showdetails="onClickShowDetails" v-on:recipelike="onClickRecipeLike"  v-on:recipeunlike="onClickRecipeUnlike"></recipes-section>
 
         <index-page :recipes="recipes" v-if="principal" v-on:showdetails="onClickShowDetails" v-on:recipelike="onClickRecipeLike"  v-on:recipeunlike="onClickRecipeUnlike"></index-page>
 
         <div v-for="item in recipeDetails">
-            <recipe-details v-if="detailsView" :recipes="recipes" :id="item.id" :name="item.name" :image="item.image" :category="item.category" :difficulty="item.difficulty" :likes="item.likes" :totalt="item.totalTime" :cookt="item.cookTime" :prept="item.prepTime" :servings="item.servings" :occasion="item.occasion" :description="item.description" :ingredients="item.ingredients" :instructions="item.instructions" v-on:showdetails="onClickShowDetails"></recipe-details>
+            <recipe-details v-if="detailsView" :recipes="recipes" :id="item.id" :name="item.name" :image="item.image" :category="item.category" :difficulty="item.difficulty" :likes="item.likes" :totalt="item.totalTime" :cookt="item.cookTime" :prept="item.prepTime" :servings="item.servings" :occasion="item.occasion" :description="item.description" :ingredients="item.ingredients" :instructions="item.instructions" v-on:showdetails="onClickShowDetails" v-on:recipelike="onClickRecipeLike"  v-on:recipeunlike="onClickRecipeUnlike"></recipe-details>
         </div>
 
         <footer-pages v-if="footer"></footer-pages>

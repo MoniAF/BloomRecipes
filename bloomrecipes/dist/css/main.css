@@ -148,6 +148,11 @@ h2 {
     text-align: center;
   }
 }
+@media only screen and (min-width: 500px) and (max-width: 767px) {
+  .info-nw {
+    font-size: 1.625rem;
+  }
+}
 @media only screen and (min-width: 1200px) and (max-width: 1400px) {
   .info-nw {
     font-size: 21px;
@@ -1370,6 +1375,7 @@ h4 {
 @media only screen and (min-width: 500px) and (max-width: 767px) {
   .btn-newest {
     width: 100%;
+    font-size: 1.625rem;
   }
 }
 @media only screen and (min-width: 1200px) and (max-width: 1400px) {
@@ -1411,6 +1417,7 @@ h4 {
 @media only screen and (min-width: 500px) and (max-width: 767px) {
   .btn-newest:hover {
     width: 100%;
+    font-size: 1.625rem;
   }
 }
 @media only screen and (min-width: 1200px) and (max-width: 1400px) {
@@ -1729,12 +1736,16 @@ body {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin-top: 32px !important;
-  margin-left: 11px;
 }
 @media only screen and (max-width: 480px) {
   .cards-modal {
     margin-left: 0;
   }
+}
+
+.mm-modal {
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .card-top {
@@ -1983,8 +1994,22 @@ body {
 }
 @media only screen and (min-width: 1200px) and (max-width: 1400px) {
   .cards-recipes {
-    gap: 26px;
+    gap: 0;
     margin-top: 19px !important;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+  .cards-recipes {
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+}
+@media only screen and (min-width: 500px) and (max-width: 767px) {
+  .cards-recipes {
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
   }
 }
 @media only screen and (max-width: 480px) {
@@ -2443,7 +2468,7 @@ body {
 }
 
 .m-form {
-  margin-top: 0.313rem;
+  margin-top: 8px;
   margin-left: 4.125rem;
 }
 @media only screen and (max-width: 480px) {
@@ -2704,6 +2729,13 @@ body {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 979px) {
+  .icons-frs {
+    -webkit-box-pack: start !important;
+        -ms-flex-pack: start !important;
+            justify-content: start !important;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 979px) {
   .jc-tl {
     -webkit-box-pack: end !important;
         -ms-flex-pack: end !important;
@@ -2737,7 +2769,7 @@ body {
 }
 @media only screen and (min-width: 768px) and (max-width: 979px) {
   .m-footer {
-    margin-top: 22px;
+    margin-top: 38px;
     margin-bottom: 0px;
   }
 }
