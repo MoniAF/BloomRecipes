@@ -72,7 +72,7 @@
     }
 
     @include media-queries.respond-to(media-queries.$large-desktop){
-        width: 1222px;
+        width: 90%;
         margin-right: 5%;
         margin-left: 5%;
     }
@@ -90,8 +90,11 @@
 
 .container-admin{
     width: 44%;
-    //background: white;
-    height: 100vh;
+    height: auto;
     margin-right: auto;
     margin-left: auto;
+
+    @include media-queries.respond-to(media-queries.$large-desktop){
+        width: 62%;
+    }
 }

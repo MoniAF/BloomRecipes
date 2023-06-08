@@ -57,7 +57,7 @@ app.component('nav-bar',{
                 <div class="modal-body">
 
                 <div class="d-flex justify-content-center flex-wrap">
-                <div v-for="element in showFav">
+                <div class="size-card" v-for="element in showFav">
                     <section v-if="element.onUnlike" class="d-flex cards-modal justify-content-center mm-modal">
                             <button v-on:click="onClickShowDetails(element.id)" type="button" class="conf-cards">
                                 <div class="card-top">
@@ -72,14 +72,16 @@ app.component('nav-bar',{
 
                                     <img v-bind:src="element.image" class="img-card" alt="{{element.name}}">
                                     <div class="degraded"></div>
-                                    <div class="info-top">
-                                        <p class="title-card text-center">{{ element.name }}</p>
-                                        <p class="category-card text-center categories-txt">{{ element.category }}</p>
-                                        <p class="category-card text-center categories-txt">{{ element.difficulty }}</p>
-                                        <p class="txt-likes text-center"><span><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-heart-fill card-heart" viewBox="0 0 16 16">
-                                            <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
-                                          </svg></span> {{ element.likes }}</p>
-                                    </div>
+                                    <section class="d-flex justify-content-center">
+                                        <div class="info-top">
+                                            <p class="title-card text-center">{{ element.name }}</p>
+                                            <p class="category-card text-center categories-txt">{{ element.category }}</p>
+                                            <p class="category-card text-center categories-txt">{{ element.difficulty }}</p>
+                                            <p class="txt-likes text-center"><span><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-heart-fill card-heart" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                                            </svg></span> {{ element.likes }}</p>
+                                        </div>
+                                    </section>
                                 </div>
                             </button>
                     </section>
@@ -224,75 +226,74 @@ app.component('nav-bar',{
                     <a class="b-icon" href="#">BLOOM<br>
                     <span class="r-icon">RECIPES</span></a>
                 </section>
-    
-                <div class="section-se ms-auto me-auto"></div>
                 
-                <section class="m-options">
-                    <button class="btn-nav" v-on:click="showHome">Home</button>
-                    <div class="dropdown-center">
-                        <button class="btn-menu" type="button" data-bs-toggle="dropdown" aria-expanded="false">Menu</button>
-                        <ul class="dropdown-menu custom-menu">
-                            <section class="menu-options d-fbd menu-gap">
-                                <section class="menu-options d-fb menu-gap">
-                                    <div class="d-block">
-                                        <p class="title-categories">Difficulty</p>
-                                        <li><a class="btn-do text-center" v-on:click="showRecipes">Easy</a></li>
-                                        <li><a class="btn-do text-center" v-on:click="showRecipes">Intermediate</a></li>
-                                        <li><a class="btn-do text-center" v-on:click="showRecipes">Difficult</a></li>
-                                    </div>
-        
-                                    <div class="d-block">
-                                        <p class="title-categories">Category</p>
-                                        <li><a class="btn-category text-center" v-on:click="showRecipes">Breakfast</a></li>
-                                        <li><a class="btn-category text-center" v-on:click="showRecipes">Desserts</a></li>
-                                        <li><a class="btn-category text-center" v-on:click="showRecipes">Drinks</a></li>
-                                    </div>
-        
-                                    <div class="d-block">
-                                        <p class="title-categories h-transparent"></p>
-                                        <li><a class="btn-category text-center" v-on:click="showRecipes">Appetizers</a></li>
-                                        <li><a class="btn-category text-center" v-on:click="showRecipes">Lunch</a></li>
-                                        <li><a class="btn-category text-center" v-on:click="showRecipes">Soups</a></li>
-                                    </div>
-                                </section>
-                                <section class="menu-options d-fb menu-gap">
-                                    <div class="d-block">
-                                        <p class="title-categories">Occasion</p>
-                                        <li><a class="btn-do text-center" v-on:click="showRecipes">All</a></li>
-                                        <li><a class="btn-do text-center" v-on:click="showRecipes">Birthday</a></li>
-                                        <li><a class="btn-do text-center" v-on:click="showRecipes">Easter</a></li>
-                                    </div>
-        
-                                    <div class="d-block">
-                                        <p class="title-categories h-transparent"></p>
-                                        <li><a class="btn-do text-center" v-on:click="showRecipes">Father's Day</a></li>
-                                        <li><a class="btn-do text-center" v-on:click="showRecipes">Children's Day</a></li>
-                                        <li><a class="btn-do text-center" v-on:click="showRecipes">Summer</a></li>
-                                    </div>
-        
-                                    <div class="d-block">
-                                        <p class="title-categories h-transparent"></p>
-                                        <li><a class="btn-do text-center" v-on:click="showRecipes">Mother's Day</a></li>
-                                        <li><a class="btn-do text-center" v-on:click="showRecipes">Christmas</a></li>
-                                    </div>
-                                </section>
-    
-                            </section>
-                        </ul>
-                    </div>
-                    <button class="btn-nav" data-bs-toggle="modal" data-bs-target="#messageModal">Gallery</button>
-                    <button type="button" class="btn-nav" data-bs-toggle="modal" data-bs-target="#favoritesModal">Favorites</button>
-                    <button type="button" class="btn-nav" data-bs-toggle="modal" data-bs-target="#aboutUsModal">About Us</button>
-                </section>
-    
+                <div class="d-flex align-items-center m-res">
                 <div class="section-se ms-auto me-auto"></div>
+                    <section class="m-options">
+                        <button class="btn-nav" v-on:click="showHome">Home</button>
+                        <div class="dropdown-center">
+                            <button class="btn-menu" type="button" data-bs-toggle="dropdown" aria-expanded="false">Menu</button>
+                            <ul class="dropdown-menu custom-menu">
+                                <section class="menu-options d-fbd menu-gap">
+                                    <section class="menu-options d-fb menu-gap">
+                                        <div class="d-block">
+                                            <p class="title-categories">Difficulty</p>
+                                            <li><a class="btn-do text-center" v-on:click="showRecipes">Easy</a></li>
+                                            <li><a class="btn-do text-center" v-on:click="showRecipes">Intermediate</a></li>
+                                            <li><a class="btn-do text-center" v-on:click="showRecipes">Difficult</a></li>
+                                        </div>
+            
+                                        <div class="d-block">
+                                            <p class="title-categories">Category</p>
+                                            <li><a class="btn-category text-center" v-on:click="showRecipes">Breakfast</a></li>
+                                            <li><a class="btn-category text-center" v-on:click="showRecipes">Desserts</a></li>
+                                            <li><a class="btn-category text-center" v-on:click="showRecipes">Drinks</a></li>
+                                        </div>
+            
+                                        <div class="d-block">
+                                            <p class="title-categories h-transparent"></p>
+                                            <li><a class="btn-category text-center" v-on:click="showRecipes">Appetizers</a></li>
+                                            <li><a class="btn-category text-center" v-on:click="showRecipes">Lunch</a></li>
+                                            <li><a class="btn-category text-center" v-on:click="showRecipes">Soups</a></li>
+                                        </div>
+                                    </section>
+                                    <section class="menu-options d-fb menu-gap">
+                                        <div class="d-block">
+                                            <p class="title-categories">Occasion</p>
+                                            <li><a class="btn-do text-center" v-on:click="showRecipes">All</a></li>
+                                            <li><a class="btn-do text-center" v-on:click="showRecipes">Birthday</a></li>
+                                            <li><a class="btn-do text-center" v-on:click="showRecipes">Easter</a></li>
+                                        </div>
+            
+                                        <div class="d-block">
+                                            <p class="title-categories h-transparent"></p>
+                                            <li><a class="btn-do text-center" v-on:click="showRecipes">Father's Day</a></li>
+                                            <li><a class="btn-do text-center" v-on:click="showRecipes">Children's Day</a></li>
+                                            <li><a class="btn-do text-center" v-on:click="showRecipes">Summer</a></li>
+                                        </div>
+            
+                                        <div class="d-block">
+                                            <p class="title-categories h-transparent"></p>
+                                            <li><a class="btn-do text-center" v-on:click="showRecipes">Mother's Day</a></li>
+                                            <li><a class="btn-do text-center" v-on:click="showRecipes">Christmas</a></li>
+                                        </div>
+                                    </section>
+                                </section>
+                            </ul>
+                        </div>
+                        <button class="btn-nav" data-bs-toggle="modal" data-bs-target="#messageModal">Gallery</button>
+                        <button type="button" class="btn-nav" data-bs-toggle="modal" data-bs-target="#favoritesModal">Favorites</button>
+                        <button type="button" class="btn-nav" data-bs-toggle="modal" data-bs-target="#aboutUsModal">About Us</button>
+                    </section>
+
+                    <div class="section-se ms-auto me-auto"></div>
                 
-                <form class="d-flex m-form" role="search">
-    
-                    <input class="search-input mt-auto pt-0 pb-0" type="text" placeholder="Search" aria-label="Search" v-model="searchTerm">
-                    <button class="btn btn-outline-success btn-search mt-auto pt-0 pb-0" type="button" v-on:click="onClickSearchRecipe">Search</button>
-    
-                </form>
+                    <form class="d-flex m-form" role="search">
+        
+                        <input class="search-input mt-auto pt-0 pb-0" type="text" placeholder="Search" aria-label="Search" v-model="searchTerm">
+                        <button class="btn btn-outline-success btn-search mt-auto pt-0 pb-0" type="button" v-on:click="onClickSearchRecipe">Search</button>
+        
+                    </form>
     
                 <section class="user-r d-flex">
                     <div class="dropdown-center">
@@ -311,6 +312,8 @@ app.component('nav-bar',{
                     </div>
                     <img src="./img/icon-admin.jpg" class="user-icon" alt="icon-admin">
                 </section>
+                </div>
+                
             </div>
         </nav>
 

@@ -208,7 +208,7 @@
     @include media-queries.respond-to(media-queries.$large-desktop){
         font-size: 20px;
         padding-top: 123px;
-        margin-left: 55%;
+        //margin-left: 55%;
     }
 }
 

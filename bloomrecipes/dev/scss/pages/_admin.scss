@@ -51,6 +51,12 @@
     gap: 78px;
 }
 
+.bg-add{
+    width: 100%;
+    height: auto;
+    background: vars.$clr-black;
+}
+
 .arrow-back{
     width: 40px;
     height: 40px;
@@ -72,7 +78,7 @@
 
 .label-add{
     @include mixins.set-font(vars.$ff-primary, vars.$fw-med, vars.$fs-18, vars.$clr-cian);
-    width: 184px;
+    width: 173px;
     height: 52px;
     display: flex;
     align-items: center;
@@ -162,3 +168,78 @@
     margin-top: 14px;
     pointer-events: none;
 }
+
+.file-input{
+    width: 173px;
+    height: 48px;
+    border-radius: 15px 0 0 15px;
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-sbold, 28px, vars.$clr-cian);
+}
+
+.file-bg{
+    position:absolute;
+    width: 396px;
+    height: 48px;
+    background: linear-gradient(to right, hsla(0, 0%, 68%, 1) 173px, vars.$clr-white-blue 0px);
+    border-radius: 15px;
+    margin-top: 52px;
+    pointer-events: none;
+}
+
+.custom-files{
+    display: flex;
+    position: absolute;
+    width: 396px;
+    height: 48px;
+    margin-top: 52px;
+    pointer-events: none;
+    align-items: center;
+}
+
+.file-upload{
+    width: 173px;
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-med, vars.$fs-15, vars.$clr-white-blue);
+}
+
+.file-select{
+    width: 223px;
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-sbold, vars.$fs-15, vars.$clr-cian);
+}
+
+.custom-list{
+    width: 348px;
+    height: 48px;
+    border-radius: 15px 0 0 15px;
+    background: vars.$clr-white-blue;
+    padding: 5px;
+    border: none;
+    color: vars.$clr-black;
+}
+
+.more-list{
+    width: 48px;
+    height: 48px;
+}
+
+.btn-list{
+    width: 48px;
+    height: 48px;
+    background: vars.$clr-cian;
+    color: vars.$clr-white-blue;
+    border: none;
+    border-radius: 0 15px 15px 0;
+    padding: 0;
+}
+
+.btn-recipe{
+    width: 396px;
+    height: 48px;
+    border-radius: 15px;
+    background: vars.$clr-cian;
+    margin-top: 54px;
+    margin-bottom: 78px;
+    border: none;
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-med, vars.$fs-18, vars.$clr-white-blue);
+}
+
+

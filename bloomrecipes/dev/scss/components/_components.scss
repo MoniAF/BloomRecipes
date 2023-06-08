@@ -62,7 +62,7 @@ body{
     border-radius: 2.188rem;
     overflow: hidden;
     @include media-queries.respond-to(media-queries.$phone){
-        width: 350px;
+        width: 100%;
         margin-bottom: 38px;
     }
 
@@ -94,6 +94,12 @@ body{
     }
 }
 
+.size-card{
+    @include media-queries.respond-to(media-queries.$phone){
+        width: 100%;
+    }
+}
+
 //cards likes
 
 //cards info
@@ -105,7 +111,7 @@ body{
     border-radius: 2.188rem;
     overflow: hidden;
     @include media-queries.respond-to(media-queries.$phone){
-        width: 350px;
+        width: 100%;
         margin-bottom: 38px;
     }
 
@@ -178,6 +184,9 @@ body{
     border: none;
     background: transparent;
     padding: 0;
+    @include media-queries.respond-to(media-queries.$phone){
+        width: 100%;
+    }
 }
 
 .cards-pp{
@@ -187,7 +196,7 @@ body{
     justify-content: space-between;
     @include media-queries.respond-to(media-queries.$phone){
         margin-top: 40px !important;
-        justify-content: end;
+        justify-content: center;
     }
 
     @include media-queries.respond-to(media-queries.$tablet-landscape){
@@ -264,7 +273,7 @@ body{
     margin-top: 28px !important;
     justify-content: center;
     @include media-queries.respond-to(media-queries.$large-desktop){
-        gap: 0;
+        gap: 26px;
         margin-top: 19px !important;
     }
     @include media-queries.respond-to(media-queries.$tablet-landscape){

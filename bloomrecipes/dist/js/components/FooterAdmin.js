@@ -1,37 +1,10 @@
-app.component('index-admin',{
+app.component('footer-admin',{
     template:
     /*html*/
-    `<div class="bg-admin">
-        <div class="container-details">
-            <div class="d-flex justify-content-between">
-                <section class="text-center pos-icona">
-                    <a class="ba-icon">BLOOM<br>
-                    <span class="ra-icon">RECIPES</span></a>
-                </section>
-                <section class="d-flex">
-                    <p class="user-admin">AdminUser</p>
-                    <img src="./img/icon-admin.jpg" class="admin-icon" alt="icon-admin">
-                </section>
-            </div>
-
-            <div class="d-flex justify-content-center gap-admin">
-                <section>
-                    <a class="btn-admin d-flex" href="">Add Recipe</a>
-                    <a class="btn-admin d-flex" href="">Community members</a>
-                </section>
-                <section>
-                    <a class="btn-admin d-flex" href="">All recipes</a>
-                    <a class="btn-admin d-flex" href="">Admin users</a>
-                </section>
-            </div>
-
-        </div>
-    </div>
-
-    <!-- Footer admin -->
-
+    `<!-- Footer admin -->
+    
     <footer class="container-total">
-        <div class="f-principal mt-5 f-footer f-admin">
+        <div class="f-principal f-admin">
             <section class="container-pp">
                 <section class="d-fb justify-content-center m-footer">
                     <section class="icons-rs footer-icons jc-tl">

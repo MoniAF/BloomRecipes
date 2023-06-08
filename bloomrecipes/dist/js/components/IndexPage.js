@@ -72,7 +72,7 @@ app.component('index-page',{
 
             <div class="d-flex cards-pp">
 
-                <div v-for="element in showTrending">
+                <div class="size-card" v-for="element in showTrending">
                     <button v-on:click="onClickShowDetails(element.id)" type="button" class="conf-cards">
                         <div class="card-top">
 
@@ -87,14 +87,16 @@ app.component('index-page',{
 
                             <img v-bind:src="element.image" class="img-card" alt="{{element.name}}">
                             <div class="degraded"></div>
-                            <div class="info-top">
-                                <p class="title-card text-center">{{ element.name }}</p>
-                                <p class="category-card text-center categories-txt">{{ element.category }}</p>
-                                <p class="category-card text-center categories-txt">{{ element.difficulty }}</p>
-                                <p class="txt-likes text-center"><span><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-heart-fill card-heart" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
-                                  </svg></span> {{ element.likes }}</p>
-                            </div>
+                            <section class="d-flex justify-content-center">
+                                <div class="info-top">
+                                    <p class="title-card text-center">{{ element.name }}</p>
+                                    <p class="category-card text-center categories-txt">{{ element.category }}</p>
+                                    <p class="category-card text-center categories-txt">{{ element.difficulty }}</p>
+                                    <p class="txt-likes text-center"><span><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-heart-fill card-heart" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                                    </svg></span> {{ element.likes }}</p>
+                                </div>
+                            </section>    
                         </div>
                     </button>
                 </div>
@@ -120,7 +122,7 @@ app.component('index-page',{
 
             <div class="d-flex cards-pp">
                 
-                <div v-for="element in showRecipes">
+                <div class="size-card" v-for="element in showRecipes">
                     <button type="button" class="conf-cards" v-on:click="onClickShowDetails(element.id)">
                         <div class="card-pp">
 
@@ -134,22 +136,29 @@ app.component('index-page',{
 
                             <img v-bind:src="element.image" class="img-card" alt="{{element.name}}">
                             <div class="degraded"></div>
-                            <div class="info-top">
-                                <p class="title-card text-center">{{ element.name }}</p>
-                                <p class="description-card txt-description">{{ element.description }}...</p>
-                                <p class="category-card text-center categories-txt">{{ element.category }}</p>
-                                <p class="category-card text-center categories-txt">{{ element.difficulty }}</p>
-                            </div>
+                            <section class="d-flex justify-content-center">
+                                <div class="info-top">
+                                    <p class="title-card text-center">{{ element.name }}</p>
+                                    <p class="description-card txt-description">{{ element.description }}...</p>
+                                    <p class="category-card text-center categories-txt">{{ element.category }}</p>
+                                    <p class="category-card text-center categories-txt">{{ element.difficulty }}</p>
+                                </div>
+                            </section>
                         </div>
                     </button>
                 </div>
             </div>
 
+            <div class="d-fbd justify-content-end">
+                <img src="./img/chef-cute.png" class="img-cf" alt="chef-cute">
+            </div>
+
             <div class="d-fbd">
                 <p class="phrase-pf">The <span class="txt-cian"> kitchen </span>is<br> <span class="txt-red">where</span> love <br>
                 becomes <span class="txt-cian"> food</span>.</p>
-                <img src="./img/chef-cute.png" class="img-cf" alt="chef-cute">
             </div>
+
+            
 
             <div class="d-flex register-f">
                 <p class="mt-r">Register for free</p>

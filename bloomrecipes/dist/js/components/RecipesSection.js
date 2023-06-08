@@ -40,7 +40,7 @@ app.component('recipes-section',{
         </section>
 
         <div class="d-flex cards-recipes">
-            <div v-for="element in showResults">
+            <div class="size-card" v-for="element in showResults">
                 <button v-on:click="onClickShowDetails(element.id)" type="button" class="conf-cards mb-4">
                     <div class="card-pp">
 
@@ -54,12 +54,14 @@ app.component('recipes-section',{
 
                         <img v-bind:src="element.image" class="img-card" alt="element.name">
                         <div class="degraded"></div>
-                        <div class="info-top">
-                            <p class="title-card text-center">{{ element.name }}</p>
-                            <p class="description-card txt-description">{{ element.description }}</p>
-                            <p class="category-card text-center categories-txt">{{ element.category }}</p>
-                            <p class="category-card text-center categories-txt">{{ element.difficulty }}</p>
-                        </div>
+                        <section class="d-flex justify-content-center">
+                            <div class="info-top">
+                                <p class="title-card text-center">{{ element.name }}</p>
+                                <p class="description-card txt-description">{{ element.description }}</p>
+                                <p class="category-card text-center categories-txt">{{ element.category }}</p>
+                                <p class="category-card text-center categories-txt">{{ element.difficulty }}</p>
+                            </div>
+                        </section>
                     </div>
                 </button>
             </div>

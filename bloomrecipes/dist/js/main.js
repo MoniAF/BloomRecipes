@@ -8,8 +8,6 @@ const app = Vue.createApp({
             allRecipes: false,
             footer: false,
             detailsView: false,
-            prepValue: 0,
-            cookValue: 0,
             recipes:[],
             searchData:[],
             recipeDetails:[]
@@ -228,26 +226,6 @@ const app = Vue.createApp({
             this.searchTerm=searchTerm;
             console.log(searchTerm);
             this.searchRecipes();
-        },
-
-        prepIncrease(){ //incrementa el valor de prepTime (administración)
-            this.prepValue++;
-        },
-
-        prepDecrease(){ //decrementa el valor de prepTime(administración)
-            if (this.prepValue > 0) {
-                this.prepValue--;
-            }
-        },
-
-        cookIncrease(){ //incrementa el valor de cookTime (administración)
-            this.cookValue++;
-        },
-
-        cookDecrease(){ //decrementa el valor de cookTime (administración)
-            if (this.cookValue > 0) {
-                this.cookValue--;
-            }
         },
 
         showRecipes(){ //mostrar pagina de recetas y footer
