@@ -1,13 +1,13 @@
 .txt-red {
-  color: hsl(20deg, 85%, 38%);
+  color: hsl(20, 85%, 38%);
 }
 
 .txt-cian {
-  color: hsl(180deg, 64%, 34%);
+  color: hsl(180, 64%, 34%);
 }
 
 .txt-black {
-  color: hsl(0deg, 0%, 15%);
+  color: hsl(0, 0%, 15%);
 }
 
 /*.txt-search{
@@ -22,7 +22,7 @@ h1 {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-size: 5.813rem;
-  color: hsl(0deg, 0%, 15%);
+  color: hsl(0, 0%, 15%);
   line-height: 6.563rem;
   margin-top: 2.875rem;
   margin-right: 56.938rem;
@@ -32,7 +32,7 @@ h1 {
     font-family: "Poppins", sans-serif;
     font-weight: 600;
     font-size: 1.563rem;
-    color: hsl(0deg, 0%, 15%);
+    color: hsl(0, 0%, 15%);
     line-height: 2.063rem;
     margin-top: 18.125rem;
     margin-right: 0;
@@ -55,7 +55,7 @@ h1 {
     line-height: 4.563rem;
   }
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   h1 {
     font-size: 67px;
     margin-right: 35.938rem;
@@ -69,7 +69,7 @@ h2 {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-size: 4.063rem;
-  color: hsl(20deg, 85%, 38%);
+  color: hsl(20, 85%, 38%);
   margin-top: 4.875rem;
 }
 @media only screen and (max-width: 480px) {
@@ -91,7 +91,7 @@ h2 {
     text-align: center;
   }
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   h2 {
     font-size: 46px;
     margin-top: 101px;
@@ -103,7 +103,7 @@ h2 {
   font-family: "Spectral", serif;
   font-weight: 600;
   font-size: 1.563rem;
-  color: hsl(0deg, 0%, 15%);
+  color: hsl(0, 0%, 15%);
   line-height: 2.378rem;
   margin-top: 7.188rem;
 }
@@ -128,7 +128,7 @@ h2 {
     font-size: 21px;
   }
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .description-p {
     width: 30rem;
     font-size: 17px;
@@ -141,7 +141,7 @@ h2 {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 1.875rem;
-  color: hsl(0deg, 0%, 15%);
+  color: hsl(0, 0%, 15%);
 }
 @media only screen and (max-width: 480px) {
   .info-nw {
@@ -154,7 +154,7 @@ h2 {
     font-size: 1.625rem;
   }
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .info-nw {
     font-size: 21px;
   }
@@ -164,7 +164,7 @@ h2 {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-size: 5.563rem;
-  color: hsl(0deg, 0%, 15%);
+  color: hsl(0, 0%, 15%);
   margin-top: 14rem;
   line-height: 6.563rem;
 }
@@ -187,7 +187,7 @@ h2 {
     line-height: 5.563rem;
   }
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .phrase-m {
     font-size: 5.313rem;
   }
@@ -197,7 +197,7 @@ h2 {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 4.813rem;
-  color: hsl(0deg, 0%, 100%);
+  color: hsl(0, 0%, 100%);
   line-height: 2.625rem;
   margin-top: 7.813rem;
 }
@@ -206,7 +206,7 @@ h2 {
     font-family: "Poppins", sans-serif;
     font-weight: 500;
     font-size: 2.625rem;
-    color: hsl(0deg, 0%, 100%);
+    color: hsl(0, 0%, 100%);
     margin-top: 1.188rem;
     line-height: 1.563rem;
   }
@@ -223,7 +223,7 @@ h2 {
     margin-top: 25px;
   }
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .bc-icon {
     font-size: 55px;
     line-height: 31px;
@@ -235,17 +235,17 @@ h2 {
   font-family: "Spectral", serif;
   font-weight: 600;
   font-size: 2.313rem;
-  color: hsl(0deg, 0%, 100%);
+  color: hsl(0, 0%, 100%);
 }
 @media only screen and (max-width: 480px) {
   .rc-icon {
     font-family: "Spectral", serif;
     font-weight: 600;
     font-size: 1.25rem;
-    color: hsl(0deg, 0%, 100%);
+    color: hsl(0, 0%, 100%);
   }
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .rc-icon {
     font-size: 26px;
   }
@@ -255,7 +255,7 @@ h2 {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 1.625rem;
-  color: hsl(180deg, 64%, 34%);
+  color: hsl(180, 64%, 34%);
   padding-top: 6.938rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -267,7 +267,7 @@ h2 {
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-size: 1.25rem;
-    color: hsl(180deg, 64%, 34%);
+    color: hsl(180, 64%, 34%);
     padding-top: 0;
     margin-left: 0;
   }
@@ -286,7 +286,7 @@ h2 {
     margin-right: auto;
   }
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .link-more {
     font-size: 20px;
     padding-top: 120px;
@@ -297,7 +297,7 @@ h2 {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-size: 4.813rem;
-  color: hsl(0deg, 0%, 15%);
+  color: hsl(0, 0%, 15%);
   margin-top: 10.875rem;
   line-height: 6.875rem;
 }
@@ -306,7 +306,7 @@ h2 {
     font-family: "Poppins", sans-serif;
     font-weight: 600;
     font-size: 1.875rem;
-    color: hsl(0deg, 0%, 15%);
+    color: hsl(0, 0%, 15%);
     margin-top: 95px;
     line-height: 2.5rem;
     text-align: center;
@@ -328,7 +328,7 @@ h2 {
     text-align: center;
   }
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .phrase-pf {
     font-size: 3.5rem;
     margin-top: 7.6rem;
@@ -341,7 +341,7 @@ h2 {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 1.625rem;
-  color: hsl(180deg, 64%, 34%);
+  color: hsl(180, 64%, 34%);
   margin-top: 2.688rem;
   margin-bottom: 3.438rem;
 }
@@ -354,7 +354,7 @@ h2 {
     font-family: "Poppins", sans-serif;
     font-weight: 500;
     font-size: 1.25rem;
-    color: hsl(180deg, 64%, 34%);
+    color: hsl(180, 64%, 34%);
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1030px) {
@@ -371,7 +371,7 @@ h2 {
             justify-content: center;
   }
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .register-f {
     font-size: 20px;
     margin-bottom: 1.438rem;
@@ -382,7 +382,7 @@ h2 {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 1.563rem;
-  color: hsl(180deg, 43%, 96%);
+  color: hsl(180, 43%, 96%);
   margin-left: 1.625rem;
 }
 @media only screen and (max-width: 480px) {
@@ -407,7 +407,7 @@ h2 {
     text-align: center;
   }
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .txt-f {
     font-size: 17px;
     margin-top: 6px;
@@ -418,7 +418,7 @@ h2 {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 1.563rem;
-  color: hsl(180deg, 43%, 96%);
+  color: hsl(180, 43%, 96%);
   text-decoration: none;
 }
 @media only screen and (max-width: 480px) {
@@ -436,7 +436,7 @@ h2 {
     font-size: 20px;
   }
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .link-f {
     font-size: 17px;
   }
@@ -446,10 +446,10 @@ h2 {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-size: 1.875rem;
-  color: hsl(0deg, 0%, 15%);
+  color: hsl(0, 0%, 15%);
   margin-top: 39px;
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .txt-menu {
     font-size: 1.625rem;
     margin-top: 30px;
@@ -467,7 +467,7 @@ h2 {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   font-size: 1.375rem;
-  color: hsl(0deg, 0%, 15%);
+  color: hsl(0, 0%, 15%);
   line-height: 21px;
   margin-bottom: 15px;
   padding-left: 22px;
@@ -479,7 +479,7 @@ h2 {
     margin-right: 5%;
   }
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .title-card {
     height: 42px;
     font-size: 15px;
@@ -494,12 +494,12 @@ h2 {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 1rem;
-  color: hsl(180deg, 43%, 96%);
+  color: hsl(180, 43%, 96%);
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .categories-txt {
     font-size: 12px;
   }
@@ -509,10 +509,10 @@ h2 {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 1.125rem;
-  color: hsl(0deg, 0%, 15%);
+  color: hsl(0, 0%, 15%);
   margin-top: 12px;
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .txt-likes {
     font-size: 13px;
     margin-top: 8px;
@@ -523,11 +523,11 @@ h2 {
   font-family: "Spectral", serif;
   font-weight: 500;
   font-size: 0.938rem;
-  color: hsl(0deg, 0%, 15%);
+  color: hsl(0, 0%, 15%);
   line-height: 23px;
   text-align: justify;
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .txt-description {
     font-size: 10px;
     line-height: 15px;
@@ -539,14 +539,14 @@ h2 {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-size: 1.625rem;
-  color: hsl(0deg, 0%, 15%);
+  color: hsl(0, 0%, 15%);
 }
 
 .bm-icon {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 5.563rem;
-  color: hsl(0deg, 0%, 15%);
+  color: hsl(0, 0%, 15%);
   line-height: 48px;
   margin-top: 40px;
 }
@@ -555,7 +555,7 @@ h2 {
     font-family: "Poppins", sans-serif;
     font-weight: 500;
     font-size: 2.625rem;
-    color: hsl(0deg, 0%, 15%);
+    color: hsl(0, 0%, 15%);
     margin-top: 1.188rem;
     line-height: 1.563rem;
   }
@@ -565,7 +565,7 @@ h2 {
   font-family: "Spectral", serif;
   font-weight: 600;
   font-size: 2.625rem;
-  color: hsl(0deg, 0%, 15%);
+  color: hsl(0, 0%, 15%);
   margin-bottom: 40px;
 }
 @media only screen and (max-width: 480px) {
@@ -573,7 +573,7 @@ h2 {
     font-family: "Spectral", serif;
     font-weight: 600;
     font-size: 1.25rem;
-    color: hsl(0deg, 0%, 15%);
+    color: hsl(0, 0%, 15%);
   }
 }
 
@@ -585,14 +585,14 @@ h2 {
   font-family: "Spectral", serif;
   font-weight: 500;
   font-size: 1.125rem;
-  color: hsl(0deg, 0%, 15%);
+  color: hsl(0, 0%, 15%);
 }
 
 .txt-message {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 1.563rem;
-  color: hsl(0deg, 0%, 15%);
+  color: hsl(0, 0%, 15%);
 }
 @media only screen and (max-width: 480px) {
   .txt-message {
@@ -604,9 +604,9 @@ h2 {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 1.563rem;
-  color: hsl(180deg, 43%, 96%);
+  color: hsl(180, 43%, 96%);
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .txt-footer {
     font-size: 17px;
   }
@@ -633,13 +633,13 @@ h2 {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-size: 1.25rem;
-  color: hsl(0deg, 0%, 15%);
+  color: hsl(0, 0%, 15%);
   width: 206px;
   height: 45px;
   margin-bottom: 0;
   margin-top: 5px;
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .title-categories {
     font-size: 15px;
     width: 145px;
@@ -668,7 +668,7 @@ h2 {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-size: 1.25rem;
-  color: hsl(0deg, 0%, 15%);
+  color: hsl(0, 0%, 15%);
   margin-left: 18px;
   margin-top: 3px;
   margin-bottom: 2px;
@@ -678,7 +678,7 @@ h2 {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 1.125rem;
-  color: hsl(180deg, 64%, 34%);
+  color: hsl(180, 64%, 34%);
   margin-left: 18px;
   margin-bottom: -2px;
 }
@@ -687,10 +687,10 @@ h2 {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-size: 4.063rem;
-  color: hsl(180deg, 43%, 96%);
+  color: hsl(180, 43%, 96%);
   margin-top: 10px;
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .name-dt {
     font-size: 45px;
   }
@@ -719,7 +719,7 @@ h2 {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-size: 1.625rem;
-  color: hsl(180deg, 64%, 34%);
+  color: hsl(180, 64%, 34%);
   width: 324px;
   height: 75px;
   text-align: center;
@@ -740,7 +740,7 @@ h2 {
     height: 56px;
   }
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .details-text {
     font-size: 20px;
   }
@@ -756,7 +756,7 @@ h4 {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-size: 2.313rem;
-  color: hsl(180deg, 64%, 34%);
+  color: hsl(180, 64%, 34%);
   width: 300px;
   height: 53px;
   display: -webkit-box;
@@ -772,7 +772,7 @@ h4 {
   font-family: "Spectral", serif;
   font-weight: 500;
   font-size: 1.375rem;
-  color: hsl(0deg, 0%, 15%);
+  color: hsl(0, 0%, 15%);
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -788,10 +788,10 @@ h4 {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 5.563rem;
-  color: hsl(0deg, 0%, 15%);
+  color: hsl(0, 0%, 15%);
   line-height: 48px;
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .bu-icon {
     font-size: 63px;
     line-height: 36px;
@@ -814,10 +814,10 @@ h4 {
   font-family: "Spectral", serif;
   font-weight: 600;
   font-size: 2.625rem;
-  color: hsl(0deg, 0%, 15%);
+  color: hsl(0, 0%, 15%);
   margin-bottom: 40px;
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .ru-icon {
     font-size: 30px;
   }
@@ -837,7 +837,7 @@ h4 {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-size: 35px;
-  color: hsl(0deg, 0%, 15%);
+  color: hsl(0, 0%, 15%);
   height: 70px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -848,7 +848,7 @@ h4 {
   padding-top: 25px;
   margin-bottom: 34px;
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .title-user {
     font-size: 26px;
     padding-top: 0px;
@@ -880,14 +880,14 @@ h4 {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 1.125rem;
-  color: hsl(0deg, 0%, 15%);
+  color: hsl(0, 0%, 15%);
 }
 
 .txt-question {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 0.938rem;
-  color: hsl(180deg, 64%, 34%);
+  color: hsl(180, 64%, 34%);
   padding-top: 4px;
   text-decoration: none;
 }
@@ -896,14 +896,14 @@ h4 {
   font-family: "Spectral", serif;
   font-weight: 500;
   font-size: 0.938rem;
-  color: hsl(0deg, 0%, 15%);
+  color: hsl(0, 0%, 15%);
 }
 
 .btn-nav {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 1.25rem;
-  color: hsl(0deg, 0%, 100%);
+  color: hsl(0, 0%, 100%);
   margin-top: 0.5rem;
   border: none;
   background: transparent;
@@ -920,7 +920,7 @@ h4 {
     margin-top: 1.438rem;
   }
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .btn-nav {
     font-size: 0.938rem;
   }
@@ -930,7 +930,7 @@ h4 {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 1.25rem;
-  color: hsl(35deg, 100%, 64%);
+  color: hsl(35, 100%, 64%);
   margin-top: 0.5rem;
   border: none;
   background: transparent;
@@ -947,7 +947,7 @@ h4 {
     margin-top: 1.438rem;
   }
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .btn-nav:hover {
     font-size: 0.938rem;
   }
@@ -958,7 +958,7 @@ h4 {
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-size: 1.25rem;
-    color: hsl(35deg, 100%, 64%);
+    color: hsl(35, 100%, 64%);
     margin-top: 0.5rem;
     border: none;
     background: transparent;
@@ -976,7 +976,7 @@ h4 {
     margin-top: 1.438rem;
   }
 }
-@media only screen and (max-width: 480px) and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (max-width: 480px) and (min-width: 1200px) and (max-width: 1800px) {
   .btn-nav:active {
     font-size: 0.938rem;
   }
@@ -986,7 +986,7 @@ h4 {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 1.25rem;
-  color: hsl(0deg, 0%, 100%);
+  color: hsl(0, 0%, 100%);
   margin-top: 0.5rem;
   border: none;
   background: transparent;
@@ -1004,7 +1004,7 @@ h4 {
     margin-top: 1.438rem;
   }
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .btn-menu {
     font-size: 0.938rem;
   }
@@ -1014,7 +1014,7 @@ h4 {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 1.25rem;
-  color: hsl(35deg, 100%, 64%);
+  color: hsl(35, 100%, 64%);
   margin-top: 0.5rem;
   border: none;
   background: transparent;
@@ -1032,7 +1032,7 @@ h4 {
     margin-top: 1.438rem;
   }
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .btn-menu:hover {
     font-size: 0.938rem;
   }
@@ -1042,7 +1042,7 @@ h4 {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 1.25rem;
-  color: hsl(180deg, 64%, 34%);
+  color: hsl(180, 64%, 34%);
   margin-top: 0.5rem;
   border: none;
   background: transparent;
@@ -1060,7 +1060,7 @@ h4 {
     margin-top: 1.438rem;
   }
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .btn-menu:active {
     font-size: 0.938rem;
   }
@@ -1070,8 +1070,8 @@ h4 {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 1.25rem;
-  color: hsl(180deg, 43%, 96%);
-  background: hsl(20deg, 85%, 38%);
+  color: hsl(180, 43%, 96%);
+  background: hsl(20, 85%, 38%);
   display: block;
   width: 206px;
   height: 45px;
@@ -1080,7 +1080,7 @@ h4 {
   text-decoration: none;
   margin-bottom: 36px;
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .btn-do {
     font-size: 15px;
     width: 145px;
@@ -1108,8 +1108,8 @@ h4 {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 1.25rem;
-  color: hsl(180deg, 43%, 96%);
-  background: hsl(180deg, 64%, 34%);
+  color: hsl(180, 43%, 96%);
+  background: hsl(180, 64%, 34%);
   display: block;
   width: 206px;
   height: 45px;
@@ -1118,7 +1118,7 @@ h4 {
   text-decoration: none;
   margin-bottom: 36px;
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .btn-category {
     font-size: 15px;
     width: 145px;
@@ -1146,7 +1146,7 @@ h4 {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 1.25rem;
-  color: hsl(0deg, 0%, 100%);
+  color: hsl(0, 0%, 100%);
   width: 8.125rem;
   margin-top: 18px;
   border: none;
@@ -1165,7 +1165,7 @@ h4 {
     margin-top: 3px;
   }
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .btn-user {
     font-size: 0.938rem;
     margin-top: 13px;
@@ -1176,7 +1176,7 @@ h4 {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 1.25rem;
-  color: hsl(35deg, 100%, 64%);
+  color: hsl(35, 100%, 64%);
   width: 8.125rem;
   margin-top: 18px;
   border: none;
@@ -1195,7 +1195,7 @@ h4 {
     margin-top: 3px;
   }
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .btn-user:hover {
     font-size: 0.938rem;
     margin-top: 13px;
@@ -1206,11 +1206,11 @@ h4 {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 1.25rem;
-  color: hsl(180deg, 43%, 96%);
+  color: hsl(180, 43%, 96%);
   width: 6.563rem;
   height: 2.125rem;
   background: transparent !important;
-  border: solid 0.125rem hsl(180deg, 43%, 96%) !important;
+  border: solid 0.125rem hsl(180, 43%, 96%) !important;
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
   border-top-right-radius: 0.5rem;
@@ -1223,7 +1223,7 @@ h4 {
     font-size: 16px;
   }
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .btn-search {
     width: 80px;
     height: 28px;
@@ -1235,11 +1235,11 @@ h4 {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 1.25rem;
-  color: hsl(180deg, 43%, 96%);
+  color: hsl(180, 43%, 96%);
   width: 6.563rem;
   height: 2.125rem;
-  background: hsl(35deg, 100%, 64%) !important;
-  border: solid 0.125rem hsl(35deg, 100%, 64%) !important;
+  background: hsl(35, 100%, 64%) !important;
+  border: solid 0.125rem hsl(35, 100%, 64%) !important;
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
   border-top-right-radius: 0.5rem;
@@ -1252,7 +1252,7 @@ h4 {
     font-size: 16px;
   }
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .btn-search:hover {
     width: 80px;
     height: 28px;
@@ -1264,11 +1264,11 @@ h4 {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 1.25rem;
-  color: hsl(180deg, 43%, 96%);
+  color: hsl(180, 43%, 96%);
   width: 6.563rem;
   height: 2.125rem;
-  background: hsl(35deg, 100%, 64%) !important;
-  border: solid 0.125rem hsl(35deg, 100%, 64%) !important;
+  background: hsl(35, 100%, 64%) !important;
+  border: solid 0.125rem hsl(35, 100%, 64%) !important;
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
   border-top-right-radius: 0.5rem;
@@ -1281,7 +1281,7 @@ h4 {
     font-size: 16px;
   }
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .btn-search:active {
     width: 80px;
     height: 28px;
@@ -1293,7 +1293,7 @@ h4 {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 1.375rem;
-  color: hsl(0deg, 0%, 15%);
+  color: hsl(0, 0%, 15%);
   border: none;
   background: transparent;
   margin-top: 1.5rem;
@@ -1310,7 +1310,7 @@ h4 {
     margin-top: 10px;
   }
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .btn-show {
     font-size: 16px;
     margin-top: 14px;
@@ -1321,7 +1321,7 @@ h4 {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 1.375rem;
-  color: hsl(180deg, 43%, 96%);
+  color: hsl(180, 43%, 96%);
   border: none;
   background: transparent;
   margin-top: 1.5rem;
@@ -1338,7 +1338,7 @@ h4 {
     margin-top: 10px;
   }
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .btn-show:hover {
     font-size: 16px;
     margin-top: 14px;
@@ -1349,9 +1349,9 @@ h4 {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-size: 1.875rem;
-  color: hsl(20deg, 85%, 38%) !important;
+  color: hsl(20, 85%, 38%) !important;
   border: none;
-  background: hsla(180deg, 43%, 96%, 0.85);
+  background: hsla(180, 43%, 96%, 0.85);
   width: 41.688rem;
   height: 3.438rem;
   border-radius: 0.938rem;
@@ -1377,7 +1377,7 @@ h4 {
     font-size: 1.625rem;
   }
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .btn-newest {
     font-size: 21px;
     width: 30rem;
@@ -1391,9 +1391,9 @@ h4 {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-size: 1.875rem;
-  color: hsl(180deg, 64%, 34%) !important;
+  color: hsl(180, 64%, 34%) !important;
   border: none;
-  background: hsla(180deg, 43%, 96%, 0.85);
+  background: hsla(180, 43%, 96%, 0.85);
   width: 41.688rem;
   height: 3.438rem;
   border-radius: 0.938rem;
@@ -1419,7 +1419,7 @@ h4 {
     font-size: 1.625rem;
   }
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .btn-newest:hover {
     font-size: 21px;
     width: 30rem;
@@ -1433,7 +1433,7 @@ h4 {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 1.625rem;
-  color: hsl(180deg, 64%, 34%);
+  color: hsl(180, 64%, 34%);
   border: none;
   background: transparent;
   padding-top: 6.938rem;
@@ -1462,7 +1462,7 @@ h4 {
     margin-right: auto;
   }
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .btn-more {
     font-size: 20px;
     padding-top: 123px;
@@ -1473,10 +1473,10 @@ h4 {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 1.625rem;
-  color: hsl(0deg, 0%, 15%);
+  color: hsl(0, 0%, 15%);
   width: 155px;
   height: 47px;
-  border: solid 3px hsl(180deg, 64%, 34%);
+  border: solid 3px hsl(180, 64%, 34%);
   border-radius: 25px;
   margin-left: 15px;
   background: transparent;
@@ -1487,7 +1487,7 @@ h4 {
     margin-left: 5px;
   }
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .btn-register {
     font-size: 20px;
     width: 109px;
@@ -1499,13 +1499,13 @@ h4 {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 1.625rem;
-  color: hsl(180deg, 43%, 96%);
+  color: hsl(180, 43%, 96%);
   width: 155px;
   height: 47px;
-  border: solid 3px hsl(180deg, 64%, 34%);
+  border: solid 3px hsl(180, 64%, 34%);
   border-radius: 25px;
   margin-left: 15px;
-  background: hsl(180deg, 64%, 34%);
+  background: hsl(180, 64%, 34%);
 }
 @media only screen and (max-width: 480px) {
   .btn-register:hover {
@@ -1513,7 +1513,7 @@ h4 {
     margin-left: 5px;
   }
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .btn-register:hover {
     font-size: 20px;
     width: 109px;
@@ -1525,8 +1525,8 @@ h4 {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 1.375rem;
-  color: hsl(180deg, 43%, 96%);
-  background: hsl(20deg, 85%, 38%);
+  color: hsl(180, 43%, 96%);
+  background: hsl(20, 85%, 38%);
   width: 150px;
   height: 45px;
   border-radius: 25px;
@@ -1540,8 +1540,8 @@ h4 {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 1.375rem;
-  color: hsl(180deg, 43%, 96%);
-  background: hsl(180deg, 64%, 34%);
+  color: hsl(180, 43%, 96%);
+  background: hsl(180, 64%, 34%);
   width: 150px;
   height: 45px;
   border-radius: 25px;
@@ -1555,8 +1555,8 @@ h4 {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 1.375rem;
-  color: hsl(180deg, 43%, 96%);
-  background: hsl(126deg, 93%, 32%);
+  color: hsl(180, 43%, 96%);
+  background: hsl(126, 93%, 32%);
   width: 150px;
   height: 45px;
   border-radius: 25px;
@@ -1570,8 +1570,8 @@ h4 {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 1.375rem;
-  color: hsl(180deg, 43%, 96%);
-  background: hsl(180deg, 64%, 34%);
+  color: hsl(180, 43%, 96%);
+  background: hsl(180, 64%, 34%);
   width: 150px;
   height: 45px;
   border-radius: 25px;
@@ -1585,8 +1585,8 @@ h4 {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 1.375rem;
-  color: hsl(180deg, 43%, 96%);
-  background: hsl(20deg, 85%, 38%);
+  color: hsl(180, 43%, 96%);
+  background: hsl(20, 85%, 38%);
   width: 96%;
   height: 45px;
   border-radius: 10px;
@@ -1594,7 +1594,7 @@ h4 {
   margin-right: auto;
   border: none;
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .btn-next {
     width: 91%;
   }
@@ -1614,10 +1614,10 @@ h4 {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 0.938rem;
-  color: hsl(180deg, 64%, 34%);
+  color: hsl(180, 64%, 34%);
   width: 83px;
   height: 28px;
-  border: solid 2px hsl(180deg, 64%, 34%);
+  border: solid 2px hsl(180, 64%, 34%);
   border-radius: 26px;
   margin-left: 15px;
   background: transparent;
@@ -1627,25 +1627,25 @@ h4 {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 0.938rem;
-  color: hsl(180deg, 43%, 96%);
+  color: hsl(180, 43%, 96%);
   width: 83px;
   height: 28px;
-  border: solid 2px hsl(180deg, 64%, 34%);
+  border: solid 2px hsl(180, 64%, 34%);
   border-radius: 26px;
   margin-left: 15px;
-  background: hsl(180deg, 64%, 34%);
+  background: hsl(180, 64%, 34%);
 }
 
 .btn-out {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 1rem;
-  color: hsl(180deg, 43%, 96%);
+  color: hsl(180, 43%, 96%);
   width: 120px;
   height: 34px;
   border-radius: 12px;
   border: none;
-  background: hsl(180deg, 64%, 34%);
+  background: hsl(180, 64%, 34%);
   gap: 6px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -1660,12 +1660,12 @@ h4 {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 1rem;
-  color: hsl(180deg, 43%, 96%);
+  color: hsl(180, 43%, 96%);
   width: 120px;
   height: 34px;
   border-radius: 12px;
   border: none;
-  background: hsl(20deg, 85%, 38%);
+  background: hsl(20, 85%, 38%);
   gap: 6px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -1683,7 +1683,7 @@ h4 {
   border: none;
   background: transparent;
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .btn-heart {
     width: 66px;
     height: 56px;
@@ -1691,7 +1691,7 @@ h4 {
 }
 
 body {
-  background: hsl(180deg, 43%, 96%);
+  background: hsl(180, 43%, 96%);
   min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1710,13 +1710,13 @@ body {
 }
 
 .header-mc {
-  background: hsl(35deg, 100%, 64%);
+  background: hsl(35, 100%, 64%);
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
 }
 
 .modal-design {
-  background: hsl(180deg, 43%, 96%);
+  background: hsl(180, 43%, 96%);
   border-radius: 25px;
   border: none;
 }
@@ -1749,7 +1749,7 @@ body {
 .card-top {
   width: 19.438rem;
   height: 30.3rem;
-  background: hsl(35deg, 100%, 64%);
+  background: hsl(35, 100%, 64%);
   border-radius: 2.188rem;
   overflow: hidden;
 }
@@ -1773,7 +1773,7 @@ body {
     margin-bottom: 40px;
   }
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .card-top {
     width: 222px;
     height: 354px;
@@ -1783,9 +1783,9 @@ body {
 .card-heart {
   width: 23px;
   height: 23px;
-  color: hsl(180deg, 64%, 34%);
+  color: hsl(180, 64%, 34%);
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .card-heart {
     width: 17px;
     height: 17px;
@@ -1801,7 +1801,7 @@ body {
 .card-pp {
   width: 19.438rem;
   height: 34rem;
-  background: hsl(35deg, 100%, 64%);
+  background: hsl(35, 100%, 64%);
   border-radius: 2.188rem;
   overflow: hidden;
 }
@@ -1825,7 +1825,7 @@ body {
     margin-bottom: 40px;
   }
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .card-pp {
     width: 222px;
     height: 396px;
@@ -1841,7 +1841,7 @@ body {
   margin-top: -12px;
   margin-bottom: 10px;
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .description-card {
     width: 187px;
     height: 58px;
@@ -1851,9 +1851,9 @@ body {
 .like-icon {
   width: 43px;
   height: 43px;
-  color: hsl(180deg, 43%, 96%);
+  color: hsl(180, 43%, 96%);
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .like-icon {
     width: 33px;
     height: 33px;
@@ -1861,15 +1861,15 @@ body {
 }
 
 .like-icon:hover {
-  color: hsl(35deg, 100%, 64%);
+  color: hsl(35, 100%, 64%);
 }
 
 .unlike-icon {
   width: 43px;
   height: 43px;
-  color: hsl(35deg, 100%, 64%);
+  color: hsl(35, 100%, 64%);
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .unlike-icon {
     width: 33px;
     height: 33px;
@@ -1877,7 +1877,7 @@ body {
 }
 
 .unlike-icon:hover {
-  color: hsl(180deg, 43%, 96%);
+  color: hsl(180, 43%, 96%);
 }
 
 .conf-cards {
@@ -1921,7 +1921,7 @@ body {
             justify-content: space-evenly;
   }
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .cards-pp {
     margin-top: 56px;
   }
@@ -1934,7 +1934,7 @@ body {
   -o-object-fit: cover;
      object-fit: cover;
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .img-card {
     height: 198px;
   }
@@ -1945,11 +1945,11 @@ body {
   height: 200px;
   margin-top: -45px;
   margin-left: -45px;
-  background: hsl(35deg, 100%, 64%);
+  background: hsl(35, 100%, 64%);
   -webkit-filter: blur(18px);
           filter: blur(18px);
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .degraded {
     width: 171%;
   }
@@ -1966,7 +1966,7 @@ body {
     width: 90%;
   }
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .info-top {
     width: 222px;
     height: 158px;
@@ -1981,10 +1981,10 @@ body {
   margin-right: auto;
   border-radius: 10px;
   padding-top: 7px;
-  background: hsl(20deg, 85%, 38%);
+  background: hsl(20, 85%, 38%);
   margin-bottom: 10px;
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .category-card {
     width: 188px;
     height: 33px;
@@ -2001,7 +2001,7 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .cards-recipes {
     gap: 26px;
     margin-top: 19px !important;
@@ -2090,7 +2090,7 @@ body {
     width: 84.25%;
   }
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .container-register {
     width: 31.25%;
   }
@@ -2151,7 +2151,7 @@ body {
     display: block;
   }
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .container-pp {
     width: 90%;
     margin-right: 5%;
@@ -2175,10 +2175,24 @@ body {
   margin-right: auto;
   margin-left: auto;
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .container-admin {
     width: 62%;
   }
+}
+
+.container-users {
+  width: 63%;
+  height: auto;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container-data {
+  width: 68%;
+  height: auto;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .menu-options {
@@ -2202,7 +2216,7 @@ body {
 .menu-gap {
   gap: 51px;
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .menu-gap {
     gap: 37px;
   }
@@ -2215,9 +2229,9 @@ body {
   height: 300px;
   border: none;
   border-radius: 0 0 25px 25px;
-  background: hsl(180deg, 43%, 96%);
-  -webkit-box-shadow: 0px 4px 6px 2px hsla(0deg, 0%, 0%, 0.15);
-          box-shadow: 0px 4px 6px 2px hsla(0deg, 0%, 0%, 0.15);
+  background: hsl(180, 43%, 96%);
+  -webkit-box-shadow: 0px 4px 6px 2px hsla(0, 0%, 0%, 0.15);
+          box-shadow: 0px 4px 6px 2px hsla(0, 0%, 0%, 0.15);
 }
 @media only screen and (max-width: 480px) {
   .custom-menu {
@@ -2244,7 +2258,7 @@ body {
     margin-top: 15px !important;
   }
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .custom-menu {
     margin-left: -370px;
     margin-top: 24px !important;
@@ -2271,11 +2285,11 @@ body {
   height: 192px;
   border: none;
   border-radius: 0 0 25px 25px;
-  background: hsl(180deg, 43%, 96%);
-  -webkit-box-shadow: 0px 4px 6px 2px hsla(0deg, 0%, 0%, 0.25);
-          box-shadow: 0px 4px 6px 2px hsla(0deg, 0%, 0%, 0.25);
+  background: hsl(180, 43%, 96%);
+  -webkit-box-shadow: 0px 4px 6px 2px hsla(0, 0%, 0%, 0.25);
+          box-shadow: 0px 4px 6px 2px hsla(0, 0%, 0%, 0.25);
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .custom-user {
     margin-top: 17px !important;
   }
@@ -2303,7 +2317,7 @@ body {
 }
 
 .navbar-h {
-  background-color: hsl(20deg, 85%, 38%);
+  background-color: hsl(20, 85%, 38%);
   height: 5.938rem;
   padding-top: 0;
 }
@@ -2327,7 +2341,7 @@ body {
     padding-bottom: 25px;
   }
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .navbar-h {
     height: 72px;
   }
@@ -2357,7 +2371,7 @@ body {
     margin-bottom: 30px;
   }
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .pos-icon {
     line-height: 1rem;
   }
@@ -2367,10 +2381,10 @@ body {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 2.625rem;
-  color: hsl(0deg, 0%, 100%);
+  color: hsl(0, 0%, 100%);
   text-decoration: none;
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .b-icon {
     font-size: 32px;
   }
@@ -2380,9 +2394,9 @@ body {
   font-family: "Spectral", serif;
   font-weight: 600;
   font-size: 1.25rem;
-  color: hsl(0deg, 0%, 100%);
+  color: hsl(0, 0%, 100%);
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .r-icon {
     font-size: 19px;
     font-weight: 400;
@@ -2400,7 +2414,7 @@ body {
     height: 3.438rem;
   }
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .user-icon {
     width: 38px;
     height: 38px;
@@ -2470,7 +2484,7 @@ body {
     margin-bottom: 20px;
   }
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .m-options {
     gap: 25px;
   }
@@ -2527,7 +2541,7 @@ body {
     margin-top: 30px;
   }
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .m-form {
     margin-left: 25px;
   }
@@ -2537,7 +2551,7 @@ body {
   .section-se {
     width: 95%;
     height: 0px;
-    border: 1px solid hsl(180deg, 43%, 96%);
+    border: 1px solid hsl(180, 43%, 96%);
     border-radius: 10px;
   }
 }
@@ -2545,7 +2559,7 @@ body {
   .section-se {
     width: 75%;
     height: 0px;
-    border: 1px solid hsl(180deg, 43%, 96%);
+    border: 1px solid hsl(180, 43%, 96%);
     border-radius: 10px;
   }
 }
@@ -2554,10 +2568,10 @@ body {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 1.25rem;
-  color: hsl(0deg, 0%, 15%);
+  color: hsl(0, 0%, 15%);
   width: 19.375rem;
   height: 2.125rem;
-  background: hsl(180deg, 43%, 96%);
+  background: hsl(180, 43%, 96%);
   border: none;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
@@ -2577,14 +2591,14 @@ body {
     width: 555px;
   }
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .search-input {
     width: 190px;
     height: 28px;
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-size: 0.938rem;
-    color: hsl(0deg, 0%, 15%);
+    color: hsl(0, 0%, 15%);
   }
 }
 
@@ -2598,11 +2612,6 @@ body {
 /*.search-input:focus{
     background: blueviolet;
 }*/
-.f-footer {
-  position: fixed;
-  bottom: 0;
-}
-
 .conf-f {
   gap: 2.188rem;
   margin-top: 3.875rem;
@@ -2635,21 +2644,17 @@ body {
     margin-bottom: 26px;
   }
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .conf-f {
     margin-top: 1.875rem;
     gap: 21px;
   }
 }
 
-.f-admin {
-  background: hsl(180deg, 64%, 34%) !important;
-}
-
 .f-principal {
   width: 100%;
   height: 10.063rem;
-  background: hsl(20deg, 85%, 38%);
+  background: hsl(20, 85%, 38%);
 }
 @media only screen and (max-width: 480px) {
   .f-principal {
@@ -2661,7 +2666,7 @@ body {
     height: 12.063rem;
   }
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .f-principal {
     height: 6.063rem;
   }
@@ -2670,7 +2675,7 @@ body {
 .icons-footer {
   width: 2.438rem;
   height: 2.438rem;
-  color: hsl(180deg, 43%, 96%);
+  color: hsl(180, 43%, 96%);
 }
 @media only screen and (min-width: 768px) and (max-width: 1030px) {
   .icons-footer {
@@ -2684,7 +2689,7 @@ body {
     height: 30px;
   }
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .icons-footer {
     width: 29px;
     height: 29px;
@@ -2692,7 +2697,7 @@ body {
 }
 
 .icons-footer:hover {
-  color: hsl(35deg, 100%, 64%);
+  color: hsl(35, 100%, 64%);
   -webkit-animation: moveBtn 3s;
           animation: moveBtn 3s;
 }
@@ -2752,7 +2757,7 @@ body {
             justify-content: center;
   }
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .icons-rs {
     gap: 21px;
   }
@@ -2776,7 +2781,7 @@ body {
 .footer-icons {
   margin-right: 2.188rem;
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .footer-icons {
     margin-right: 21px;
   }
@@ -2791,7 +2796,7 @@ body {
   margin-top: 35px;
   margin-bottom: 19px;
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .m-footer {
     margin-top: 16px;
     margin-bottom: 12px;
@@ -2837,9 +2842,7 @@ body {
   }
 }
 .bg-admin {
-  width: 100%;
-  height: 100vh;
-  background: hsl(0deg, 0%, 15%);
+  background: hsl(0, 0%, 15%);
 }
 
 .pos-icona {
@@ -2851,7 +2854,7 @@ body {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 70px;
-  color: hsl(0deg, 0%, 100%);
+  color: hsl(0, 0%, 100%);
   text-decoration: none;
 }
 
@@ -2859,14 +2862,14 @@ body {
   font-family: "Spectral", serif;
   font-weight: 600;
   font-size: 33px;
-  color: hsl(0deg, 0%, 100%);
+  color: hsl(0, 0%, 100%);
 }
 
 .user-admin {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 22px;
-  color: hsl(0deg, 0%, 100%);
+  color: hsl(0, 0%, 100%);
   margin-top: 68px;
   margin-right: 20px;
 }
@@ -2884,8 +2887,8 @@ body {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 22px;
-  color: hsl(0deg, 0%, 100%);
-  background: hsl(180deg, 64%, 34%);
+  color: hsl(0, 0%, 100%);
+  background: hsl(180, 64%, 34%);
   text-decoration: none;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -2895,24 +2898,23 @@ body {
           align-items: center;
   border-radius: 15px;
   margin-bottom: 64px;
+  border: none;
 }
 
 .gap-admin {
-  margin-top: 198px;
+  height: 80%;
   gap: 78px;
 }
 
-.bg-add {
-  width: 100%;
-  height: auto;
-  background: hsl(0deg, 0%, 15%);
+.sz-menu {
+  height: 100vh;
 }
 
 .arrow-back {
   width: 40px;
   height: 40px;
   font-size: 40px !important;
-  color: hsl(0deg, 0%, 100%);
+  color: hsl(0, 0%, 100%);
   margin-left: -5px;
 }
 
@@ -2920,9 +2922,13 @@ body {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 35px;
-  color: hsl(0deg, 0%, 100%);
+  color: hsl(0, 0%, 100%);
   width: 200px;
   margin-top: 33px;
+}
+
+.title-edit {
+  width: 160px !important;
 }
 
 .pos-add {
@@ -2934,7 +2940,7 @@ body {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 1.125rem;
-  color: hsl(180deg, 64%, 34%);
+  color: hsl(180, 64%, 34%);
   width: 173px;
   height: 52px;
   display: -webkit-box;
@@ -2950,7 +2956,7 @@ body {
 }
 
 .mt-form {
-  margin-top: 26px;
+  margin-top: 40px;
 }
 
 .section-info {
@@ -2962,51 +2968,99 @@ body {
   width: 396px;
   height: 48px;
   border-radius: 15px;
-  background: hsl(180deg, 43%, 96%);
+  background: hsl(180, 43%, 96%);
   padding: 5px;
   border: none;
-  color: hsl(0deg, 0%, 15%);
+  color: hsl(0, 0%, 15%);
 }
 
 .custom-drop {
   width: 173px;
   height: 48px;
   border-radius: 15px;
-  background: hsl(180deg, 43%, 96%);
-  padding: 5px;
+  background: hsl(180, 43%, 96%);
+  padding-left: 4px;
+  padding-right: 32px;
   border: none;
-  color: hsl(180deg, 64%, 34%);
+  color: hsl(180, 64%, 34%);
   text-align: center;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-size: 0.938rem;
-  color: hsl(180deg, 64%, 34%);
+  color: hsl(180, 64%, 34%);
+}
+
+.inp-amount {
+  width: 70px;
+  height: 48px;
+  border-radius: 15px 0 0 15px;
+  background: hsl(180, 43%, 96%);
+  padding-bottom: 2px;
+  border: none;
+  color: hsl(180, 64%, 34%);
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 0.938rem;
+  color: hsl(180, 64%, 34%);
+  -webkit-appearance: textfield;
+     -moz-appearance: textfield;
+          appearance: textfield;
+}
+
+.inp-amount::-webkit-inner-spin-button,
+.inp-amount::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.drop-msu {
+  width: 80px;
+  height: 48px;
+  border-radius: 0px;
+  background: hsl(180, 64%, 34%);
+  padding-left: 4px;
+  padding-right: 32px;
+  border: none;
+  color: hsl(180, 64%, 34%);
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 0.938rem;
+  color: hsl(180, 43%, 96%);
+}
+
+.drop-ing {
+  width: 198px;
+  height: 48px;
+  border-radius: 0px;
+  background: hsl(180, 43%, 96%);
+  padding-left: 4px;
+  padding-right: 32px;
+  border: none;
+  color: hsl(180, 64%, 34%);
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 0.938rem;
+  color: hsl(180, 64%, 34%);
 }
 
 .custom-input {
   width: 155px;
   height: 48px;
   border-radius: 15px 0 0 15px;
-  background: hsl(180deg, 43%, 96%);
+  background: hsl(180, 43%, 96%);
   padding: 5px;
   border: none;
-  color: hsl(0deg, 0%, 15%);
+  color: hsl(0, 0%, 15%);
   text-align: center;
-  -webkit-appearance: textfield;
-     -moz-appearance: textfield;
-          appearance: textfield;
-}
-
-.custom-input::-webkit-inner-spin-button,
-.custom-input::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
 }
 
 .bg-btns {
   width: 18px;
   height: 48px;
-  background: hsl(180deg, 64%, 34%);
+  background: hsl(180, 64%, 34%);
   border-radius: 0 15px 15px 0;
 }
 
@@ -3023,17 +3077,26 @@ body {
   width: 16px;
   height: 16px;
   margin-bottom: 4px;
-  color: hsl(180deg, 43%, 96%);
+  color: hsl(180, 43%, 96%);
 }
 
 .icon-drop {
   width: 20px;
   height: 20px;
-  color: hsl(180deg, 64%, 34%);
+  color: hsl(180, 64%, 34%);
   position: absolute;
   margin-left: 139px;
   margin-top: 14px;
   pointer-events: none;
+}
+
+.icon-msu {
+  color: hsl(180, 43%, 96%) !important;
+  margin-left: 52px !important;
+}
+
+.icon-ing {
+  margin-left: 172px !important;
 }
 
 .file-input {
@@ -3043,14 +3106,14 @@ body {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-size: 28px;
-  color: hsl(180deg, 64%, 34%);
+  color: hsl(180, 64%, 34%);
 }
 
 .file-bg {
   position: absolute;
   width: 396px;
   height: 48px;
-  background: linear-gradient(to right, hsl(0deg, 0%, 68%) 173px, hsl(180deg, 43%, 96%) 0px);
+  background: linear-gradient(to right, hsl(0, 0%, 68%) 173px, hsl(180, 43%, 96%) 0px);
   border-radius: 15px;
   margin-top: 52px;
   pointer-events: none;
@@ -3075,7 +3138,7 @@ body {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 0.938rem;
-  color: hsl(180deg, 43%, 96%);
+  color: hsl(180, 43%, 96%);
 }
 
 .file-select {
@@ -3083,17 +3146,17 @@ body {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-size: 0.938rem;
-  color: hsl(180deg, 64%, 34%);
+  color: hsl(180, 64%, 34%);
 }
 
 .custom-list {
   width: 348px;
   height: 48px;
   border-radius: 15px 0 0 15px;
-  background: hsl(180deg, 43%, 96%);
+  background: hsl(180, 43%, 96%);
   padding: 5px;
   border: none;
-  color: hsl(0deg, 0%, 15%);
+  color: hsl(0, 0%, 15%);
 }
 
 .more-list {
@@ -3104,8 +3167,8 @@ body {
 .btn-list {
   width: 48px;
   height: 48px;
-  background: hsl(180deg, 64%, 34%);
-  color: hsl(180deg, 43%, 96%);
+  background: hsl(180, 64%, 34%);
+  color: hsl(180, 43%, 96%);
   border: none;
   border-radius: 0 15px 15px 0;
   padding: 0;
@@ -3115,20 +3178,174 @@ body {
   width: 396px;
   height: 48px;
   border-radius: 15px;
-  background: hsl(180deg, 64%, 34%);
+  background: hsl(180, 64%, 34%);
   margin-top: 54px;
   margin-bottom: 78px;
   border: none;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 1.125rem;
-  color: hsl(180deg, 43%, 96%);
+  color: hsl(180, 43%, 96%);
+}
+
+.sz-data {
+  height: 50px;
+  background: hsl(180, 64%, 34%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 4px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 0.938rem;
+  color: hsl(180, 43%, 96%);
+}
+
+.sz-left {
+  width: 390px;
+  border-radius: 15px 0 0 15px;
+}
+
+.sz-right {
+  width: 390px;
+  border-radius: 0 15px 15px 0;
+}
+
+.sz-center {
+  width: 412px;
+}
+
+h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 17px;
+  color: hsl(180, 43%, 96%);
+}
+
+.btn-arrow {
+  background: transparent;
+  border: none;
+}
+
+.custom-close {
+  width: 40px;
+  height: 40px;
+  color: hsl(180, 64%, 34%);
+  text-decoration: none;
+  margin-left: 20px;
+  margin-top: 62px;
+}
+
+.custom-close:hover {
+  color: hsl(180, 43%, 96%);
+}
+
+.s-name {
+  width: 335px;
+  height: 50px;
+  background: hsl(180, 64%, 34%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 15px 0 0 15px;
+  margin-bottom: 12px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 0.938rem;
+  color: hsl(180, 43%, 96%);
+}
+
+.s-categories {
+  width: 180px;
+  height: 50px;
+  background: hsl(180, 64%, 34%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 12px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 0.938rem;
+  color: hsl(180, 43%, 96%);
+}
+
+.s-numbers {
+  width: 121px;
+  height: 50px;
+  background: hsl(180, 64%, 34%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 12px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 0.938rem;
+  color: hsl(180, 43%, 96%);
+}
+
+.s-options {
+  width: 68px !important;
+  height: 50px;
+  background: hsl(180, 43%, 96%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: hsl(180, 64%, 34%);
+  text-decoration: none;
+}
+
+.us-title {
+  background: transparent;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 0.938rem;
+  color: hsl(180, 43%, 96%);
+}
+
+.edit-icon {
+  font-size: 35px;
+  padding-bottom: 7px;
+}
+
+.delete-icon {
+  font-size: 40px;
 }
 
 .bg-w {
   width: 100%;
   height: 59.375rem;
-  background: hsl(180deg, 43%, 96%);
+  background: hsl(180, 43%, 96%);
 }
 @media only screen and (max-width: 480px) {
   .bg-w {
@@ -3146,7 +3363,7 @@ body {
     height: 70.375rem;
   }
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .bg-w {
     height: 39.375rem;
   }
@@ -3156,7 +3373,7 @@ body {
   position: absolute;
   width: 100%;
   height: 28.75rem;
-  background: hsl(35deg, 100%, 64%);
+  background: hsl(35, 100%, 64%);
   margin-top: 26.5rem;
 }
 @media only screen and (max-width: 480px) {
@@ -3175,7 +3392,7 @@ body {
     margin-top: 41.5rem;
   }
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .orange-bg {
     margin-top: 18.5rem;
     width: 100%;
@@ -3187,13 +3404,13 @@ body {
   position: absolute;
   width: 56.72%;
   height: 48.125rem;
-  background: hsl(180deg, 43%, 96%);
+  background: hsl(180, 43%, 96%);
   border-top-width: 0.25rem;
   border-right-width: 0;
   border-bottom-width: 0.25rem;
   border-left-width: 0.25rem;
   border-style: solid;
-  border-color: hsl(35deg, 100%, 64%);
+  border-color: hsl(35, 100%, 64%);
   border-top-left-radius: 26.25rem;
   border-bottom-left-radius: 26.25rem;
   margin-left: 43.28%;
@@ -3234,7 +3451,7 @@ body {
     margin-top: 15.813rem;
   }
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .border-image {
     margin-top: 0.813rem;
     margin-left: 44.28%;
@@ -3280,7 +3497,7 @@ body {
     margin-left: 0rem;
   }
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .nw-image {
     height: 478px;
     margin-left: 34px;
@@ -3292,7 +3509,7 @@ body {
 .icon-click {
   width: 2.313rem;
   height: 2.313rem;
-  color: hsl(0deg, 0%, 15%);
+  color: hsl(0, 0%, 15%);
 }
 @media only screen and (max-width: 480px) {
   .icon-click {
@@ -3300,7 +3517,7 @@ body {
     height: 0;
   }
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .icon-click {
     width: 25px;
     height: 25px;
@@ -3361,7 +3578,7 @@ body {
     border-radius: 2.188rem 2.188rem 0 0;
   }
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .img-left {
     width: 607px;
     height: 330px;
@@ -3396,7 +3613,7 @@ body {
     border-radius: 0 0 2.188rem 2.188rem;
   }
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .img-right {
     width: 607px;
     height: 330px;
@@ -3407,7 +3624,7 @@ body {
   position: absolute;
   width: 20.188rem;
   height: 20.188rem;
-  background: hsl(20deg, 85%, 38%);
+  background: hsl(20, 85%, 38%);
   margin-top: 4.5rem;
   border-radius: 10.625rem;
 }
@@ -3435,7 +3652,7 @@ body {
     border-radius: 0;
   }
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .circle-icon {
     width: 231px;
     height: 231px;
@@ -3455,7 +3672,7 @@ body {
     margin-left: 0.188rem;
   }
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .icon-more {
     font-size: 28px;
     font-weight: bold;
@@ -3464,20 +3681,20 @@ body {
 }
 
 .icon-more:hover {
-  color: hsl(35deg, 100%, 64%);
+  color: hsl(35, 100%, 64%);
 }
 
 .icon-show {
   margin-left: 0.625rem !important;
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .icon-show {
     margin-left: 0px !important;
   }
 }
 
 .icon-show:hover {
-  color: hsl(180deg, 43%, 96%) !important;
+  color: hsl(180, 43%, 96%) !important;
 }
 
 .img-cf {
@@ -3510,7 +3727,7 @@ body {
     height: auto;
   }
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .img-cf {
     width: 669px;
     height: auto;
@@ -3536,7 +3753,7 @@ body {
   margin-top: 31px;
   border-radius: 25px;
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .img-details {
     margin-top: 17px;
     height: 557px;
@@ -3565,15 +3782,15 @@ body {
   position: absolute;
   width: 80px;
   height: 80px;
-  background: hsl(180deg, 43%, 96%);
+  background: hsl(180, 43%, 96%);
   border-radius: 40px;
   margin-top: 170px;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-size: 2.625rem;
-  color: hsl(20deg, 85%, 38%);
+  color: hsl(20, 85%, 38%);
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .circle-top {
     width: 60px;
     height: 60px;
@@ -3609,11 +3826,11 @@ body {
 .details-name {
   width: 80%;
   height: 160px;
-  background: hsla(0deg, 0%, 15%, 0.5);
+  background: hsla(0, 0%, 15%, 0.5);
   position: absolute;
   margin-top: 342px;
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .details-name {
     height: 113px;
     margin-top: 239px;
@@ -3663,7 +3880,7 @@ body {
 .m-dtk {
   margin-top: -9px;
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .m-dtk {
     margin-top: -6px;
   }
@@ -3687,10 +3904,10 @@ body {
 .heart-dt {
   width: 59px;
   height: 59px;
-  color: hsl(180deg, 64%, 34%);
+  color: hsl(180, 64%, 34%);
   margin-right: 14px;
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .heart-dt {
     width: 40px;
     height: 40px;
@@ -3712,7 +3929,7 @@ body {
 .dt-gap {
   gap: 100px;
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .dt-gap {
     gap: 25px;
   }
@@ -3745,7 +3962,7 @@ body {
     width: 80%;
   }
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .info-related {
     width: 222px;
     height: 158px;
@@ -3756,24 +3973,24 @@ body {
 .icon-log {
   width: 55px;
   height: 40px;
-  background: hsl(35deg, 100%, 64%);
+  background: hsl(35, 100%, 64%);
   border-radius: 10px 0 0 10px;
 }
 
 .size-icon {
   width: 23px;
-  color: hsl(180deg, 43%, 96%);
+  color: hsl(180, 43%, 96%);
 }
 
 .icon-msg {
   width: 50px;
-  color: hsl(126deg, 93%, 32%);
+  color: hsl(126, 93%, 32%);
 }
 
 .input-log {
   width: 355px;
   height: 40px;
-  background: hsl(0deg, 0%, 84%);
+  background: hsl(0, 0%, 84%);
   border-radius: 0 10px 10px 0;
   border: none;
 }
@@ -3782,20 +3999,20 @@ body {
     width: 300px;
   }
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .input-log {
     width: 335px;
   }
 }
 
 .input-log:focus {
-  background: hsl(0deg, 0%, 84%);
+  background: hsl(0, 0%, 84%);
 }
 
 .m-input {
   margin-bottom: 24px;
 }
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
   .m-input {
     margin-bottom: 20px;
   }

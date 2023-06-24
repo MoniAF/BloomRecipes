@@ -2,11 +2,6 @@
 @use '../abstracts/mixins';
 @use '../abstracts/media-queries';
 
-.f-footer{
-    position: fixed;
-    bottom: 0;
-}
-
 //principal page footer
 
 .conf-f{
@@ -40,9 +35,6 @@
 //principal page footer
 
 //footer
-.f-admin{
-    background: vars.$clr-cian !important;
-}
 
 .f-principal{
     width: 100%;
@@ -50,10 +42,6 @@
     background: vars.$clr-red;
     @include media-queries.respond-to(media-queries.$phone){
         height: 14.688rem;
-    }
-
-    @include media-queries.respond-to(media-queries.$tablet-landscape){
-        //height: 8.063rem;
     }
 
     @include media-queries.respond-to(media-queries.$tablet-portrait){

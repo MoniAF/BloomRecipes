@@ -227,7 +227,6 @@
 
 .m-options{
     display: flex;
-    //margin-left: 14.5rem;
     gap: 3.688rem;
 
     @include media-queries.respond-to(media-queries.$phone){
@@ -239,7 +238,6 @@
     }
 
     @include media-queries.respond-to(media-queries.$large-desktop){
-        //margin-left: 165px;
         gap: 25px;
     }
 

@@ -190,7 +190,6 @@ body{
 }
 
 .cards-pp{
-    //gap: 2.438rem;
     flex-wrap: wrap;
     margin-top: 4.938rem !important;
     justify-content: space-between;
@@ -208,7 +207,6 @@ body{
     }
 
     @include media-queries.respond-to(media-queries.$large-desktop){
-        //gap: 26px;
         margin-top: 56px;
     }
 }

@@ -18,7 +18,48 @@
 </head>
 <body class="bg-admin">
     <div id="app">
-        
+        <div class="container-users">
+
+            <div class="d-flex flex-nowrap">
+                <div class="mt-2 position-absolute">
+                    <section class="pos-add">
+                        <button type="button" v-on:click="showIndexAdmin" class="btn-arrow"><span class="arrow-back material-symbols-outlined">
+                            arrow_back
+                            </span></button>
+                    </section>
+                </div>
+                <div class="mt-2 ms-auto me-auto">
+                    <section class="text-center pos-icona">
+                        <a class="ba-icon">BLOOM<br>
+                        <span class="ra-icon">RECIPES</span></a>
+                    </section>
+                </div>
+            </div>
+    
+            <div class="d-flex justify-content-center mt-5">
+                <h3>Administrators</h3>
+            </div>
+    
+            <div class="d-flex justify-content-between mt-4">
+    
+                <p class="us-title sz-left">Full name</p>
+    
+                <p class="us-title sz-center">E-mail</p>
+    
+                <p class="us-title sz-right">Username</p>
+                
+            </div>
+    
+            <div class="d-flex justify-content-between">
+    
+                <p class="sz-data sz-left">Monica Artavia Flores</p>
+    
+                <p class="sz-data sz-center">artaviafloresmonica@gmail.com</p>
+    
+                <p class="sz-data sz-right">floadmin</p>
+                
+            </div>
+        </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
@@ -31,11 +72,7 @@
     <!-- Axios --> 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <!-- main script -->
-    <script src="./js/admin.js"></script>
-    <!-- index script -->
-    <script src="./js/components/IndexAdmin.js"></script>
-    <script src="./js/components/FooterAdmin.js"></script>
-    <script src="./js/components/AddRecipe.js"></script>
+    <script src="./js/main.js"></script>
     <!-- mounted -->
     <script>
       const mountedApp = app.mount("#app");

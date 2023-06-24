@@ -207,7 +207,6 @@ h2{
     padding-top: 6.938rem;
     justify-content: center;
     text-decoration: none;
-    //margin-left: 70%;
     @include media-queries.respond-to(media-queries.$phone){
         @include mixins.set-font(vars.$ff-primary, vars.$fw-reg, vars.$fs-20, vars.$clr-cian);
         padding-top: 0;
@@ -229,7 +228,6 @@ h2{
     @include media-queries.respond-to(media-queries.$large-desktop){
         font-size: 20px;
         padding-top: 120px;
-        //margin-left: 68%;
     }
 }
 

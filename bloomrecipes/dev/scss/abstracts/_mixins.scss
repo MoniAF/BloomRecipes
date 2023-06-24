@@ -185,7 +185,6 @@
     background: $bg;
     padding-top: 6.938rem;
     justify-content: center;
-    //margin-left: 57%;
 
     @include media-queries.respond-to(media-queries.$phone){
         font-size: vars.$fs-20;
@@ -208,7 +207,6 @@
     @include media-queries.respond-to(media-queries.$large-desktop){
         font-size: 20px;
         padding-top: 123px;
-        //margin-left: 55%;
     }
 }
 

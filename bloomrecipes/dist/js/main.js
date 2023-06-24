@@ -4,10 +4,19 @@ const app = Vue.createApp({
             message: "All Recipes",
             searchTerm: "",
             idRecipe: "",
+            prepValue: 0,
+            cookValue: 0,
+            servingsValue: 0,
+
             principal: true,
             allRecipes: false,
             footer: false,
             detailsView: false,
+
+            indexAdmin: true,
+            iAdmin: false,
+            iUsers: false,
+
             recipes:[],
             searchData:[],
             recipeDetails:[]
@@ -234,8 +243,6 @@ const app = Vue.createApp({
             this.$root.allRecipes = true;
             this.$root.footer = true;
             this.cleanResults();
-            console.log("princ reee "+this.principal);
-            console.log("recip reee "+this.allRecipes);
         },
 
         showHome(){ //mostrar pagina principal
@@ -243,8 +250,6 @@ const app = Vue.createApp({
             this.$root.allRecipes = false;
             this.$root.detailsView = false;
             this.$root.footer = false;
-            console.log("princ hhhhhhhh "+this.principal);
-            console.log("recip hhhhhhhh "+this.allRecipes);
         },
 
         cleanResults(){ //borrar datos de busqueda
@@ -252,6 +257,36 @@ const app = Vue.createApp({
             this.message= "All recipes";
         },
 
+        prepIncrease(){ //incrementa el valor de prepTime (administración)
+            this.prepValue++;
+        },
+
+        prepDecrease(){ //decrementa el valor de prepTime(administración)
+            if (this.prepValue > 0) {
+                this.prepValue--;
+            }
+        },
+
+        cookIncrease(){ //incrementa el valor de cookTime (administración)
+            this.cookValue++;
+        },
+
+        cookDecrease(){ //decrementa el valor de cookTime (administración)
+            if (this.cookValue > 0) {
+                this.cookValue--;
+            }
+        },
+
+        servingsIncrease(){ //incrementa el valor de cookTime (administración)
+            this.servingsValue++;
+        },
+
+        servingsDecrease(){ //decrementa el valor de cookTime (administración)
+            if (this.servingsValue > 0) {
+                this.servingsValue--;
+            }
+        },
+        
         onClickShowDetails(id){ //mostrar detalles de la receta seleccionada
             //mostrar una receta
             axios({
@@ -328,6 +363,24 @@ const app = Vue.createApp({
                 recipe.onlike=true;
                 recipe.onUnlike=false;
             }
+        },
+
+        showIndexAdmin(){ //mostrar index de administracion
+            this.$root.indexAdmin = true;
+            this.$root.iAdmin = false;
+            this.$root.iUsers = false;
+        },
+
+        showInfoAdmin(){ //mostrar informacion de administradores
+            this.$root.indexAdmin = false;
+            this.$root.iAdmin = true;
+            this.$root.iUsers = false;
+        },
+
+        showInfoUsers(){ //mostrar informacion de usuarios
+            this.$root.indexAdmin = false;
+            this.$root.iAdmin = false;
+            this.$root.iUsers = true;
         }
     }
 })

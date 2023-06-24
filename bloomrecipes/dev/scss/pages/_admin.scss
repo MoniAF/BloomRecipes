@@ -2,8 +2,6 @@
 @use '../abstracts/mixins';
 
 .bg-admin{
-    width: 100%;
-    height: 100vh;
     background: vars.$clr-black;
 }
 
@@ -44,17 +42,16 @@
     align-items: center;
     border-radius: 15px;
     margin-bottom: 64px;
+    border: none;
 }
 
 .gap-admin{
-    margin-top: 198px;
+    height: 80%;
     gap: 78px;
 }
 
-.bg-add{
-    width: 100%;
-    height: auto;
-    background: vars.$clr-black;
+.sz-menu{
+    height: 100vh;
 }
 
 .arrow-back{
@@ -69,6 +66,10 @@
     @include mixins.set-font(vars.$ff-primary, vars.$fw-med, 35px, vars.$clr-white);
     width: 200px;
     margin-top: 33px;
+}
+
+.title-edit{
+    width: 160px !important;
 }
 
 .pos-add{
@@ -89,7 +90,7 @@
 }
 
 .mt-form{
-    margin-top: 26px;
+    margin-top: 40px;
 }
 
 .section-info{
@@ -111,7 +112,55 @@
     height: 48px;
     border-radius: 15px;
     background: vars.$clr-white-blue;
-    padding: 5px;
+    padding-left: 4px;
+    padding-right: 32px;
+    border: none;
+    color: vars.$clr-cian;
+    text-align: center;
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-sbold, vars.$fs-15, vars.$clr-cian);
+}
+
+.inp-amount{
+    width: 70px;
+    height: 48px;
+    border-radius: 15px 0 0 15px;
+    background: vars.$clr-white-blue;
+    padding-bottom: 2px;
+    border: none;
+    color: vars.$clr-cian;
+    text-align: center;
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-sbold, vars.$fs-15, vars.$clr-cian);
+    appearance: textfield;
+}
+
+.inp-amount::-webkit-inner-spin-button,
+.inp-amount::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+.drop-msu{
+    width: 80px;
+    height: 48px;
+    border-radius: 0px;
+    background: vars.$clr-cian;
+    padding-left: 4px;
+    padding-right: 32px;
+    border: none;
+    color: vars.$clr-cian;
+    text-align: center;
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-reg, vars.$fs-15, vars.$clr-white-blue);
+}
+
+.drop-ing{
+    //width: 233px;
+    width: 198px;
+    height: 48px;
+    border-radius: 0px;
+    background: vars.$clr-white-blue;
+    padding-left: 4px;
+    padding-right: 32px;
     border: none;
     color: vars.$clr-cian;
     text-align: center;
@@ -127,13 +176,6 @@
     border: none;
     color: vars.$clr-black;
     text-align: center;
-    appearance: textfield;
-}
-
-.custom-input::-webkit-inner-spin-button,
-.custom-input::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
 }
 
 .bg-btns{
@@ -167,6 +209,15 @@
     margin-left: 139px;
     margin-top: 14px;
     pointer-events: none;
+}
+
+.icon-msu{
+    color: vars.$clr-white-blue !important;
+    margin-left: 52px !important;
+}
+
+.icon-ing{
+    margin-left: 172px !important;
 }
 
 .file-input{
@@ -242,4 +293,110 @@
     @include mixins.set-font(vars.$ff-primary, vars.$fw-med, vars.$fs-18, vars.$clr-white-blue);
 }
 
+//users administration
 
+.sz-data{
+    height: 50px;
+    background: vars.$clr-cian;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 4px;
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-med, vars.$fs-15, vars.$clr-white-blue);
+}
+
+.sz-left{
+    width: 390px;
+    border-radius: 15px 0 0 15px;
+}
+
+.sz-right{
+    width: 390px;
+    border-radius: 0 15px 15px 0;
+}
+
+.sz-center{
+    width: 412px;
+}
+
+h3{
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-sbold, 17px, vars.$clr-white-blue);
+}
+
+.btn-arrow{
+    background: transparent;
+    border: none;
+}
+
+.custom-close{
+    width: 40px;
+    height: 40px;
+    color: vars.$clr-cian;
+    text-decoration: none;
+    margin-left: 20px;
+    margin-top: 62px;
+}
+
+.custom-close:hover{
+    color: vars.$clr-white-blue;
+}
+
+.s-name{
+    width: 335px;
+    height: 50px;
+    background: vars.$clr-cian;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px 0 0 15px;
+    margin-bottom: 12px;
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-med, vars.$fs-15, vars.$clr-white-blue);
+}
+
+.s-categories{
+    width: 180px;
+    height: 50px;
+    background: vars.$clr-cian;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-med, vars.$fs-15, vars.$clr-white-blue);
+}
+
+.s-numbers{
+    width: 121px;
+    height: 50px;
+    background: vars.$clr-cian;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-med, vars.$fs-15, vars.$clr-white-blue);
+}
+
+.s-options{
+    width: 68px !important;
+    height: 50px;
+    background: vars.$clr-white-blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: vars.$clr-cian;
+    text-decoration: none;
+}
+
+.us-title{
+    background: transparent;
+    text-align: center;
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-sbold, vars.$fs-15, vars.$clr-white-blue);
+}
+
+.edit-icon{
+    font-size: 35px;
+    padding-bottom: 7px;
+}
+
+.delete-icon{
+    font-size: 40px;
+}

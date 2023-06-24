@@ -134,7 +134,7 @@ app.component('recipe-details',{
                 <h4>Related recipes</h4>
 
                 <div class="d-flex cards-recipes mb-5">
-                    <div v-for="(element, index) in showRelated">
+                    <div class="size-card" v-for="(element, index) in showRelated">
                         <button v-on:click="onClickShowDetails(element.id)" type="button" class="conf-cards">
                             <div class="card-top">
 
@@ -148,14 +148,16 @@ app.component('recipe-details',{
 
                                 <img v-bind:src="element.image" class="img-card" alt="{{element.name}}">
                                 <div class="degraded"></div>
-                                <div class="info-top">
-                                    <p class="title-card text-center">{{ element.name }}</p>
-                                    <p class="category-card text-center categories-txt">{{ element.category }}</p>
-                                    <p class="category-card text-center categories-txt">{{ element.difficulty }}</p>
-                                    <p class="txt-likes text-center"><span><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-heart-fill card-heart" viewBox="0 0 16 16">
-                                        <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
-                                        </svg></span> {{ element.likes }}</p>
-                                </div>
+                                <section class="d-flex justify-content-center">
+                                    <div class="info-top">
+                                        <p class="title-card text-center">{{ element.name }}</p>
+                                        <p class="category-card text-center categories-txt">{{ element.category }}</p>
+                                        <p class="category-card text-center categories-txt">{{ element.difficulty }}</p>
+                                        <p class="txt-likes text-center"><span><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-heart-fill card-heart" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                                            </svg></span> {{ element.likes }}</p>
+                                    </div>
+                                </section>
                             </div>
                         </button>
                     </div>
