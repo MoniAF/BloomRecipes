@@ -19,18 +19,23 @@
 <body>
     <div id="app">
 
-
         <!--Barra de navegacion / envio de datos y metodos-->
         <nav-bar :recipes="recipes" v-on:openrecipes="showRecipes" v-on:openhome="showHome" v-on:searchrecipes="onClickSearchRecipe" v-on:showdetails="onClickShowDetails" v-on:recipelike="onClickRecipeLike" v-on:recipeunlike="onClickRecipeUnlike"></nav-bar>
 
+        <!--Galeria de fotos de las recetas (modal) / envio de datos y metodos-->
+        <gallery-section :recipes="recipes"></gallery-section>
 
-        <!--Recetas por categoria (actualmente solo todas las recetas) y buscadas / envio de datos y metodos-->
-        <recipes-section  :results="searchData" :recipes="recipes" :message="message" v-if="allRecipes" v-on:showdetails="onClickShowDetails" v-on:recipelike="onClickRecipeLike"  v-on:recipeunlike="onClickRecipeUnlike"></recipes-section>
-
+        <!--las recetas mas nuevas(modal) / envio de datos y metodos-->
+        <newest-recipes :recipes="recipes"></newest-recipes>
 
         <!--Pagina principal / envio de datos y metodos-->
-        <index-page :recipes="recipes" v-if="principal" v-on:showdetails="onClickShowDetails" v-on:recipelike="onClickRecipeLike"  v-on:recipeunlike="onClickRecipeUnlike"></index-page>
+        <index-page :recipes="recipes" v-if="principal" v-on:openrecipes="showRecipes" v-on:showdetails="onClickShowDetails" v-on:recipelike="onClickRecipeLike"  v-on:recipeunlike="onClickRecipeUnlike"></index-page>
 
+        <!--Recetas por categoria (actualmente solo todas las recetas) y buscadas / envio de datos y metodos-->
+        <recipes-section :recipes="recipes" :categoryname="categoryName" v-if="allRecipes" v-on:showdetails="onClickShowDetails" v-on:recipelike="onClickRecipeLike" v-on:recipeunlike="onClickRecipeUnlike"></recipes-section>
+
+        <!--Recetas buscadas / envio de datos y metodos-->
+        <search-section  :results="searchData" :term="searchTerm" v-if="searchResults" v-on:showdetails="onClickShowDetails" v-on:recipelike="onClickRecipeLike"  v-on:recipeunlike="onClickRecipeUnlike"></search-section>
 
         <!--Detalles de la receta / envio de datos y metodos-->
         <div v-for="item in recipeDetails">
@@ -38,7 +43,7 @@
         </div>
 
         <!--Footer-->
-        <footer-pages v-if="footer"></footer-pages>
+        <footer-pages v-if="footer" :statusfooter="fstatus"></footer-pages>
 
     </div>
 
@@ -56,8 +61,11 @@
     <script src="./js/components/IndexPage.js"></script>
     <script src="./js/components/NavBar.js"></script>
     <script src="./js/components/RecipesSection.js"></script>
+    <script src="./js/components/SearchSection.js"></script>
     <script src="./js/components/Footer.js"></script>
     <script src="./js/components/Details.js"></script>
+    <script src="./js/components/Gallery.js"></script>
+    <script src="./js/components/Newest.js"></script>
     <!-- mounted -->
     <script>
       const mountedApp = app.mount("#app");

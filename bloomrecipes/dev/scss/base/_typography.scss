@@ -13,23 +13,14 @@
 }
 
 .txt-black{
-    color: vars.$clr-black;
+    color: vars.$clr-black !important;
+}
+
+.txt-wb{
+    color: vars.$clr-white-blue !important;
 }
 
 //colors
-
-//search
-
-/*.txt-search{
-    @include mixins.set-font(vars.$ff-secondary, vars.$fw-med, vars.$fs-30);
-    margin-top: 28px;
-}
-
-.txt-result{
-    @include mixins.set-font(vars.$ff-secondary, vars.$fw-bold, vars.$fs-30);
-}*/
-
-//search
 
 //principal
 
@@ -235,7 +226,7 @@ h2{
     @include mixins.set-font(vars.$ff-primary, vars.$fw-sbold, vars.$fs-77);
     margin-top: 10.875rem;
     line-height: 6.875rem;
-    //position: absolute;
+
     @include media-queries.respond-to(media-queries.$phone){
         @include mixins.set-font(vars.$ff-primary, vars.$fw-sbold, vars.$fs-30);
         margin-top: 95px;
@@ -341,17 +332,36 @@ h2{
 
 //categories
 
-.txt-menu{
+.txt-value{
     
     @include mixins.set-font(vars.$ff-primary, vars.$fw-sbold, vars.$fs-30);
     margin-top: 39px;
+
     @include media-queries.respond-to(media-queries.$large-desktop){
         font-size: vars.$fs-26;
         margin-top: 30px;
     }
+    
     @include media-queries.respond-to(media-queries.$phone){
         text-align: center;
     }
+
+}
+
+.txt-option{
+    
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-reg, vars.$fs-30);
+    margin-top: 39px;
+
+    @include media-queries.respond-to(media-queries.$large-desktop){
+        font-size: vars.$fs-26;
+        margin-top: 30px;
+    }
+    
+    @include media-queries.respond-to(media-queries.$phone){
+        text-align: center;
+    }
+
 }
 
 //categories

@@ -1,12 +1,18 @@
-app.component('recipes-section',{
+app.component('search-section',{
     emits: ['showdetails', 'recipelike', 'recipeunlike'], //emision de eventos
     props:{
-        recipes:{
+        results:{
             type: Array
         },
-        categoryname:{
+        term:{
             type: String,
-            //default: "Results"
+            default: "default term"
+        }
+    },
+    data() {
+        return {
+            message: "",
+            showicon: false
         }
     },
     methods: {
@@ -20,15 +26,33 @@ app.component('recipes-section',{
             this.$emit('recipeunlike', id); //Emite el evento y envia el id para disminuir los likes
         }
     },
+    computed:{
+        showResults(){ //define la muestra de el icono de alerta y del mensaje que aparece con el resultado de busqueda
+            if (this.results.length > 0) {
+                this.showicon=false;
+                this.message= "Search results for";
+                return this.results;
+            } else {
+                this.showicon=true;
+                this.message= "Sorry, we couldn't find any recipes that match";
+            }
+        }
+    },
     template:
     /*html*/
     `<div class="container-principal">
+        <div v-if="showicon" class="d-flex justify-content-center align-items-center mt-5">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-exclamation-circle icon-msg text-primary" viewBox="0 0 16 16">
+                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/>
+            </svg>
+        </div>
         <section class="d-flex justify-content-center">
-            <p class="txt-value">{{ categoryname }}</p>
+            <p class="txt-option">{{message}} '<span class="txt-value">{{ term }}</span>'.</p>
         </section>
 
         <div class="d-flex cards-recipes">
-            <div class="size-card" v-for="element in recipes">
+            <div class="size-card" v-for="element in showResults">
                 <button v-on:click="onClickShowDetails(element.id)" type="button" class="conf-cards mb-4">
                     <div class="card-pp">
 

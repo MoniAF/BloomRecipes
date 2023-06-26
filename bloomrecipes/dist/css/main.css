@@ -7,17 +7,13 @@
 }
 
 .txt-black {
-  color: hsl(0, 0%, 15%);
+  color: hsl(0, 0%, 15%) !important;
 }
 
-/*.txt-search{
-    @include mixins.set-font(vars.$ff-secondary, vars.$fw-med, vars.$fs-30);
-    margin-top: 28px;
+.txt-wb {
+  color: hsl(180, 43%, 96%) !important;
 }
 
-.txt-result{
-    @include mixins.set-font(vars.$ff-secondary, vars.$fw-bold, vars.$fs-30);
-}*/
 h1 {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
@@ -442,7 +438,7 @@ h2 {
   }
 }
 
-.txt-menu {
+.txt-value {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-size: 1.875rem;
@@ -450,13 +446,32 @@ h2 {
   margin-top: 39px;
 }
 @media only screen and (min-width: 1200px) and (max-width: 1800px) {
-  .txt-menu {
+  .txt-value {
     font-size: 1.625rem;
     margin-top: 30px;
   }
 }
 @media only screen and (max-width: 480px) {
-  .txt-menu {
+  .txt-value {
+    text-align: center;
+  }
+}
+
+.txt-option {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 1.875rem;
+  color: hsl(0, 0%, 15%);
+  margin-top: 39px;
+}
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
+  .txt-option {
+    font-size: 1.625rem;
+    margin-top: 30px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .txt-option {
     text-align: center;
   }
 }
@@ -2223,7 +2238,7 @@ body {
 }
 
 .custom-menu {
-  margin-left: -518px;
+  margin-left: -526px;
   margin-top: 32px !important;
   width: 1728px;
   height: 300px;
@@ -2609,6 +2624,87 @@ body {
   padding-right: 22px;
 }
 
+.pd-gallery {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+@media only screen and (max-width: 480px) {
+  .pd-gallery {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1030px) {
+  .pd-gallery {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+@media only screen and (min-width: 500px) and (max-width: 767px) {
+  .pd-gallery {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+.image-one {
+  width: 470px;
+  height: 305px;
+  margin: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media only screen and (max-width: 480px) {
+  .image-one {
+    width: 347px;
+    height: 207px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1030px) {
+  .image-one {
+    width: 347px;
+    height: 207px;
+  }
+}
+@media only screen and (min-width: 500px) and (max-width: 767px) {
+  .image-one {
+    width: 347px;
+    height: 207px;
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
+  .image-one {
+    width: 350px;
+    height: 227px;
+  }
+}
+
+.image-two {
+  width: 347px;
+  height: 207px;
+  margin: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
+  .image-two {
+    width: 258px;
+    height: 154px;
+  }
+}
+
+.btnc-gallery {
+  background: hsl(180, 64%, 34%) !important;
+}
+
+.btnc-gallery:hover {
+  background: hsl(20, 85%, 38%) !important;
+}
+
+.hd-gallery {
+  background: hsl(20, 85%, 38%) !important;
+}
+
 /*.search-input:focus{
     background: blueviolet;
 }*/
@@ -2818,6 +2914,12 @@ body {
   .m-footer {
     padding-top: 25px;
   }
+}
+
+.fixed-footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
 }
 
 @-webkit-keyframes moveBtn {
@@ -3261,6 +3363,7 @@ h3 {
           justify-content: center;
   border-radius: 15px 0 0 15px;
   margin-bottom: 12px;
+  padding-left: 15px;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 0.938rem;
@@ -3340,6 +3443,20 @@ h3 {
 
 .delete-icon {
   font-size: 40px;
+}
+
+.admin-log {
+  background: hsl(180, 64%, 34%) !important;
+}
+
+.admin-sign {
+  border: solid 2px hsl(0, 0%, 15%) !important;
+  color: hsl(0, 0%, 15%) !important;
+}
+
+.admin-sign:hover {
+  background: hsl(0, 0%, 15%);
+  color: hsl(180, 43%, 96%) !important;
 }
 
 .bg-w {

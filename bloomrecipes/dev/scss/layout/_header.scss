@@ -24,7 +24,7 @@
 }
 
 .custom-menu{
-    margin-left: -518px;
+    margin-left: -526px;
     margin-top: 32px !important;
     width: 1728px;
     height: 300px;
@@ -336,6 +336,93 @@
     justify-content: end;
     padding-right: 22px;
 }
+
+//gallery
+
+.pd-gallery{
+    padding-left: 50px;
+    padding-right: 50px;
+
+    @include media-queries.respond-to(media-queries.$phone){
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-landscape){
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-portrait){
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+
+.image-one{
+    width: 470px;
+    height: 305px;
+    margin: 10px;
+    object-fit: cover;
+    
+    @include media-queries.respond-to(media-queries.$phone){
+        width: 347px;
+        height: 207px;
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-landscape){
+        width: 347px;
+        height: 207px;
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-portrait){
+        width: 347px;
+        height: 207px;
+    }
+
+    @include media-queries.respond-to(media-queries.$large-desktop){
+        width: 350px;
+        height: 227px;
+    }
+}
+
+.image-two{
+    width: 347px;
+    height: 207px;
+    margin: 10px;
+    object-fit: cover;
+
+    @include media-queries.respond-to(media-queries.$phone){
+        
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-landscape){
+        
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-portrait){
+        
+    }
+
+    @include media-queries.respond-to(media-queries.$large-desktop){
+        width: 258px;
+        height: 154px;
+    }
+}
+
+.btnc-gallery{
+    background: vars.$clr-cian !important;
+}
+
+.btnc-gallery:hover{
+    background: vars.$clr-red !important;
+}
+
+.hd-gallery{
+    background: vars.$clr-red !important;
+}
+
+//gallery
 
 /*.search-input:focus{
     background: blueviolet;

@@ -1,21 +1,20 @@
 const app = Vue.createApp({
     data() {
         return {
-            message: "All Recipes",
             searchTerm: "",
             idRecipe: "",
+            categoryName: "All Recipes",
             prepValue: 0,
             cookValue: 0,
             servingsValue: 0,
 
             principal: true,
             allRecipes: false,
+            searchResults: false,
             footer: false,
             detailsView: false,
 
-            indexAdmin: true,
-            iAdmin: false,
-            iUsers: false,
+            fstatus: false,
 
             recipes:[],
             searchData:[],
@@ -203,27 +202,36 @@ const app = Vue.createApp({
 
                     if(this.searchTerm != ""){
                         this.$root.principal = false;
-                        this.$root.allRecipes = true;
+                        this.$root.searchResults = true;
+                        this.$root.footer = true;
+                        this.$root.allRecipes = false;
+                        this.$root.detailsView = false;
                     }
 
                     console.log("palabra " +this.searchTerm);
-
-                    items.forEach(element => {
-                        this.searchData.push({ 
-                                id: element.idMeal,
-                                image: element.strMealThumb,
-                                name: element.strMeal,
-                                category: element.strCategory,
-                                description: "This recipe is a delightful combination of flavors and textures that will leave you wanting more. With fresh ingredients and a careful selection of spices, this recipe offers a unique culinary experience. Start by mixing the main ingredients in a bowl and seasoning them with a pinch of salt and pepper to enhance the flavors. Then, heat a skillet over medium heat and add a drizzle of oil to brown the ingredients. As they cook, the irresistible aroma fills the kitchen, creating an anticipation that is hard to resist.",
-                                difficulty: "Intermediate",
-                                onLike:true,
-                                onUnlike:false
-                            })
-                    });
-
-                    if(this.searchData != null){
-                        this.message= "Search results for "+this.searchTerm;
+                    if(items != null){
+                        items.forEach(element => {
+                            this.searchData.push({ 
+                                    id: element.idMeal,
+                                    image: element.strMealThumb,
+                                    name: element.strMeal,
+                                    category: element.strCategory,
+                                    description: "This recipe is a delightful combination of flavors and textures that will leave you wanting more. With fresh ingredients and a careful selection of spices, this recipe offers a unique culinary experience. Start by mixing the main ingredients in a bowl and seasoning them with a pinch of salt and pepper to enhance the flavors. Then, heat a skillet over medium heat and add a drizzle of oil to brown the ingredients. As they cook, the irresistible aroma fills the kitchen, creating an anticipation that is hard to resist.",
+                                    difficulty: "Intermediate",
+                                    onLike:true,
+                                    onUnlike:false
+                                })
+                        });
                     }
+
+                    if (this.searchData.length > 0) {
+                        this.fstatus = false;
+                        //console.log(this.searchData);
+                    }else{
+                        this.fstatus = true;
+                        //console.log(this.searchData);
+                    }
+
                 }
             )
             .catch(
@@ -240,21 +248,21 @@ const app = Vue.createApp({
         showRecipes(){ //mostrar pagina de recetas y footer
             this.$root.principal = false;
             this.$root.detailsView = false;
+            this.$root.searchResults = false;
             this.$root.allRecipes = true;
             this.$root.footer = true;
-            this.cleanResults();
+
+            this.fstatus = false;
         },
 
         showHome(){ //mostrar pagina principal
             this.$root.principal = true;
             this.$root.allRecipes = false;
+            this.$root.searchResults = false;
             this.$root.detailsView = false;
             this.$root.footer = false;
-        },
 
-        cleanResults(){ //borrar datos de busqueda
-            this.searchData= [];
-            this.message= "All recipes";
+            this.fstatus = false;
         },
 
         prepIncrease(){ //incrementa el valor de prepTime (administración)
@@ -299,9 +307,11 @@ const app = Vue.createApp({
                     console.log(item);
                     console.log(id);
                     this.recipeDetails = [];
+                    this.fstatus = false;
 
                     this.$root.principal = false;
                     this.$root.allRecipes = false;
+                    this.$root.searchResults = false;
                     this.$root.detailsView = true;
                     this.$root.footer = true;
 
@@ -363,24 +373,6 @@ const app = Vue.createApp({
                 recipe.onlike=true;
                 recipe.onUnlike=false;
             }
-        },
-
-        showIndexAdmin(){ //mostrar index de administracion
-            this.$root.indexAdmin = true;
-            this.$root.iAdmin = false;
-            this.$root.iUsers = false;
-        },
-
-        showInfoAdmin(){ //mostrar informacion de administradores
-            this.$root.indexAdmin = false;
-            this.$root.iAdmin = true;
-            this.$root.iUsers = false;
-        },
-
-        showInfoUsers(){ //mostrar informacion de usuarios
-            this.$root.indexAdmin = false;
-            this.$root.iAdmin = false;
-            this.$root.iUsers = true;
         }
     }
 })

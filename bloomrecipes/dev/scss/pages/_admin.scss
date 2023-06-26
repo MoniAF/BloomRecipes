@@ -350,6 +350,7 @@ h3{
     justify-content: center;
     border-radius: 15px 0 0 15px;
     margin-bottom: 12px;
+    padding-left: 15px;
     @include mixins.set-font(vars.$ff-primary, vars.$fw-med, vars.$fs-15, vars.$clr-white-blue);
 }
 
@@ -399,4 +400,18 @@ h3{
 
 .delete-icon{
     font-size: 40px;
+}
+
+.admin-log{
+    background: vars.$clr-cian !important;
+}
+
+.admin-sign{
+    border: solid 2px vars.$clr-black !important;
+    color: vars.$clr-black !important;
+}
+
+.admin-sign:hover{
+    background: vars.$clr-black;
+    color: vars.$clr-white-blue !important;
 }
