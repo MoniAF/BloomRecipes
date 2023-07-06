@@ -1,8 +1,27 @@
 app.component('nav-bar',{
-    emits: ['openrecipes', 'openhome', 'searchrecipes', 'showdetails', 'recipelike', 'recipeunlike'],//emision de eventos
+    emits: ['openrecipes', 'openhome', 'searchrecipes', 'showdetails', 'recipelike', 'recipeunlike', 'showlevels', 'showoccasions', 'showcategories', 'showcategories', 'logout'],//emision de eventos
     props:{
-        recipes:{
+        savedrecipes:{
             type: Array
+        },
+        trendings:{
+            type: Array
+        },
+        online:{
+            type: Boolean,
+            default: false
+        },
+        username:{
+            type: String,
+            default: "default username"
+        },
+        name:{
+            type: String,
+            default: "default name"
+        },
+        email:{
+            type: String,
+            default: "default email"
         }
     },
     data() {
@@ -29,19 +48,23 @@ app.component('nav-bar',{
         },
         onClickRecipeUnlike(id){
             this.$emit('recipeunlike', id); //Emite el evento y envia el id para disminuir los likes
+        },
+        showLevels(id){
+            this.$emit('showlevels', id); //Emite el evento y envia el id para disminuir los likes
+        },
+        showOccasions(id){
+            this.$emit('showoccasions', id); //Emite el evento y envia el id para disminuir los likes
+        },
+        showCategories(id){
+            this.$emit('showcategories', id); //Emite el evento y envia el id para disminuir los likes
+        },
+        onClickLogout(){
+            this.$emit('logout', this); //Emite el evento y envia el id para disminuir los likes
         }
     },
     computed:{
-        showTop(){
-            let recipesCopy = this.recipes.slice(); //copia del array para no afectar el original
-            return recipesCopy.sort((a, b) => b.likes - a.likes).slice(0, 10); //Ordena de mayor a menor segun los likes y muestra unicamente 10 elementos del array
-        },
-        showTrending(){
-            let recipesCopy = this.recipes.slice(); //copia del array para no afectar el original
-            return recipesCopy.sort((a, b) => b.likes - a.likes).slice(0, 5); //Ordena de mayor a menor segun los likes y muestra unicamente 5 elementos del array
-        },
         showFav(){
-            return this.recipes.slice(); //muestra las recetas favoritas sin afectar la original
+            return this.savedrecipes.slice(); //muestra las recetas favoritas sin afectar la original
         }
     },
     template:
@@ -57,20 +80,22 @@ app.component('nav-bar',{
                 <div class="modal-body">
 
                 <div class="d-flex justify-content-center flex-wrap">
-                <div class="size-card" v-for="element in showFav">
-                    <section v-if="element.onUnlike" class="d-flex cards-modal justify-content-center mm-modal">
+                <div class="size-card" v-for="element in savedrecipes">
+                    <section class="d-flex cards-modal justify-content-center mm-modal">
                             <button v-on:click="onClickShowDetails(element.id)" type="button" class="conf-cards">
                                 <div class="card-top">
 
-                                <button v-show="element.onLike" v-on:click.stop="onClickRecipeLike(element.id)" class="btn-heart"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-heart-fill like-icon" viewBox="0 0 16 16">
+                                <button v-if="online" v-show="element.onLike" v-on:click.stop="onClickRecipeLike(element.id)" class="btn-heart"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-heart-fill like-icon" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
                                 </svg></button>
 
-                                <button v-show="element.onUnlike" v-on:click.stop="onClickRecipeUnlike(element.id)" class="btn-heart"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-heart-fill unlike-icon" viewBox="0 0 16 16">
+                                <button v-if="online" v-show="element.onUnlike" v-on:click.stop="onClickRecipeUnlike(element.id)" class="btn-heart"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-heart-fill unlike-icon" viewBox="0 0 16 16">
                                     <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
                                 </svg></button>
 
+                                <section class="img-csz">
                                     <img v-bind:src="element.image" class="img-card" alt="{{element.name}}">
+                                </section>
                                     <div class="degraded"></div>
                                     <section class="d-flex justify-content-center">
                                         <div class="info-top">
@@ -105,20 +130,35 @@ app.component('nav-bar',{
                 </div>
                 <div class="modal-body">
 
-                    <div class="d-fb cards-modal">
-                        <div v-for="element in showTop" class="col">
+                    <div class="d-fb cards-modal justify-content-between">
+
+                        <div class="size-card" v-for="element in trendings">
                             <button v-on:click="onClickShowDetails(element.id)" type="button" class="conf-cards">
                                 <div class="card-top">
-                                    <img v-bind:src="element.image" class="img-card" alt="chocolate">
+
+                                    <button v-if="online" v-show="element.onLike" v-on:click.stop="onClickRecipeLike(element.id)" class="btn-heart"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-heart-fill like-icon" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                                    </svg></button>
+
+                                    <button v-if="online" v-show="element.onUnlike" v-on:click.stop="onClickRecipeUnlike(element.id)" class="btn-heart"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-heart-fill unlike-icon" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                                    </svg></button>
+
+                                    <section class="img-csz">
+                                        <img v-bind:src="element.image" class="img-card" alt="{{element.name}}">
+                                    </section>
+                                    
                                     <div class="degraded"></div>
-                                    <div class="info-top">
-                                        <p class="title-card text-center">{{ element.name }}</p>
-                                        <p class="category-card text-center categories-txt">{{ element.category }}</p>
-                                        <p class="category-card text-center categories-txt">{{ element.difficulty }}</p>
-                                        <p class="txt-likes text-center"><span><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-heart-fill card-heart" viewBox="0 0 16 16">
-                                            <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
-                                          </svg></span> {{ element.likes }}</p>
-                                    </div>
+                                    <section class="d-flex justify-content-center">
+                                        <div class="info-top">
+                                            <p class="title-card text-center">{{ element.name }}</p>
+                                            <p class="category-card text-center categories-txt">{{ element.category }}</p>
+                                            <p class="category-card text-center categories-txt">{{ element.difficulty }}</p>
+                                            <p class="txt-likes text-center"><span><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-heart-fill card-heart" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                                            </svg></span> {{ element.likes }}</p>
+                                        </div>
+                                    </section>    
                                 </div>
                             </button>
                         </div>
@@ -169,7 +209,7 @@ app.component('nav-bar',{
                             registered members.</p>
                     </div>
                     <div class="d-flex justify-content-center align-items-center mb-0">
-                          <p class="txt-msgxs text-center">Make your votes count. <span class="txt-cian text-decoration-underline">Sign up</span> or <span class="txt-red text-decoration-underline">log in</span> to vote for the best recipes and improve your cooking experience.</p>
+                          <p class="txt-msgxs text-center">Make your votes count. <a href="http://bloomrecipes.test/dist/register.html" class="txt-cian">Sign up</a> or <a href="http://bloomrecipes.test/dist/login.html" class="txt-red">log in</a> to vote for the best recipes and improve your cooking experience.</p>
                     </div>
                     
                 </div>
@@ -202,51 +242,52 @@ app.component('nav-bar',{
                                     <section class="menu-options d-fb menu-gap">
                                         <div class="d-block">
                                             <p class="title-categories">Difficulty</p>
-                                            <li><a class="btn-do text-center" v-on:click="showRecipes">Easy</a></li>
-                                            <li><a class="btn-do text-center" v-on:click="showRecipes">Intermediate</a></li>
-                                            <li><a class="btn-do text-center" v-on:click="showRecipes">Difficult</a></li>
+                                            <li><a class="btn-do text-center" v-on:click="showLevels(1)">Easy</a></li>
+                                            <li><a class="btn-do text-center" v-on:click="showLevels(2)">Intermediate</a></li>
+                                            <li><a class="btn-do text-center" v-on:click="showLevels(3)">Difficult</a></li>
                                         </div>
             
                                         <div class="d-block">
                                             <p class="title-categories">Category</p>
-                                            <li><a class="btn-category text-center" v-on:click="showRecipes">Breakfast</a></li>
-                                            <li><a class="btn-category text-center" v-on:click="showRecipes">Desserts</a></li>
-                                            <li><a class="btn-category text-center" v-on:click="showRecipes">Drinks</a></li>
+                                            <li><a class="btn-category text-center" v-on:click="showCategories(1)">Breakfast</a></li>
+                                            <li><a class="btn-category text-center" v-on:click="showCategories(4)">Desserts</a></li>
+                                            <li><a class="btn-category text-center" v-on:click="showCategories(2)">Drinks</a></li>
                                         </div>
             
                                         <div class="d-block">
                                             <p class="title-categories h-transparent"></p>
-                                            <li><a class="btn-category text-center" v-on:click="showRecipes">Appetizers</a></li>
-                                            <li><a class="btn-category text-center" v-on:click="showRecipes">Lunch</a></li>
-                                            <li><a class="btn-category text-center" v-on:click="showRecipes">Soups</a></li>
+                                            <li><a class="btn-category text-center" v-on:click="showCategories(6)">Appetizers</a></li>
+                                            <li><a class="btn-category text-center" v-on:click="showCategories(3)">Lunch</a></li>
+                                            <li><a class="btn-category text-center" v-on:click="showCategories(5)">Soups</a></li>
                                         </div>
                                     </section>
                                     <section class="menu-options d-fb menu-gap">
                                         <div class="d-block">
                                             <p class="title-categories">Occasion</p>
                                             <li><a class="btn-do text-center" v-on:click="showRecipes">All</a></li>
-                                            <li><a class="btn-do text-center" v-on:click="showRecipes">Birthday</a></li>
+                                            <li><a class="btn-do text-center" v-on:click="showOccasions(1)">Birthday</a></li>
                                             <li><a class="btn-do text-center" v-on:click="showRecipes">Easter</a></li>
                                         </div>
             
                                         <div class="d-block">
                                             <p class="title-categories h-transparent"></p>
-                                            <li><a class="btn-do text-center" v-on:click="showRecipes">Father's Day</a></li>
-                                            <li><a class="btn-do text-center" v-on:click="showRecipes">Children's Day</a></li>
-                                            <li><a class="btn-do text-center" v-on:click="showRecipes">Summer</a></li>
+                                            <li><a class="btn-do text-center" v-on:click="showOccasions(2)">Father's Day</a></li>
+                                            <li><a class="btn-do text-center" v-on:click="showOccasions(4)">Children's Day</a></li>
+                                            <li><a class="btn-do text-center" v-on:click="showOccasions(6)">Summer</a></li>
                                         </div>
             
                                         <div class="d-block">
                                             <p class="title-categories h-transparent"></p>
-                                            <li><a class="btn-do text-center" v-on:click="showRecipes">Mother's Day</a></li>
-                                            <li><a class="btn-do text-center" v-on:click="showRecipes">Christmas</a></li>
+                                            <li><a class="btn-do text-center" v-on:click="showRecipes(3)">Mother's Day</a></li>
+                                            <li><a class="btn-do text-center" v-on:click="showRecipes(5)">Christmas</a></li>
                                         </div>
                                     </section>
                                 </section>
                             </ul>
                         </div>
                         <button class="btn-nav" data-bs-toggle="modal" data-bs-target="#imagesModal">Gallery</button>
-                        <button type="button" class="btn-nav" data-bs-toggle="modal" data-bs-target="#favoritesModal">Favorites</button>
+                        <button v-if="online" type="button" class="btn-nav" data-bs-toggle="modal" data-bs-target="#favoritesModal">Favorites</button>
+                        <button v-else type="button" class="btn-nav" data-bs-toggle="modal" data-bs-target="#messageModal">Favorites</button>
                         <button type="button" class="btn-nav" data-bs-toggle="modal" data-bs-target="#aboutUsModal">About Us</button>
                     </section>
 
@@ -260,20 +301,23 @@ app.component('nav-bar',{
                     </form>
     
                 <section class="user-r d-flex">
-                    <div class="dropdown-center">
-                        <button class="btn-user" type="button" data-bs-toggle="dropdown" aria-expanded="false">Sign Up</button>
+                    <div v-if="online" class="dropdown-center">
+                        <button class="btn-user" type="button" data-bs-toggle="dropdown" aria-expanded="false">{{username}}</button>
                         <ul class="dropdown-menu custom-user">
                             <p class="title-iuser">E-mail:</p>
-                            <p class="txt-iuser">artaviafloresmonica@gmail.com</p>
+                            <p class="txt-iuser">{{email}}</p>
                             <p class="title-iuser">Full name:</p>
-                            <p class="txt-iuser">Mónica Artavia Flores</p>
+                            <p class="txt-iuser">{{name}}</p>
                             <section class="d-flex btn-sout">
-                                <button class="btn-out d-flex">Log out <span class="material-symbols-outlined">
+                                <button v-on:click="onClickLogout" class="btn-out d-flex">Log out <span class="material-symbols-outlined">
                                     logout
                                     </span></button>
                             </section>
                         </ul>
                     </div>
+                    <section v-else>
+                        <a href="http://bloomrecipes.test/dist/register.html" class="btn-user d-block text-decoration-none">Sign Up</a>
+                    </section>
                     <img src="./img/icon-admin.jpg" class="user-icon" alt="icon-admin">
                 </section>
                 </div>

@@ -1,11 +1,11 @@
 app.component('recipe-details',{
-    emits:['recipelike', 'recipeunlike'], //emision de eventos
+    emits:['recipelike', 'recipeunlike', 'showdetails'], //emision de eventos
     props:{
-        recipes:{
+        featuredrecipes:{
             type: Array
         },
         id:{
-            type: String
+            type: Number
         },
         name:{
             type: String,
@@ -57,10 +57,11 @@ app.component('recipe-details',{
         instructions:{
             type: String,
             default: "default instructions"
+        },
+        online:{
+            type:Boolean,
+            default:false
         }
-    },
-    mounted() {
-        console.log(this.totalt, this.cookt, this.prept);
     },
     computed: {
         showIngredients() {
@@ -72,7 +73,7 @@ app.component('recipe-details',{
             return formatted;
         },
         showRelated(){
-            return this.recipes.slice(0, 3); //muestra unicamente 3 recetas del array
+            return this.featuredrecipes.slice(0, 3); //muestra unicamente 3 recetas del array
         }
     },
     methods: {
@@ -127,7 +128,7 @@ app.component('recipe-details',{
                 </div>
                 <h4>Instructions</h4>
                 <section class="mb-ins">
-                <p v-for="(instruction, index) in showInstructions" class="txt-recipes">{{index + 1}}. {{ instruction }}</p>
+                <p v-for="(instruction, index) in showInstructions" class="txt-recipes"><!--{{index + 1}}.--> {{ instruction }}</p>
                 </section>
                 <p class="txt-recipes"></p>
 
@@ -138,15 +139,18 @@ app.component('recipe-details',{
                         <button v-on:click="onClickShowDetails(element.id)" type="button" class="conf-cards">
                             <div class="card-top">
 
-                                <button v-show="element.onLike" v-on:click.stop="onClickRecipeLike(element.id)" class="btn-heart"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-heart-fill like-icon" viewBox="0 0 16 16">
+                                <button v-if="online" v-show="element.onLike" v-on:click.stop="onClickRecipeLike(element.id)" class="btn-heart"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-heart-fill like-icon" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
                                 </svg></button>
 
-                                <button v-show="element.onUnlike" v-on:click.stop="onClickRecipeUnlike(element.id)" class="btn-heart"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-heart-fill unlike-icon" viewBox="0 0 16 16">
+                                <button v-if="online" v-show="element.onUnlike" v-on:click.stop="onClickRecipeUnlike(element.id)" class="btn-heart"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-heart-fill unlike-icon" viewBox="0 0 16 16">
                                     <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
                                 </svg></button>
 
-                                <img v-bind:src="element.image" class="img-card" alt="{{element.name}}">
+                                <section class="img-csz">
+                                    <img v-bind:src="element.image" class="img-card" alt="{{element.name}}">
+                                </section>
+
                                 <div class="degraded"></div>
                                 <section class="d-flex justify-content-center">
                                     <div class="info-top">

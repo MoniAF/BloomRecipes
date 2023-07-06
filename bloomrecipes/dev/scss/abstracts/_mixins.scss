@@ -322,6 +322,8 @@
     margin-left: auto;
     margin-right: auto;
     border: none;
+    text-decoration: none;
+    text-align: center;
     @include media-queries.respond-to(media-queries.$large-desktop){
         width: 91%;
     }

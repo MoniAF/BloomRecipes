@@ -20,27 +20,25 @@
     <div id="app">
 
         <!--Barra de navegacion / envio de datos y metodos-->
-        <nav-bar :recipes="recipes" v-on:openrecipes="showRecipes" v-on:openhome="showHome" v-on:searchrecipes="onClickSearchRecipe" v-on:showdetails="onClickShowDetails" v-on:recipelike="onClickRecipeLike" v-on:recipeunlike="onClickRecipeUnlike"></nav-bar>
+        <nav-bar :savedrecipes="savedRecipes" :trendings="trendings" :online="online" v-on:openrecipes="showRecipes" v-on:openhome="showHome" v-on:showlevels="showLevels" v-on:showcategories="showCategories" v-on:showoccasions="showOccasions" v-on:searchrecipes="onClickSearchRecipe" v-on:showdetails="onClickShowDetails" v-on:recipelike="onClickRecipeLike" v-on:recipeunlike="onClickRecipeUnlike" v-on:logout="onClickLogout" :username="logusername" :name="logname" :email="logemail"></nav-bar>
 
         <!--Galeria de fotos de las recetas (modal) / envio de datos y metodos-->
         <gallery-section :recipes="recipes"></gallery-section>
 
         <!--las recetas mas nuevas(modal) / envio de datos y metodos-->
-        <newest-recipes :recipes="recipes"></newest-recipes>
+        <newest-recipes :recipes="recipes" :online="online" v-on:showdetails="onClickShowDetails" v-on:recipelike="onClickRecipeLike" v-on:recipeunlike="onClickRecipeUnlike"></newest-recipes>
 
         <!--Pagina principal / envio de datos y metodos-->
-        <index-page :recipes="recipes" v-if="principal" v-on:openrecipes="showRecipes" v-on:showdetails="onClickShowDetails" v-on:recipelike="onClickRecipeLike"  v-on:recipeunlike="onClickRecipeUnlike"></index-page>
+        <index-page :recipes="recipes" :trendings="trendings" :online="online" v-if="principal" v-on:openrecipes="showRecipes" v-on:showdetails="onClickShowDetails" v-on:recipelike="onClickRecipeLike"  v-on:recipeunlike="onClickRecipeUnlike"></index-page>
 
-        <!--Recetas por categoria (actualmente solo todas las recetas) y buscadas / envio de datos y metodos-->
-        <recipes-section :recipes="recipes" :categoryname="categoryName" v-if="allRecipes" v-on:showdetails="onClickShowDetails" v-on:recipelike="onClickRecipeLike" v-on:recipeunlike="onClickRecipeUnlike"></recipes-section>
+        <!--Recetas por categoria / envio de datos y metodos-->
+        <recipes-section :recipes="recipes" :online="online" :optionsrecipes="optionsRecipes" :optionname="optionName" :rstatus="rstatus" v-if="allRecipes" v-on:showdetails="onClickShowDetails" v-on:recipelike="onClickRecipeLike" v-on:recipeunlike="onClickRecipeUnlike"></recipes-section>
 
         <!--Recetas buscadas / envio de datos y metodos-->
-        <search-section  :results="searchData" :term="searchTerm" v-if="searchResults" v-on:showdetails="onClickShowDetails" v-on:recipelike="onClickRecipeLike"  v-on:recipeunlike="onClickRecipeUnlike"></search-section>
+        <search-section  :results="searchData" :online="online" :term="searchTerm" v-if="searchResults" v-on:showdetails="onClickShowDetails" v-on:recipelike="onClickRecipeLike"  v-on:recipeunlike="onClickRecipeUnlike"></search-section>
 
         <!--Detalles de la receta / envio de datos y metodos-->
-        <div v-for="item in recipeDetails">
-            <recipe-details v-if="detailsView" :recipes="recipes" :id="item.id" :name="item.name" :image="item.image" :category="item.category" :difficulty="item.difficulty" :likes="item.likes" :totalt="item.totalTime" :cookt="item.cookTime" :prept="item.prepTime" :servings="item.servings" :occasion="item.occasion" :description="item.description" :ingredients="item.ingredients" :instructions="item.instructions" v-on:showdetails="onClickShowDetails" v-on:recipelike="onClickRecipeLike"  v-on:recipeunlike="onClickRecipeUnlike"></recipe-details>
-        </div>
+        <recipe-details v-if="detailsView" :featuredrecipes="featuredRecipes" :id="recipe.id" :name="recipe.name" :image="recipe.image" :category="recipe.category" :difficulty="recipe.difficulty" :likes="recipe.likes" :totalt="recipe.totalTime" :cookt="recipe.cookTime" :prept="recipe.prepTime" :servings="recipe.servings" :occasion="recipe.occasion" :description="recipe.description" :ingredients="recipe.ingredients" :instructions="recipe.instructions" :online="online" v-on:showdetails="onClickShowDetails" v-on:recipelike="onClickRecipeLike" v-on:recipeunlike="onClickRecipeUnlike"></recipe-details>
 
         <!--Footer-->
         <footer-pages v-if="footer" :statusfooter="fstatus"></footer-pages>

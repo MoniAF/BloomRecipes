@@ -382,10 +382,10 @@ h2{
         margin-right: 5%;
     }
     @include media-queries.respond-to(media-queries.$large-desktop){
-        height: 42px;
+        height: 32px;
         font-size: 15px;
         line-height: 15px;
-        margin-bottom: -5px;
+        margin-bottom: 10px;
         padding-left: 16px;
         padding-right: 16px;
     }

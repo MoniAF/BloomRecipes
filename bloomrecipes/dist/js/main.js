@@ -3,10 +3,27 @@ const app = Vue.createApp({
         return {
             searchTerm: "",
             idRecipe: "",
-            categoryName: "All Recipes",
+            optionName: "All Recipes",
             prepValue: 0,
             cookValue: 0,
             servingsValue: 0,
+
+            //users
+            uemail: "",
+            upassword: "",
+            name: "",
+            username: "",
+            country: "Costa Rica",
+            online: false,
+            newpassword: "",
+            //users
+
+            //sesion iniciada
+            logid: "",
+            logusername: "",
+            logemail:"",
+            logname:"",
+            //sesion iniciada
 
             principal: true,
             allRecipes: false,
@@ -15,173 +32,85 @@ const app = Vue.createApp({
             detailsView: false,
 
             fstatus: false,
+            rstatus: false,
 
             recipes:[],
+            trendings:[],
+            levels:[],
+            categories:[],
+            occasions:[],
+            optionsRecipes:[],
             searchData:[],
-            recipeDetails:[]
+            featuredRecipes:[],
+            savedRecipes:[],
+
+            recipe:{}
         }
     },
     mounted(){
 
-        //Se añaden 3 categorias al array recipes desde el api
+        this.dataPage();
 
-        //agregar Dessert
+        //agregar complejidad
         axios({
             method: 'get',
-            url:'https://www.themealdb.com/api/json/v1/1/filter.php?c=Dessert'
+            url:'http://proyectobloom.test/api/recipes/levels'
            })
         .then(
             (response) => {
-                let items = response.data.meals;
+                let items = response.data;
                 //console.log(items);
 
                 items.forEach(element => {
-                    this.recipes.push({ 
-                            id: element.idMeal,
-                            image: element.strMealThumb,
-                            name: element.strMeal,
+                    this.levels.push({ 
+                            id: element.id,
+                            difficulty: element.level
                         })
                 });
-
-                for (let index = 0; index < this.recipes.length; index++) {
-                    axios({
-                        method: 'get',
-                        url:'https://www.themealdb.com/api/json/v1/1/lookup.php?i='+this.recipes[index].id+''
-                       })
-                    .then(
-                        (response) => {
-                            let item = response.data.meals;
-                            //console.log(item);
-                            let likesGenerate = Math.floor(Math.random() * 900);
-                            
-                            item.forEach(element => { 
-                                this.recipes[index].likes = likesGenerate;
-                                this.recipes[index].category = element.strCategory;
-                                this.recipes[index].description = "This recipe is a delightful combination of flavors and textures that will leave you wanting more. With fresh ingredients and a careful selection of spices, this recipe offers a unique culinary experience. Start by mixing the main ingredients in a bowl and seasoning them with a pinch of salt and pepper to enhance the flavors. Then, heat a skillet over medium heat and add a drizzle of oil to brown the ingredients. As they cook, the irresistible aroma fills the kitchen, creating an anticipation that is hard to resist.";
-                                this.recipes[index].difficulty = "Intermediate";
-                                this.recipes[index].prepTime = 10;
-                                this.recipes[index].cookTime = 10;
-                                this.recipes[index].totalTime = 20;
-                                this.recipes[index].servings = 5;
-                                this.recipes[index].occasion = element.strArea;
-                                this.recipes[index].onLike=true;
-                                this.recipes[index].onUnlike=false;
-                            });
-                        }
-                    )
-                    .catch(
-                        error => console.log(error)
-                    );
-                }
             }
         )
         .catch(
             error => console.log(error)
         );
 
-
-        //agregar breakfast
+        //agregar categorías
         axios({
             method: 'get',
-            url:'https://www.themealdb.com/api/json/v1/1/filter.php?c=Breakfast'
+            url:'http://proyectobloom.test/api/recipes/categories'
            })
         .then(
             (response) => {
-                let items = response.data.meals;
+                let items = response.data;
                 //console.log(items);
 
                 items.forEach(element => {
-                    this.recipes.push({ 
-                            id: element.idMeal,
-                            image: element.strMealThumb,
-                            name: element.strMeal,
+                    this.categories.push({ 
+                            id: element.id,
+                            category: element.category,
                         })
                 });
-
-                for (let index = 0; index < this.recipes.length; index++) {
-                    axios({
-                        method: 'get',
-                        url:'https://www.themealdb.com/api/json/v1/1/lookup.php?i='+this.recipes[index].id+''
-                       })
-                    .then(
-                        (response) => {
-                            let item = response.data.meals;
-                            //console.log(item);
-                            let likesGenerate = Math.floor(Math.random() * 900);
-                            
-                            item.forEach(element => { 
-                                this.recipes[index].likes = likesGenerate;
-                                this.recipes[index].category = element.strCategory;
-                                this.recipes[index].description = "This recipe is a delightful combination of flavors and textures that will leave you wanting more. With fresh ingredients and a careful selection of spices, this recipe offers a unique culinary experience. Start by mixing the main ingredients in a bowl and seasoning them with a pinch of salt and pepper to enhance the flavors. Then, heat a skillet over medium heat and add a drizzle of oil to brown the ingredients. As they cook, the irresistible aroma fills the kitchen, creating an anticipation that is hard to resist.";
-                                this.recipes[index].difficulty = "Intermediate";
-                                this.recipes[index].prepTime = 10;
-                                this.recipes[index].cookTime = 10;
-                                this.recipes[index].totalTime = 20;
-                                this.recipes[index].servings = 5;
-                                this.recipes[index].occasion = element.strArea;
-                                this.recipes[index].onLike=true;
-                                this.recipes[index].onUnlike=false;
-                            });
-                        }
-                    )
-                    .catch(
-                        error => console.log(error)
-                    );
-                }
             }
         )
         .catch(
             error => console.log(error)
         );
 
-        //agregar entradas
+        //agregar ocasiones
         axios({
             method: 'get',
-            url:'https://www.themealdb.com/api/json/v1/1/filter.php?c=Starter'
+            url:'http://proyectobloom.test/api/recipes/occasions'
            })
         .then(
             (response) => {
-                let items = response.data.meals;
+                let items = response.data;
                 //console.log(items);
 
                 items.forEach(element => {
-                    this.recipes.push({ 
-                            id: element.idMeal,
-                            image: element.strMealThumb,
-                            name: element.strMeal,
+                    this.occasions.push({ 
+                            id: element.id,
+                            occasion: element.occasion,
                         })
                 });
-
-                for (let index = 0; index < this.recipes.length; index++) {
-                    axios({
-                        method: 'get',
-                        url:'https://www.themealdb.com/api/json/v1/1/lookup.php?i='+this.recipes[index].id+''
-                       })
-                    .then(
-                        (response) => {
-                            let item = response.data.meals;
-                            //console.log(item);
-                            let likesGenerate = Math.floor(Math.random() * 900);
-                            
-                            item.forEach(element => { 
-                                this.recipes[index].likes = likesGenerate;
-                                this.recipes[index].category = element.strCategory;
-                                this.recipes[index].description = "This recipe is a delightful combination of flavors and textures that will leave you wanting more. With fresh ingredients and a careful selection of spices, this recipe offers a unique culinary experience. Start by mixing the main ingredients in a bowl and seasoning them with a pinch of salt and pepper to enhance the flavors. Then, heat a skillet over medium heat and add a drizzle of oil to brown the ingredients. As they cook, the irresistible aroma fills the kitchen, creating an anticipation that is hard to resist.";
-                                this.recipes[index].difficulty = "Intermediate";
-                                this.recipes[index].prepTime = 10;
-                                this.recipes[index].cookTime = 10;
-                                this.recipes[index].totalTime = 20;
-                                this.recipes[index].servings = 5;
-                                this.recipes[index].occasion = element.strArea;
-                                this.recipes[index].onLike=true;
-                                this.recipes[index].onUnlike=false;
-                            });
-                        }
-                    )
-                    .catch(
-                        error => console.log(error)
-                    );
-                }
             }
         )
         .catch(
@@ -190,15 +119,406 @@ const app = Vue.createApp({
         
     },
     methods: {
-        searchRecipes(){ //realiza la busqueda de las recetas y las añade al array de resultados
+        dataPage(){ //actualiza todos los datos de la pagina principal 
+            //revisa si hay sesion iniciada y envio de datos del usuario
+        let token = localStorage.getItem('token');
+        console.log(token);
+
+        if (token) {
+            this.online = true;
+            this.logid = localStorage.getItem('id');
+            this.logname = localStorage.getItem('name');
+            this.logemail = localStorage.getItem('email');
+            this.logusername = localStorage.getItem('username');
+            
+            console.log(localStorage.getItem('name'));
+
             axios({
                 method: 'get',
-                url:'https://www.themealdb.com/api/json/v1/1/search.php?s='+this.searchTerm
+                url:'http://proyectobloom.test/api/users/savedrecipes/'+this.logid
+                })
+            .then(
+                (response) => {
+                    let items = response.data;
+                    console.log(items);
+                    this.savedRecipes = [];
+
+                    if(items.length > 0){
+                        //console.log(items);
+                        items.forEach(element => {
+                            this.savedRecipes.push({ 
+                                    id: element.id,
+                                    image: "http://proyectobloom.test/storage/imgs/"+ element.image,
+                                    name: element.name,
+                                    likes: element.likes,
+                                    category: element.category,
+                                    difficulty: element.level,
+                                    onLike: false,
+                                    onUnlike: true
+                                })
+    
+                        });
+
+                        //agregar trendings
+                        axios({
+                            method: 'get',
+                            url:'http://proyectobloom.test/api/recipes/top10'
+                           })
+                        .then(
+                            (response) => {
+                                let items = response.data;
+                                //console.log(items);
+                                this.trendings = [];
+                
+                                items.forEach(element => {
+                                    
+                                    let isLiked = false;
+                                    let isUnliked = false;
+                                    let foundMatch = false;
+                
+                                    if (this.savedRecipes) {
+                                        this.savedRecipes.forEach((savedRecipe) => {
+                                            if (savedRecipe.id === element.id) {
+                                                foundMatch = true;
+                                            }
+                                        });
+                
+                                        if (foundMatch) {
+                                            isLiked = false;
+                                            isUnliked = true;
+                                        } else {
+                                            isLiked = true;
+                                            isUnliked = false;
+                                        }
+                                    } else {
+                                        isLiked = true;
+                                        isUnliked = false;
+                                    }
+                
+                                    //console.log("like? " + isLiked + "// no like? " +isUnliked);
+                
+                                    this.trendings.push({ 
+                                            id: element.id,
+                                            image: "http://proyectobloom.test/storage/imgs/"+ element.image,
+                                            name: element.name,
+                                            likes: element.likes,
+                                            category: element.category,
+                                            difficulty: element.level,
+                                            onLike: isLiked,
+                                            onUnlike: isUnliked
+                                    })
+                                    
+                                });
+                                
+                            }
+                        )
+                        .catch(
+                            error => console.log(error)
+                        );
+
+                        //agregar recetas desde el api
+                        axios({
+                            method: 'get',
+                            url:'http://proyectobloom.test/api/recipes/all'
+                        })
+                        .then(
+                            (response) => {
+                                let items = response.data;
+                                //console.log(items);
+                                this.recipes = [];
+
+                                items.forEach(element => {
+
+                                    let isLiked = false;
+                                    let isUnliked = false;
+                                    let foundMatch = false;
+
+                                    if (this.savedRecipes) {
+                                        this.savedRecipes.forEach((savedRecipe) => {
+                                            if (savedRecipe.id === element.id) {
+                                                foundMatch = true;
+                                            }
+                                        });
+
+                                        if (foundMatch) {
+                                            isLiked = false;
+                                            isUnliked = true;
+                                        } else {
+                                            isLiked = true;
+                                            isUnliked = false;
+                                        }
+                                    } else {
+                                        isLiked = true;
+                                        isUnliked = false;
+                                    }
+
+                                    this.recipes.push({ 
+                                            id: element.id,
+                                            image: "http://proyectobloom.test/storage/imgs/"+ element.image,
+                                            name: element.name,
+                                            likes: element.likes,
+                                            category: element.category,
+                                            description: element.description,
+                                            difficulty: element.level,
+                                            onLike: isLiked,
+                                            onUnlike: isUnliked
+                                        })
+                                });
+                            }
+                        )
+                        .catch(
+                            error => console.log(error)
+                        );
+                    }else{
+
+                        //agregar trendings
+                        axios({
+                            method: 'get',
+                            url:'http://proyectobloom.test/api/recipes/top10'
+                           })
+                        .then(
+                            (response) => {
+                                let items = response.data;
+                                //console.log(items);
+                                this.trendings = [];
+                
+                                items.forEach(element => {
+                                    
+                                    let isLiked = false;
+                                    let isUnliked = false;
+                                    let foundMatch = false;
+                
+                                    if (this.savedRecipes) {
+                                        this.savedRecipes.forEach((savedRecipe) => {
+                                            if (savedRecipe.id === element.id) {
+                                                foundMatch = true;
+                                            }
+                                        });
+                
+                                        if (foundMatch) {
+                                            isLiked = false;
+                                            isUnliked = true;
+                                        } else {
+                                            isLiked = true;
+                                            isUnliked = false;
+                                        }
+                                    } else {
+                                        isLiked = true;
+                                        isUnliked = false;
+                                    }
+                
+                                    //console.log("like? " + isLiked + "// no like? " +isUnliked);
+                
+                                    this.trendings.push({ 
+                                            id: element.id,
+                                            image: "http://proyectobloom.test/storage/imgs/"+ element.image,
+                                            name: element.name,
+                                            likes: element.likes,
+                                            category: element.category,
+                                            difficulty: element.level,
+                                            onLike: isLiked,
+                                            onUnlike: isUnliked
+                                    })
+                                    
+                                });
+                                
+                            }
+                        )
+                        .catch(
+                            error => console.log(error)
+                        );
+
+                        //agregar recetas desde el api
+                        axios({
+                            method: 'get',
+                            url:'http://proyectobloom.test/api/recipes/all'
+                        })
+                        .then(
+                            (response) => {
+                                let items = response.data;
+                                //console.log(items);
+                                this.recipes = [];
+
+                                items.forEach(element => {
+
+                                    let isLiked = false;
+                                    let isUnliked = false;
+                                    let foundMatch = false;
+
+                                    if (this.savedRecipes) {
+                                        this.savedRecipes.forEach((savedRecipe) => {
+                                            if (savedRecipe.id === element.id) {
+                                                foundMatch = true;
+                                            }
+                                        });
+
+                                        if (foundMatch) {
+                                            isLiked = false;
+                                            isUnliked = true;
+                                        } else {
+                                            isLiked = true;
+                                            isUnliked = false;
+                                        }
+                                    } else {
+                                        isLiked = true;
+                                        isUnliked = false;
+                                    }
+
+                                    this.recipes.push({ 
+                                            id: element.id,
+                                            image: "http://proyectobloom.test/storage/imgs/"+ element.image,
+                                            name: element.name,
+                                            likes: element.likes,
+                                            category: element.category,
+                                            description: element.description,
+                                            difficulty: element.level,
+                                            onLike: isLiked,
+                                            onUnlike: isUnliked
+                                        })
+                                });
+                            }
+                        )
+                        .catch(
+                            error => console.log(error)
+                        );
+                    }
+
+                }
+            )
+            .catch(
+                error => console.log(error)
+            );
+        } else {
+            this.online = false;
+
+            //agregar trendings
+            axios({
+                method: 'get',
+                url:'http://proyectobloom.test/api/recipes/top10'
                })
             .then(
                 (response) => {
-                    let items = response.data.meals;
+                    let items = response.data;
+                    //console.log(items);
+                    this.trendings = [];
+    
+                    items.forEach(element => {
+                        
+                        let isLiked = false;
+                        let isUnliked = false;
+                        let foundMatch = false;
+    
+                        if (this.savedRecipes) {
+                            this.savedRecipes.forEach((savedRecipe) => {
+                                if (savedRecipe.id === element.id) {
+                                    foundMatch = true;
+                                }
+                            });
+    
+                            if (foundMatch) {
+                                isLiked = false;
+                                isUnliked = true;
+                            } else {
+                                isLiked = true;
+                                isUnliked = false;
+                            }
+                        } else {
+                            isLiked = true;
+                            isUnliked = false;
+                        }
+    
+                        //console.log("like? " + isLiked + "// no like? " +isUnliked);
+    
+                        this.trendings.push({ 
+                                id: element.id,
+                                image: "http://proyectobloom.test/storage/imgs/"+ element.image,
+                                name: element.name,
+                                likes: element.likes,
+                                category: element.category,
+                                difficulty: element.level,
+                                onLike: isLiked,
+                                onUnlike: isUnliked
+                        })
+                        
+                    });
+                    
+                }
+            )
+            .catch(
+                error => console.log(error)
+            );
+    
+            //agregar recetas desde el api
+            axios({
+                method: 'get',
+                url:'http://proyectobloom.test/api/recipes/all'
+            })
+            .then(
+                (response) => {
+                    let items = response.data;
+                    //console.log(items);
+                    this.recipes = [];
+    
+                    items.forEach(element => {
+    
+                        let isLiked = false;
+                        let isUnliked = false;
+                        let foundMatch = false;
+    
+                        if (this.savedRecipes) {
+                            this.savedRecipes.forEach((savedRecipe) => {
+                                if (savedRecipe.id === element.id) {
+                                    foundMatch = true;
+                                }
+                            });
+    
+                            if (foundMatch) {
+                                isLiked = false;
+                                isUnliked = true;
+                            } else {
+                                isLiked = true;
+                                isUnliked = false;
+                            }
+                        } else {
+                            isLiked = true;
+                            isUnliked = false;
+                        }
+    
+                        this.recipes.push({ 
+                                id: element.id,
+                                image: "http://proyectobloom.test/storage/imgs/"+ element.image,
+                                name: element.name,
+                                likes: element.likes,
+                                category: element.category,
+                                description: element.description,
+                                difficulty: element.level,
+                                onLike: isLiked,
+                                onUnlike: isUnliked
+                            })
+                    });
+                }
+            )
+            .catch(
+                error => console.log(error)
+            );
+        }
+        
+        },
+
+        searchRecipes(){ //realiza la busqueda de las recetas y las añade al array de resultados
+            axios({
+                method: 'get',
+                url:'http://proyectobloom.test/api/recipes/searchbyname/'+this.searchTerm
+               })
+            .then(
+                (response) => {
+                    let items = response.data;
                     this.searchData = [];
+
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
 
                     if(this.searchTerm != ""){
                         this.$root.principal = false;
@@ -208,28 +528,50 @@ const app = Vue.createApp({
                         this.$root.detailsView = false;
                     }
 
-                    console.log("palabra " +this.searchTerm);
+                    //console.log("palabra " +this.searchTerm);
                     if(items != null){
                         items.forEach(element => {
+                            let isLiked = false;
+                            let isUnliked = false;
+                            let foundMatch = false;
+
+                            if (this.savedRecipes) {
+                                this.savedRecipes.forEach((savedRecipe) => {
+                                    if (savedRecipe.id === element.id) {
+                                        foundMatch = true;
+                                    }
+                                });
+
+                                if (foundMatch) {
+                                    isLiked = false;
+                                    isUnliked = true;
+                                } else {
+                                    isLiked = true;
+                                    isUnliked = false;
+                                }
+                            } else {
+                                isLiked = true;
+                                isUnliked = false;
+                            }
+
                             this.searchData.push({ 
-                                    id: element.idMeal,
-                                    image: element.strMealThumb,
-                                    name: element.strMeal,
-                                    category: element.strCategory,
-                                    description: "This recipe is a delightful combination of flavors and textures that will leave you wanting more. With fresh ingredients and a careful selection of spices, this recipe offers a unique culinary experience. Start by mixing the main ingredients in a bowl and seasoning them with a pinch of salt and pepper to enhance the flavors. Then, heat a skillet over medium heat and add a drizzle of oil to brown the ingredients. As they cook, the irresistible aroma fills the kitchen, creating an anticipation that is hard to resist.",
-                                    difficulty: "Intermediate",
-                                    onLike:true,
-                                    onUnlike:false
+                                    id: element.id,
+                                    image: "http://proyectobloom.test/storage/imgs/"+ element.image,
+                                    name: element.name,
+                                    likes: element.likes,
+                                    category: element.category,
+                                    description: element.description,
+                                    difficulty: element.level,
+                                    onLike: isLiked,
+                                    onUnlike: isUnliked
                                 })
                         });
                     }
 
                     if (this.searchData.length > 0) {
                         this.fstatus = false;
-                        //console.log(this.searchData);
                     }else{
                         this.fstatus = true;
-                        //console.log(this.searchData);
                     }
 
                 }
@@ -241,7 +583,7 @@ const app = Vue.createApp({
 
         onClickSearchRecipe(searchTerm){ //recibe el termino y ejecuta el buscar 
             this.searchTerm=searchTerm;
-            console.log(searchTerm);
+            //console.log(searchTerm);
             this.searchRecipes();
         },
 
@@ -252,7 +594,279 @@ const app = Vue.createApp({
             this.$root.allRecipes = true;
             this.$root.footer = true;
 
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+
             this.fstatus = false;
+            this.rstatus = true;
+        },
+
+        showLevels(level){ //mostrar pagina de recetas y footer
+
+            axios({
+                method: 'get',
+                url:'http://proyectobloom.test/api/recipes/levels'
+               })
+            .then(
+                (response) => {
+                    let item = response.data;
+                    //console.log(item);
+                    item.forEach(element => {
+                        if(element.id == level){
+                            this.optionName = element.level;
+                        }
+                    });
+                }
+            )
+            .catch(
+                error => console.log(error)
+            );
+
+            axios({
+                method: 'get',
+                url:'http://proyectobloom.test/api/recipes/filterby/level/'+level
+               })
+            .then(
+                (response) => {
+                    let items = response.data;
+                    //console.log(items);
+                    this.optionsRecipes = [];
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                                
+                    this.$root.principal = false;
+                    this.$root.detailsView = false;
+                    this.$root.searchResults = false;
+                    this.$root.allRecipes = true;
+                    this.$root.footer = true;
+
+                    this.fstatus = false;
+                    this.rstatus = false;
+    
+                    items.forEach(element => {
+
+                        let isLiked = false;
+                        let isUnliked = false;
+                        let foundMatch = false;
+
+                        if (this.savedRecipes) {
+                            this.savedRecipes.forEach((savedRecipe) => {
+                                if (savedRecipe.id === element.id) {
+                                    foundMatch = true;
+                                }
+                            });
+
+                            if (foundMatch) {
+                                isLiked = false;
+                                isUnliked = true;
+                            } else {
+                                isLiked = true;
+                                isUnliked = false;
+                            }
+                        } else {
+                            isLiked = true;
+                            isUnliked = false;
+                        }
+
+                        this.optionsRecipes.push({ 
+                                id: element.id,
+                                image: "http://proyectobloom.test/storage/imgs/"+ element.image,
+                                name: element.name,
+                                likes: element.likes,
+                                category: element.category,
+                                description: element.description,
+                                difficulty: element.level,
+                                onLike: isLiked,
+                                onUnlike: isUnliked
+                            })
+                    });
+                }
+            )
+            .catch(
+                error => console.log(error)
+            );
+        },
+
+        showOccasions(occasion){ //mostrar pagina de recetas y footer
+
+            axios({
+                method: 'get',
+                url:'http://proyectobloom.test/api/recipes/occasions'
+               })
+            .then(
+                (response) => {
+                    let item = response.data;
+                    //console.log(item);
+                    item.forEach(element => {
+                        if(element.id == occasion){
+                            this.optionName = element.occasion;
+                        }
+                    });
+                }
+            )
+            .catch(
+                error => console.log(error)
+            );
+
+            axios({
+                method: 'get',
+                url:'http://proyectobloom.test/api/recipes/filterby/occasion/'+occasion
+               })
+            .then(
+                (response) => {
+                    let items = response.data;
+                    //console.log(items);
+                    this.optionsRecipes = [];
+
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                                
+                    this.$root.principal = false;
+                    this.$root.detailsView = false;
+                    this.$root.searchResults = false;
+                    this.$root.allRecipes = true;
+                    this.$root.footer = true;
+
+                    this.fstatus = false;
+                    this.rstatus = false;
+    
+                    items.forEach(element => {
+
+                        let isLiked = false;
+                        let isUnliked = false;
+                        let foundMatch = false;
+
+                        if (this.savedRecipes) {
+                            this.savedRecipes.forEach((savedRecipe) => {
+                                if (savedRecipe.id === element.id) {
+                                    foundMatch = true;
+                                }
+                            });
+
+                            if (foundMatch) {
+                                isLiked = false;
+                                isUnliked = true;
+                            } else {
+                                isLiked = true;
+                                isUnliked = false;
+                            }
+                        } else {
+                            isLiked = true;
+                            isUnliked = false;
+                        }
+
+                        this.optionsRecipes.push({ 
+                                id: element.id,
+                                image: "http://proyectobloom.test/storage/imgs/"+ element.image,
+                                name: element.name,
+                                likes: element.likes,
+                                category: element.category,
+                                description: element.description,
+                                difficulty: element.level,
+                                onLike: isLiked,
+                                onUnlike: isUnliked
+                            })
+                    });
+                }
+            )
+            .catch(
+                error => console.log(error)
+            );
+        },
+
+        showCategories(category){ //mostrar pagina de recetas y footer
+
+            axios({
+                method: 'get',
+                url:'http://proyectobloom.test/api/recipes/categories'
+               })
+            .then(
+                (response) => {
+                    let item = response.data;
+                    //console.log(item);
+                    item.forEach(element => {
+                        if(element.id == category){
+                            this.optionName = element.category;
+                        }
+                    });
+                }
+            )
+            .catch(
+                error => console.log(error)
+            );
+
+            axios({
+                method: 'get',
+                url:'http://proyectobloom.test/api/recipes/filterby/category/'+category
+               })
+            .then(
+                (response) => {
+                    let items = response.data;
+                    //console.log(items);
+                    this.optionsRecipes = [];
+
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                                
+                    this.$root.principal = false;
+                    this.$root.detailsView = false;
+                    this.$root.searchResults = false;
+                    this.$root.allRecipes = true;
+                    this.$root.footer = true;
+
+                    this.fstatus = false;
+                    this.rstatus = false;
+    
+                    items.forEach(element => {
+
+                        let isLiked = false;
+                        let isUnliked = false;
+                        let foundMatch = false;
+
+                        if (this.savedRecipes) {
+                            this.savedRecipes.forEach((savedRecipe) => {
+                                if (savedRecipe.id === element.id) {
+                                    foundMatch = true;
+                                }
+                            });
+
+                            if (foundMatch) {
+                                isLiked = false;
+                                isUnliked = true;
+                            } else {
+                                isLiked = true;
+                                isUnliked = false;
+                            }
+                        } else {
+                            isLiked = true;
+                            isUnliked = false;
+                        }
+
+                        this.optionsRecipes.push({ 
+                                id: element.id,
+                                image: "http://proyectobloom.test/storage/imgs/"+ element.image,
+                                name: element.name,
+                                likes: element.likes,
+                                category: element.category,
+                                description: element.description,
+                                difficulty: element.level,
+                                onLike: isLiked,
+                                onUnlike: isUnliked
+                            })
+                    });
+                }
+            )
+            .catch(
+                error => console.log(error)
+            );
         },
 
         showHome(){ //mostrar pagina principal
@@ -262,51 +876,35 @@ const app = Vue.createApp({
             this.$root.detailsView = false;
             this.$root.footer = false;
 
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+
             this.fstatus = false;
-        },
-
-        prepIncrease(){ //incrementa el valor de prepTime (administración)
-            this.prepValue++;
-        },
-
-        prepDecrease(){ //decrementa el valor de prepTime(administración)
-            if (this.prepValue > 0) {
-                this.prepValue--;
-            }
-        },
-
-        cookIncrease(){ //incrementa el valor de cookTime (administración)
-            this.cookValue++;
-        },
-
-        cookDecrease(){ //decrementa el valor de cookTime (administración)
-            if (this.cookValue > 0) {
-                this.cookValue--;
-            }
-        },
-
-        servingsIncrease(){ //incrementa el valor de cookTime (administración)
-            this.servingsValue++;
-        },
-
-        servingsDecrease(){ //decrementa el valor de cookTime (administración)
-            if (this.servingsValue > 0) {
-                this.servingsValue--;
-            }
         },
         
         onClickShowDetails(id){ //mostrar detalles de la receta seleccionada
             //mostrar una receta
+            //console.log("muestra el id" +id);
             axios({
                 method: 'get',
-                url:'https://www.themealdb.com/api/json/v1/1/lookup.php?i='+id
+                url:'http://proyectobloom.test/api/recipes/recipe/'+id
                 })
             .then(
                 (response) => {
-                    let item = response.data.meals;
-                    console.log(item);
-                    console.log(id);
-                    this.recipeDetails = [];
+                    let item = response.data[0];
+                    let ingredient = response.data[1];
+                    let featured = response.data[2];
+                    this.featuredRecipes = [];
+                    //console.log(item);
+                    //console.log(id);
+
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+
                     this.fstatus = false;
 
                     this.$root.principal = false;
@@ -317,39 +915,72 @@ const app = Vue.createApp({
 
                     let ingredientsList = "";
                     let ingredientsA = [];
-                    let likesGenerate = Math.floor(Math.random() * 900);
-                    for (let vars in item[0]) {
-                        if (vars.startsWith("strIngredient") && item[0][vars]) {
-                        let measureVars = vars.replace("strIngredient", "strMeasure");
-                        let measure = item[0][measureVars];
-                        let ingredient = item[0][vars];
+                    ingredient.forEach(element => {
+                        ingredientsA.push(`${element.amount} ${element.measurement_unit} ${element.description}`);
+                    });
                     
-                        ingredientsA.push(`${measure} ${ingredient}`);
-                        }
-                    }
                     ingredientsList = ingredientsA.join('*');
 
+                    let instructions = "";
                     item.forEach(element => {
-                        this.recipeDetails.push({ 
-                                id: element.idMeal,
-                                image: element.strMealThumb,
-                                name: element.strMeal,
-                                likes: likesGenerate,
-                                category: element.strCategory,
-                                description: "This recipe is a delightful combination of flavors and textures that will leave you wanting more. With fresh ingredients and a careful selection of spices, this recipe offers a unique culinary experience. Start by mixing the main ingredients in a bowl and seasoning them with a pinch of salt and pepper to enhance the flavors. Then, heat a skillet over medium heat and add a drizzle of oil to brown the ingredients. As they cook, the irresistible aroma fills the kitchen, creating an anticipation that is hard to resist.",
-                                difficulty: "Intermediate",
-                                totalTime: 35,
-                                cookTime: 20,
-                                prepTime: 15,
-                                servings: 5,
-                                occasion: "Summer",
-                                ingredients: ingredientsList,
-                                instructions:"Preheat the oven to 350°F (175°C). Grease an 8-inch (20 cm) square baking pan and line it with parchment paper. *In a medium saucepan over medium heat, melt the butter. Add the sugar and mix until well combined. Remove from heat and let cool for a few minutes.*Add the eggs and vanilla to the butter-sugar mixture and beat until well combined.*In a separate bowl, sift together the flour, cocoa powder, salt, and baking soda. Add the dry ingredients to the egg mixture and mix until well combined.*Add the chopped walnuts and mix gently.*Pour the mixture into the prepared baking pan and bake for 25-30 minutes or until a toothpick inserted into the center comes out clean.*Let cool in the pan for 10 minutes before cutting into squares and serving.",
-                                onLike:true,
-                                onUnlike:false
+                        instructions = element.preparation_instructions.replace(/([.,]\s)(Step)/g, "$1*$2");
+                    });
+
+
+                    item.forEach(element => {
+                        this.recipe.id = id,
+                        this.recipe.image =  "http://proyectobloom.test/storage/imgs/"+ element.image,
+                        this.recipe.name = element.name,
+                        this.recipe.likes = element.likes,
+                        this.recipe.category = element.category,
+                        this.recipe.description = element.description,
+                        this.recipe.difficulty = element.level,
+                        this.recipe.totalTime = element.total_time,
+                        this.recipe.cookTime = element.cooking_time,
+                        this.recipe.prepTime = element.preparation_time,
+                        this.recipe.servings = element.portions,
+                        this.recipe.occasion = element.occasion,
+                        this.recipe.ingredients = ingredientsList,
+                        this.recipe.instructions = instructions
+                    });
+
+                    featured.forEach(element => {
+
+                        let isLiked = false;
+                        let isUnliked = false;
+                        let foundMatch = false;
+
+                        if (this.savedRecipes) {
+                            this.savedRecipes.forEach((savedRecipe) => {
+                                if (savedRecipe.id === element.id) {
+                                    foundMatch = true;
+                                }
+                            });
+
+                            if (foundMatch) {
+                                isLiked = false;
+                                isUnliked = true;
+                            } else {
+                                isLiked = true;
+                                isUnliked = false;
+                            }
+                        } else {
+                            isLiked = true;
+                            isUnliked = false;
+                        }
+
+                        this.featuredRecipes.push({ 
+                                id: element.id,
+                                image: "http://proyectobloom.test/storage/imgs/"+ element.image,
+                                name: element.name,
+                                likes: element.likes,
+                                category: element.category,
+                                description: element.description,
+                                difficulty: element.level,
+                                onLike: isLiked,
+                                onUnlike: isUnliked
                             })
                     });
-                    console.log(this.recipeDetails);
                 }
             )
             .catch(
@@ -357,22 +988,205 @@ const app = Vue.createApp({
             );
         },
 
-        onClickRecipeLike(id){ //aumentar likes
-            let recipe = this.recipes.find(r => r.id === id);
-            if (recipe) {
-                recipe.likes++;
-                recipe.onlike=false;
-                recipe.onUnlike=true;
-            }
+        onClickRecipeLike(idrecipe){ //aumentar likes idrecipe
+            let logid = localStorage.getItem('id');
+
+            //console.log("valor de logid "+logid);
+            //console.log("valor de idrecipe "+idrecipe);
+            
+            axios({
+                method: 'get',
+                url:'http://proyectobloom.test/api/users/likes/' + logid + '/' + idrecipe
+               })
+            .then(
+                (response) => {
+                    //let session = response.data;
+                    //console.log(session);
+                    this.dataPage();
+                }
+            )
+
+            axios({
+                method: 'get',
+                url:'http://proyectobloom.test/api/users/saverecipe/' + logid + '/' + idrecipe
+               })
+            .then(
+                (response) => {
+                    //let sessiontwo = response.data;
+                    //console.log(sessiontwo);
+                    this.dataPage();
+                }
+            )
         },
 
-        onClickRecipeUnlike(id){ //disminuir likes
-            let recipe = this.recipes.find(r => r.id === id);
+        onClickRecipeUnlike(idrecipe){ //disminuir likes
+
+            let logid = localStorage.getItem('id');
+
+            console.log("valor de logid "+logid);
+            console.log("valor de idrecipe "+idrecipe);
+            
+            axios({
+                method: 'get',
+                url:'http://proyectobloom.test/api/users/dislikes/' + logid + '/' + idrecipe
+               })
+            .then(
+                (response) => {
+                    let session = response.data;
+                    //console.log(session);
+                    this.dataPage();
+                }
+            )
+
+            axios({
+                method: 'get',
+                url:'http://proyectobloom.test/api/users/removesavedrecipe/' + logid + '/' + idrecipe
+               })
+            .then(
+                (response) => {
+                    let sessiontwo = response.data;
+                    //console.log(sessiontwo);
+                    this.dataPage();
+                }
+            )
+            /*axios({
+                method: 'get',
+                url:'http://proyectobloom.test/api/users/saverecipe/' + logid + '/' + idrecipe
+               })
+            .then(
+                (response) => {
+                    let sessiontwo = response.data;
+                    console.log(sessiontwo);
+                    this.dataPage();
+                }
+            )*/
+            console.log(idrecipe + "unlikeeeeeeee")
+            /*let recipe = this.recipes.find(r => r.id === id);
             if (recipe) {
                 recipe.likes--;
                 recipe.onlike=true;
                 recipe.onUnlike=false;
-            }
+            }*/
+        },
+
+        onClickLogin(){ //iniciar sesion //username3@gmail.com //pwd12345
+
+            localStorage.removeItem('token');
+            localStorage.removeItem('id');
+            localStorage.removeItem('name');
+            localStorage.removeItem('email');
+            localStorage.removeItem('username');
+
+            axios({
+                method: 'post',
+                url:'http://proyectobloom.test/api/users/login',
+                data: {
+                  email: this.uemail,
+                  password: this.upassword
+                }
+               })
+            .then(
+                (response) => {
+                    let session = response.data;
+                    //console.log(session);
+
+                    localStorage.setItem('token', session.accessToken);
+                    localStorage.setItem('id', session.user.id);
+                    localStorage.setItem('name', session.user.name);
+                    localStorage.setItem('email', session.user.email);
+                    localStorage.setItem('username', session.user.last_name);
+
+                    window.location.href = 'http://bloomrecipes.test/dist/';
+                }
+            )
+        },
+
+        onClickLogout(){ //cerrar la sesion
+            let token = localStorage.getItem('token');
+            console.log(token);
+
+            axios({
+                method: 'get',
+                url: 'http://proyectobloom.test/api/users/logout',
+                headers: {
+                    Authorization: `Bearer ${token}`
+                }
+               })
+            .then(
+                (response) => {
+                    let session = response.data;
+                    console.log(session);
+
+                    localStorage.removeItem('token');
+                    localStorage.removeItem('id');
+                    localStorage.removeItem('name');
+                    localStorage.removeItem('email');
+                    localStorage.removeItem('username');
+
+                    window.location.href = 'http://bloomrecipes.test/dist/';
+                }
+            )
+        },
+
+        onClickRegister(){ //Registrar un usuario nuevo
+
+            localStorage.removeItem('token');
+            localStorage.removeItem('id');
+            localStorage.removeItem('name');
+            localStorage.removeItem('email');
+            localStorage.removeItem('username');
+
+            axios({
+                method: 'post',
+                url: 'http://proyectobloom.test/api/users/register',
+                data: {
+                    name: this.name,
+                    last_name: this.username,
+                    country: this.country,
+                    email: this.uemail,
+                    password: this.upassword
+                }
+               })
+            .then(
+                (response) => {
+                    let session = response.data;
+                    console.log(session);
+
+                    localStorage.setItem('token', session.access_token);
+                    localStorage.setItem('id', session.data.id);
+                    localStorage.setItem('name', session.data.name);
+                    localStorage.setItem('email', session.data.email);
+                    localStorage.setItem('username', session.data.last_name);
+
+                    window.location.href = 'http://bloomrecipes.test/dist/';
+                }
+            )
+        },
+
+        onClickRecoverPassword(){ //Registrar un usuario nuevo
+
+            //console.log(this.uemail);
+            axios({
+                method: 'post',
+                url: 'http://proyectobloom.test/api/users/recoverpassword',
+                data: {
+                    email: this.uemail
+                }
+               })
+            .then(
+                (response) => {
+                    let session = response.data;
+                    //console.log(session);
+                    this.newpassword = session.password;
+                    //console.log(this.newpassword);
+                }
+            )
+
+        },
+
+        redirectToLogin(){ //Redirecciona a la pagina de login
+            window.location.href = 'http://bloomrecipes.test/dist/login.html';
         }
+            
     }
 })

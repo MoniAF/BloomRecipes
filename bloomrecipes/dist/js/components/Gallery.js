@@ -19,10 +19,14 @@ app.component('gallery-section',{
             <div class="d-flex justify-content-center flex-wrap align-items-center mt-4 mb-4 pd-gallery">
                 <section v-for="(element, index) in recipes">
                     <section v-if="index % 7 === 0 || index % 7 === 1 || index % 7 === 2">
-                        <img v-bind:src="element.image" alt="element.name" class="image-one">
+                        <div class="one-box">
+                            <img v-bind:src="element.image" alt="element.name" class="image-one">
+                        </div>
                     </section>
                     <section v-else>
-                        <img v-bind:src="element.image" alt="element.name" class="image-two">
+                        <div class="two-box">
+                            <img v-bind:src="element.image" alt="element.name" class="image-two">
+                        </div>
                     </section>
                 </section>
             </div>
