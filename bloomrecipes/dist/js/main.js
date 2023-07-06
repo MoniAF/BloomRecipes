@@ -529,7 +529,7 @@ const app = Vue.createApp({
                     }
 
                     //console.log("palabra " +this.searchTerm);
-                    if(items != null){
+                    if(items.length > 0){
                         items.forEach(element => {
                             let isLiked = false;
                             let isUnliked = false;
@@ -566,14 +566,20 @@ const app = Vue.createApp({
                                     onUnlike: isUnliked
                                 })
                         });
-                    }
 
-                    if (this.searchData.length > 0) {
                         this.fstatus = false;
+
                     }else{
                         this.fstatus = true;
                     }
 
+                    /*if (this.searchData.length > 0) {
+                        this.fstatus = false;
+                    }else{
+                        this.fstatus = true;
+                    }*/
+
+                    console.log(this.fstatus);
                 }
             )
             .catch(
